@@ -36,7 +36,8 @@ export function ContinentCountryList({ countries }: { countries: DirectoryCountr
           autoComplete="off"
           name="country-search"
           onChange={(event) => setQuery(event.target.value)}
-          placeholder="搜索国家或地区"
+          placeholder="搜索国家或地区…"
+          spellCheck={false}
           type="search"
           value={query}
         />
@@ -47,9 +48,7 @@ export function ContinentCountryList({ countries }: { countries: DirectoryCountr
         <div className="directory-country-grid">
           {visibleCountries.map((country) => (
             <Link className="directory-country-card" href={`/country/${country.code}`} key={country.code}>
-              <span className="directory-flag" aria-hidden="true">
-                {country.flag}
-              </span>
+              <span className={`directory-flag fi fi-${country.code}`} aria-hidden="true" />
               <span className="directory-country-name">
                 <strong>{country.name}</strong>
                 <small>{country.englishName}</small>

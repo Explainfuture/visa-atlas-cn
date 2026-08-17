@@ -15,6 +15,6 @@ const WorldMapExplorer = dynamic(
   },
 );
 
-export function MapShell() {
-  return <WorldMapExplorer />;
+export function MapShell({ availableCodes }: { availableCodes: string[] }) {
+  return <WorldMapExplorer availableCodes={availableCodes} />;
 }

@@ -9,9 +9,12 @@ import {
 import { MapShell } from "@/components/map-shell";
 import { SiteFooter, SiteHeader } from "@/components/site-chrome";
 import { continents, featuredCountries } from "@/data/featured-countries";
+import { getContinentCount, worldCountries } from "@/data/world-countries";
 import { visaGuides } from "@/data/visa-guides";
 
 export default function Home() {
+  const currentYear = new Date().getUTCFullYear();
+
   return (
     <>
       <a className="skip-link" href="#main-content">
@@ -66,9 +69,9 @@ export default function Home() {
             <div className="map-folio">
               <div className="map-folio-topline">
                 <span>WORLD VISA ATLAS</span>
-                <span>CN · 2026</span>
+                <span>CN · {currentYear}</span>
               </div>
-              <MapShell />
+              <MapShell availableCodes={worldCountries.map((country) => country.code)} />
               <div className="map-folio-note">
                 <span className="map-pulse" aria-hidden="true" />
                 点按地图，认识你的下一站
@@ -99,7 +102,9 @@ export default function Home() {
                   <strong>{continent.name}</strong>
                   <small>{continent.englishName}</small>
                 </span>
-                <span className="continent-count">{continent.count} 个目的地</span>
+                <span className="continent-count">
+                  {getContinentCount(continent.slug)} 条记录
+                </span>
                 <ArrowDownRight aria-hidden="true" size={20} />
               </Link>
             ))}
@@ -128,7 +133,7 @@ export default function Home() {
               >
                 <div className="country-card-topline">
                   <span className="country-flag" aria-hidden="true">
-                    {country.flag}
+                    {country.code.toUpperCase()}
                   </span>
                   <span>{country.continent}</span>
                 </div>

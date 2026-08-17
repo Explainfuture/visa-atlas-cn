@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
+import "flag-icons/css/flag-icons.min.css";
 import "./globals.css";
 
 const geist = Geist({
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="zh-CN" className={geist.variable}>
+    <html lang="zh-CN" className={geist.variable} data-scroll-behavior="smooth">
       <body>{children}</body>
     </html>
   );

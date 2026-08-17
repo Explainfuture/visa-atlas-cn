@@ -51,6 +51,10 @@ export default async function CountryPage({
   if (!country) notFound();
 
   const guide = getVisaGuide(country);
+  const verifiedDate = new Intl.DateTimeFormat("zh-CN", {
+    dateStyle: "long",
+    timeZone: "UTC",
+  }).format(new Date(`${guide.verifiedAt}T00:00:00Z`));
 
   return (
     <>
@@ -75,9 +79,7 @@ export default async function CountryPage({
               {country.continentName} · {country.englishName}
             </p>
             <div className="guide-title-row">
-              <span className="guide-flag" aria-hidden="true">
-                {country.flag}
-              </span>
+              <span className={`guide-flag fi fi-${country.code}`} aria-hidden="true" />
               <h1>{country.name}</h1>
             </div>
             <p className="guide-overview">{guide.overview}</p>
@@ -88,7 +90,7 @@ export default async function CountryPage({
             <strong>{guide.stay}</strong>
             <span>
               <CalendarCheck aria-hidden="true" size={16} />
-              核验于 {guide.verifiedAt}
+              核验于 {verifiedDate}
             </span>
           </div>
         </section>

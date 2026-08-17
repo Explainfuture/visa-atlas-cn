@@ -38,6 +38,17 @@ a {
 button,
 a {
   -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+[id] {
+  scroll-margin-top: 24px;
 }
 
 :focus-visible {
@@ -729,7 +740,10 @@ a {
 }
 
 .directory-flag {
-  font-size: 28px;
+  width: 31px;
+  height: 22px;
+  border-radius: 3px;
+  box-shadow: 0 0 0 1px rgba(38, 29, 33, 0.08);
 }
 
 .directory-country-name {
@@ -849,7 +863,9 @@ a {
 }
 
 .guide-flag {
-  font-size: clamp(52px, 6vw, 84px);
+  width: clamp(70px, 8vw, 104px);
+  border-radius: 6px;
+  box-shadow: 0 0 0 1px rgba(38, 29, 33, 0.08);
 }
 
 .guide-title-row h1 {

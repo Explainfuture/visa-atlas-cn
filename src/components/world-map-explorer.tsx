@@ -21,8 +21,9 @@ const countryNames = new Map<string, string>(
   featuredCountries.map((country) => [country.code, country.name]),
 );
 
-export function WorldMapExplorer() {
+export function WorldMapExplorer({ availableCodes }: { availableCodes: string[] }) {
   const [selectedCode, setSelectedCode] = useState("jp");
+  const availableCodeSet = useMemo(() => new Set(availableCodes), [availableCodes]);
   const displayNames = useMemo(
     () => new Intl.DisplayNames(["zh-CN"], { type: "region" }),
     [],
@@ -31,6 +32,7 @@ export function WorldMapExplorer() {
   const selectedName =
     countryNames.get(selectedCode) ?? displayNames.of(selectedCode.toUpperCase()) ?? "未知目的地";
   const isFeatured = countryNames.has(selectedCode);
+  const hasGuidePage = availableCodeSet.has(selectedCode);
 
   const styleCountry = (context: CountryContext<string>) => {
     const code = context.countryCode.toLowerCase();
@@ -45,7 +47,6 @@ export function WorldMapExplorer() {
       stroke: "#fff8fa",
       strokeWidth: code === selectedCode ? 1.2 : 0.55,
       cursor: "pointer",
-      outline: "none",
       transition: "fill 180ms ease, opacity 180ms ease",
     };
   };
@@ -59,7 +60,10 @@ export function WorldMapExplorer() {
           color="#e99bb3"
           data={mapData}
           frame={false}
-          hrefFunction={({ countryCode }) => `/country/${countryCode.toLowerCase()}`}
+          hrefFunction={({ countryCode }) => {
+            const code = countryCode.toLowerCase();
+            return availableCodeSet.has(code) ? `/country/${code}` : undefined;
+          }}
           onClickFunction={({ countryCode }) => setSelectedCode(countryCode.toLowerCase())}
           richInteraction
           size="responsive"
@@ -76,8 +80,8 @@ export function WorldMapExplorer() {
       <div className="map-selection" aria-live="polite">
         <span>{isFeatured ? "首批攻略" : "地图已选中"}</span>
         <strong>{selectedName}</strong>
-        <a href={`/country/${selectedCode}`}>
-          {isFeatured ? "打开完整攻略" : "打开目的地页"}
+        <a href={hasGuidePage ? `/country/${selectedCode}` : "#continents"}>
+          {isFeatured ? "打开完整攻略" : hasGuidePage ? "打开目的地页" : "按地区继续找"}
         </a>
       </div>
     </div>
