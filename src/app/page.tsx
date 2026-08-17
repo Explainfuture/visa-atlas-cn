@@ -1,69 +1,172 @@
-import Image from "next/image";
+import Link from "next/link";
+import {
+  ArrowDownRight,
+  ArrowRight,
+  BookOpen,
+  Compass,
+  ShieldCheck,
+} from "lucide-react";
+import { MapShell } from "@/components/map-shell";
+import { continents, featuredCountries } from "@/data/featured-countries";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+    <>
+      <a className="skip-link" href="#main-content">
+        跳到主要内容
+      </a>
+
+      <header className="site-header">
+        <Link className="brand" href="/" aria-label="签证地图首页">
+          <span className="brand-mark" aria-hidden="true">
+            签
+          </span>
+          <span>签证地图</span>
+        </Link>
+
+        <nav className="main-nav" aria-label="主导航">
+          <Link href="#world-map">世界地图</Link>
+          <Link href="#continents">七大洲</Link>
+          <Link href="#featured-guides">签证攻略</Link>
+        </nav>
+
+        <Link className="header-action" href="#featured-guides">
+          开始探索
+          <ArrowRight aria-hidden="true" size={17} strokeWidth={2.2} />
+        </Link>
+      </header>
+
+      <main id="main-content">
+        <section className="hero" aria-labelledby="hero-title">
+          <div className="hero-copy">
+            <p className="eyebrow">
+              <Compass aria-hidden="true" size={17} />
+              给中国护照的全球签证指南
+            </p>
+            <h1 id="hero-title">
+              世界很大，
+              <span>从一张地图出发。</span>
+            </h1>
+            <p className="hero-intro">
+              选择大洲或点亮一个国家，快速找到签证方式、材料清单与官方入口。
+            </p>
+
+            <div className="hero-actions">
+              <Link className="primary-button" href="#world-map">
+                打开世界地图
+                <ArrowDownRight aria-hidden="true" size={19} />
+              </Link>
+              <Link className="text-button" href="#continents">
+                按地区查找
+                <ArrowRight aria-hidden="true" size={18} />
+              </Link>
+            </div>
+
+            <dl className="hero-facts" aria-label="知识库概况">
+              <div>
+                <dt>7</dt>
+                <dd>大洲目录</dd>
+              </div>
+              <div>
+                <dt>{featuredCountries.length}</dt>
+                <dd>首批目的地</dd>
+              </div>
+              <div>
+                <dt>官方</dt>
+                <dd>来源优先</dd>
+              </div>
+            </dl>
+          </div>
+
+          <div className="hero-map" id="world-map">
+            <div className="map-folio">
+              <div className="map-folio-topline">
+                <span>WORLD VISA ATLAS</span>
+                <span>CN · 2026</span>
+              </div>
+              <MapShell />
+              <div className="map-folio-note">
+                <span className="map-pulse" aria-hidden="true" />
+                点按地图，认识你的下一站
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="continent-section" id="continents" aria-labelledby="continents-title">
+          <div className="section-heading">
+            <div>
+              <p className="section-kicker">按地区探索</p>
+              <h2 id="continents-title">七大洲，一目了然</h2>
+            </div>
+            <p>从熟悉的地区开始，也可以去地图上随意逛逛。</p>
+          </div>
+
+          <div className="continent-grid">
+            {continents.map((continent) => (
+              <Link
+                className="continent-card"
+                href={`/#${continent.slug}`}
+                id={continent.slug}
+                key={continent.slug}
+              >
+                <span className="continent-index">{continent.index}</span>
+                <span className="continent-name">
+                  <strong>{continent.name}</strong>
+                  <small>{continent.englishName}</small>
+                </span>
+                <span className="continent-count">{continent.count} 个目的地</span>
+                <ArrowDownRight aria-hidden="true" size={20} />
+              </Link>
+            ))}
+          </div>
+        </section>
+
+        <section className="featured-section" id="featured-guides" aria-labelledby="featured-title">
+          <div className="section-heading featured-heading">
+            <div>
+              <p className="section-kicker">第一批攻略</p>
+              <h2 id="featured-title">大家常去的地方，先整理好</h2>
+            </div>
+            <div className="source-promise">
+              <ShieldCheck aria-hidden="true" size={19} />
+              每条结论附来源与核验日期
+            </div>
+          </div>
+
+          <div className="country-grid">
+            {featuredCountries.map((country) => (
+              <article className="country-card" id={`country-${country.slug}`} key={country.code}>
+                <div className="country-card-topline">
+                  <span className="country-flag" aria-hidden="true">
+                    {country.flag}
+                  </span>
+                  <span>{country.continent}</span>
+                </div>
+                <h3>{country.name}</h3>
+                <p>{country.city}</p>
+                <div className="country-card-footer">
+                  <span>
+                    <BookOpen aria-hidden="true" size={16} />
+                    攻略即将开放
+                  </span>
+                  <ArrowRight aria-hidden="true" size={19} />
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
       </main>
-    </div>
+
+      <footer className="site-footer">
+        <div className="brand footer-brand">
+          <span className="brand-mark" aria-hidden="true">
+            签
+          </span>
+          <span>签证地图</span>
+        </div>
+        <p>出发前，再到目的地官方渠道确认一次。</p>
+      </footer>
+    </>
   );
 }
