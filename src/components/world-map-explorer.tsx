@@ -7,31 +7,34 @@ import WorldMap, {
   type Data,
   type ISOCode,
 } from "react-svg-worldmap";
-import { featuredCountries } from "@/data/featured-countries";
 
 const supportedCodes = new Set(regions.map((region) => region.code.toLowerCase()));
-const mapData: Data<string> = featuredCountries
-  .filter((country) => supportedCodes.has(country.code))
-  .map((country) => ({
-    country: country.code as ISOCode,
-    value: country.name,
-  }));
-
-const countryNames = new Map<string, string>(
-  featuredCountries.map((country) => [country.code, country.name]),
-);
 
 export function WorldMapExplorer({ availableCodes }: { availableCodes: string[] }) {
   const [selectedCode, setSelectedCode] = useState("jp");
-  const availableCodeSet = useMemo(() => new Set(availableCodes), [availableCodes]);
   const displayNames = useMemo(
     () => new Intl.DisplayNames(["zh-CN"], { type: "region" }),
     [],
   );
+  const availableCodeSet = useMemo(() => new Set(availableCodes), [availableCodes]);
+  const mapData = useMemo<Data<string>>(
+    () =>
+      availableCodes.flatMap((code) => {
+        const normalizedCode = code.toLowerCase();
+
+        if (!supportedCodes.has(normalizedCode)) return [];
+
+        return [{
+          country: normalizedCode as ISOCode,
+          value:
+            displayNames.of(normalizedCode.toUpperCase()) ?? normalizedCode.toUpperCase(),
+        }];
+      }),
+    [availableCodes, displayNames],
+  );
 
   const selectedName =
-    countryNames.get(selectedCode) ?? displayNames.of(selectedCode.toUpperCase()) ?? "未知目的地";
-  const isFeatured = countryNames.has(selectedCode);
+    displayNames.of(selectedCode.toUpperCase()) ?? "未知目的地";
   const hasGuidePage = availableCodeSet.has(selectedCode);
 
   const styleCountry = (context: CountryContext<string>) => {
@@ -46,8 +49,8 @@ export function WorldMapExplorer({ availableCodes }: { availableCodes: string[] 
             : "#eadde2",
       stroke: "#fff8fa",
       strokeWidth: code === selectedCode ? 1.2 : 0.55,
-      cursor: "pointer",
-      transition: "fill 180ms ease, opacity 180ms ease",
+      cursor: context.countryValue ? "pointer" : "default",
+      transition: "fill 180ms ease, filter 180ms ease, opacity 180ms ease",
     };
   };
 
@@ -64,7 +67,11 @@ export function WorldMapExplorer({ availableCodes }: { availableCodes: string[] 
             const code = countryCode.toLowerCase();
             return availableCodeSet.has(code) ? `/country/${code}` : undefined;
           }}
-          onClickFunction={({ countryCode }) => setSelectedCode(countryCode.toLowerCase())}
+          onClickFunction={({ countryCode }) => {
+            const code = countryCode.toLowerCase();
+
+            if (availableCodeSet.has(code)) setSelectedCode(code);
+          }}
           richInteraction
           size="responsive"
           styleFunction={styleCountry}
@@ -78,10 +85,10 @@ export function WorldMapExplorer({ availableCodes }: { availableCodes: string[] 
       </div>
 
       <div className="map-selection" aria-live="polite">
-        <span>{isFeatured ? "首批攻略" : "地图已选中"}</span>
+        <span>{hasGuidePage ? "攻略已收录" : "地图已选中"}</span>
         <strong>{selectedName}</strong>
         <a href={hasGuidePage ? `/country/${selectedCode}` : "#continents"}>
-          {isFeatured ? "打开完整攻略" : hasGuidePage ? "打开目的地页" : "按地区继续找"}
+          {hasGuidePage ? "打开完整攻略" : "按地区继续找"}
         </a>
       </div>
     </div>

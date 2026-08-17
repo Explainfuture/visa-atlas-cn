@@ -335,7 +335,14 @@ h3 {
 }
 
 .world-map-canvas path:hover {
-  opacity: 0.78;
+  opacity: 1;
+  filter: brightness(0.9) saturate(1.12);
+}
+
+.world-map-canvas a:focus-visible path {
+  filter: brightness(0.9) saturate(1.12);
+  stroke: var(--rose-deep);
+  stroke-width: 1.5px;
 }
 
 .map-selection {
