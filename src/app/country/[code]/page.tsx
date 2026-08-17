@@ -206,14 +206,14 @@ export default async function CountryPage({
 
         <section className="source-section" id="sources" aria-labelledby="sources-title">
           <div>
-            <p className="section-kicker">04 · # 官方来源</p>
+            <p className="section-kicker">04 · # 信息来源</p>
             <h2 id="sources-title">每个数字都有出处</h2>
-            <p className="source-intro">政策、材料和费用均从官方页面提取。付款前点开再确认一次，就能看到是否发生变化。</p>
+            <p className="source-intro">官方规则、资料基线与临行核验分别标注。付款前打开对应入口再确认一次。</p>
           </div>
           <div className="source-list">
             {guide.sources.map((source) => (
               <a href={source.url} key={source.url} rel="noreferrer" target="_blank">
-                <span># 官方来源</span>
+                <span># {source.tag ?? "官方来源"}</span>
                 <strong>{source.title}</strong>
                 <small>{source.authority}</small>
                 <ArrowUpRight aria-hidden="true" size={19} />

@@ -55,8 +55,8 @@ export default function Home() {
                 <dd>大洲目录</dd>
               </div>
               <div>
-                <dt>{featuredCountries.length}</dt>
-                <dd>首批目的地</dd>
+                <dt>{worldCountries.length}</dt>
+                <dd>目的地攻略</dd>
               </div>
               <div>
                 <dt>官方</dt>

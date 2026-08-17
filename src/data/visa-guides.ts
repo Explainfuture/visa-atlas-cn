@@ -1,4 +1,5 @@
 import type { CountrySummary } from "@/data/world-countries";
+import { createBaselineVisaGuide } from "@/data/baseline-visa-guide";
 
 export type VisaStatusTone =
   | "visa-free"
@@ -50,6 +51,7 @@ export type VisaGuide = {
     title: string;
     authority: string;
     url: string;
+    tag?: string;
   }>;
 };
 
@@ -595,43 +597,5 @@ export const visaGuides: Record<string, VisaGuide> = {
 };
 
 export function getVisaGuide(country: CountrySummary): VisaGuide {
-  return (
-    visaGuides[country.code] ?? {
-      code: country.code,
-      status: "正在核验",
-      statusTone: "pending",
-      stay: "以目的地官方答复为准",
-      method: "先查官方入境要求",
-      leadTime: "订票前完成确认",
-      overview: `${country.name}页面已经进入知识库，但面向中国普通护照的材料、申请入口与费用还没有完成逐项核验。这里不会用通用模板假装成完整攻略。`,
-      decision: "本页尚未达到可直接照办的标准，请先使用下方官方渠道确认，再购买不可退行程。",
-      cost: {
-        summary: "费用待核验",
-        items: [
-          { label: "政府签证或授权费", amount: "待核验", detail: "以目的地使领馆或移民机关最新收费页为准。" },
-          { label: "签证中心服务费", amount: "可能另收", detail: "只有官方指定外包中心才能作为费用依据。" },
-          { label: "第三方代办费", amount: "非政府收费", detail: "付款前区分政府费、指定中心费和商业代办费。" },
-        ],
-        note: "核验完成前不展示猜测金额。",
-      },
-      steps: [
-        { title: "确认旅行目的与护照类型", detail: "先区分旅游、探亲、商务、过境，以及普通、公务或其他旅行证件。" },
-        { title: "查目的地官方移民或使领馆", detail: "用完整行程和入境口岸确认签证类别、材料、费用和递交地点。" },
-        { title: "得到明确答复后再付费订票", detail: "保存官方页面、邮件或书面清单，避免向非指定网站付款。" },
-      ],
-      materials: [
-        { title: "有效中国普通护照", detail: "准备护照有效期、空白页和旧护照信息。", kind: "必备" },
-        { title: "完整旅行日期与入境口岸", detail: "包含转机地、交通方式和所有目的地。", kind: "必备" },
-        { title: "返程或后续行程", detail: "说明将在许可期限内离境。", kind: "必备" },
-        { title: "住宿与访问目的", detail: "酒店、接待人或活动安排。", kind: "必备" },
-        { title: "旅行预算与资金来源", detail: "用于核对资金要求和费用承担能力。", kind: "建议" },
-      ],
-      notes: ["此页暂未发布确定的签证结论、材料门槛或费用。", "转机、邮轮和陆路入境可能有独立规则。"],
-      verifiedAt,
-      sources: [
-        { title: "中国领事服务网目的地指南", authority: "中华人民共和国外交部", url: "https://cs.mfa.gov.cn/zggmcg/ljmdd/" },
-        { title: "旅行证件与入境要求查询", authority: "IATA Travel Centre", url: "https://www.iatatravelcentre.com/" },
-      ],
-    }
-  );
+  return visaGuides[country.code] ?? createBaselineVisaGuide(country);
 }

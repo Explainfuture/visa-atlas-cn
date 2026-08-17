@@ -4,6 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "data:visa": "node scripts/generate-visa-baseline.mjs",
+    "verify:visa-data": "node scripts/verify-visa-coverage.mjs",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"
