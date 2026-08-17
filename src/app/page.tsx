@@ -35,7 +35,7 @@ export default function Home() {
               <span>从一张地图出发。</span>
             </h1>
             <p className="hero-intro">
-              选择大洲或点亮一个国家，快速找到签证方式、材料清单与官方入口。
+              选择大洲或点亮一个目的地，快速找到签证方式、材料清单与官方入口。
             </p>
 
             <div className="hero-actions">

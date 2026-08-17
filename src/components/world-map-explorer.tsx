@@ -11,6 +11,17 @@ import WorldMap, {
 } from "react-svg-worldmap";
 
 const supportedCodes = new Set(regions.map((region) => region.code.toLowerCase()));
+const destinationNameOverrides: Readonly<Record<string, string>> = {
+  tw: "中国台湾",
+};
+
+function getDestinationName(code: string, displayNames: Intl.DisplayNames) {
+  return (
+    destinationNameOverrides[code.toLowerCase()] ??
+    displayNames.of(code.toUpperCase()) ??
+    code.toUpperCase()
+  );
+}
 
 export function WorldMapExplorer({ availableCodes }: { availableCodes: string[] }) {
   const [selectedCode, setSelectedCode] = useState("jp");
@@ -28,15 +39,13 @@ export function WorldMapExplorer({ availableCodes }: { availableCodes: string[] 
 
         return [{
           country: normalizedCode as ISOCode,
-          value:
-            displayNames.of(normalizedCode.toUpperCase()) ?? normalizedCode.toUpperCase(),
+          value: getDestinationName(normalizedCode, displayNames),
         }];
       }),
     [availableCodes, displayNames],
   );
 
-  const selectedName =
-    displayNames.of(selectedCode.toUpperCase()) ?? "未知目的地";
+  const selectedName = getDestinationName(selectedCode, displayNames);
   const hasGuidePage = availableCodeSet.has(selectedCode);
 
   const styleCountry = (context: CountryContext<string>) => {
@@ -111,7 +120,12 @@ export function WorldMapExplorer({ availableCodes }: { availableCodes: string[] 
                   frame={false}
                   hrefFunction={({ countryCode }) => {
                     const code = countryCode.toLowerCase();
-                    return availableCodeSet.has(code) ? `/country/${code}` : undefined;
+                    return availableCodeSet.has(code)
+                      ? {
+                          href: `/country/${code}`,
+                          "aria-label": getDestinationName(code, displayNames),
+                        }
+                      : undefined;
                   }}
                   onClickFunction={({ countryCode }) => {
                     const code = countryCode.toLowerCase();
@@ -124,9 +138,7 @@ export function WorldMapExplorer({ availableCodes }: { availableCodes: string[] 
                   tooltipBgColor="#2a2024"
                   tooltipTextColor="#fff8fa"
                   tooltipTextFunction={({ countryCode, countryValue }) =>
-                    countryValue ??
-                    displayNames.of(countryCode.toUpperCase()) ??
-                    countryCode.toUpperCase()
+                    countryValue ?? getDestinationName(countryCode, displayNames)
                   }
                 />
               </TransformComponent>
