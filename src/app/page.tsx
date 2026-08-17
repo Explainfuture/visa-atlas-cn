@@ -7,7 +7,9 @@ import {
   ShieldCheck,
 } from "lucide-react";
 import { MapShell } from "@/components/map-shell";
+import { SiteFooter, SiteHeader } from "@/components/site-chrome";
 import { continents, featuredCountries } from "@/data/featured-countries";
+import { visaGuides } from "@/data/visa-guides";
 
 export default function Home() {
   return (
@@ -16,25 +18,7 @@ export default function Home() {
         跳到主要内容
       </a>
 
-      <header className="site-header">
-        <Link className="brand" href="/" aria-label="签证地图首页">
-          <span className="brand-mark" aria-hidden="true">
-            签
-          </span>
-          <span>签证地图</span>
-        </Link>
-
-        <nav className="main-nav" aria-label="主导航">
-          <Link href="#world-map">世界地图</Link>
-          <Link href="#continents">七大洲</Link>
-          <Link href="#featured-guides">签证攻略</Link>
-        </nav>
-
-        <Link className="header-action" href="#featured-guides">
-          开始探索
-          <ArrowRight aria-hidden="true" size={17} strokeWidth={2.2} />
-        </Link>
-      </header>
+      <SiteHeader />
 
       <main id="main-content">
         <section className="hero" aria-labelledby="hero-title">
@@ -106,7 +90,7 @@ export default function Home() {
             {continents.map((continent) => (
               <Link
                 className="continent-card"
-                href={`/#${continent.slug}`}
+                href={`/continents/${continent.slug}`}
                 id={continent.slug}
                 key={continent.slug}
               >
@@ -136,7 +120,12 @@ export default function Home() {
 
           <div className="country-grid">
             {featuredCountries.map((country) => (
-              <article className="country-card" id={`country-${country.slug}`} key={country.code}>
+              <Link
+                className="country-card"
+                href={`/country/${country.code}`}
+                id={`country-${country.slug}`}
+                key={country.code}
+              >
                 <div className="country-card-topline">
                   <span className="country-flag" aria-hidden="true">
                     {country.flag}
@@ -148,25 +137,17 @@ export default function Home() {
                 <div className="country-card-footer">
                   <span>
                     <BookOpen aria-hidden="true" size={16} />
-                    攻略即将开放
+                    {visaGuides[country.code]?.status ?? "攻略已收录"}
                   </span>
                   <ArrowRight aria-hidden="true" size={19} />
                 </div>
-              </article>
+              </Link>
             ))}
           </div>
         </section>
       </main>
 
-      <footer className="site-footer">
-        <div className="brand footer-brand">
-          <span className="brand-mark" aria-hidden="true">
-            签
-          </span>
-          <span>签证地图</span>
-        </div>
-        <p>出发前，再到目的地官方渠道确认一次。</p>
-      </footer>
+      <SiteFooter />
     </>
   );
 }

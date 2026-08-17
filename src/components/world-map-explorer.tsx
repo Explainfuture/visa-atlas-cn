@@ -1,15 +1,25 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import WorldMap, { type CountryContext, type Data } from "react-svg-worldmap";
+import WorldMap, {
+  regions,
+  type CountryContext,
+  type Data,
+  type ISOCode,
+} from "react-svg-worldmap";
 import { featuredCountries } from "@/data/featured-countries";
 
-const mapData: Data<string> = featuredCountries.map((country) => ({
-  country: country.code,
-  value: country.name,
-}));
+const supportedCodes = new Set(regions.map((region) => region.code.toLowerCase()));
+const mapData: Data<string> = featuredCountries
+  .filter((country) => supportedCodes.has(country.code))
+  .map((country) => ({
+    country: country.code as ISOCode,
+    value: country.name,
+  }));
 
-const countryNames = new Map(featuredCountries.map((country) => [country.code, country.name]));
+const countryNames = new Map<string, string>(
+  featuredCountries.map((country) => [country.code, country.name]),
+);
 
 export function WorldMapExplorer() {
   const [selectedCode, setSelectedCode] = useState("jp");
@@ -40,8 +50,6 @@ export function WorldMapExplorer() {
     };
   };
 
-  const selectedSlug = featuredCountries.find((item) => item.code === selectedCode)?.slug;
-
   return (
     <div className="world-map-explorer">
       <div className="world-map-canvas">
@@ -51,6 +59,7 @@ export function WorldMapExplorer() {
           color="#e99bb3"
           data={mapData}
           frame={false}
+          hrefFunction={({ countryCode }) => `/country/${countryCode.toLowerCase()}`}
           onClickFunction={({ countryCode }) => setSelectedCode(countryCode.toLowerCase())}
           richInteraction
           size="responsive"
@@ -67,8 +76,8 @@ export function WorldMapExplorer() {
       <div className="map-selection" aria-live="polite">
         <span>{isFeatured ? "首批攻略" : "地图已选中"}</span>
         <strong>{selectedName}</strong>
-        <a href={selectedSlug ? `#country-${selectedSlug}` : "#continents"}>
-          {isFeatured ? "查看目的地" : "按地区继续找"}
+        <a href={`/country/${selectedCode}`}>
+          {isFeatured ? "打开完整攻略" : "打开目的地页"}
         </a>
       </div>
     </div>
