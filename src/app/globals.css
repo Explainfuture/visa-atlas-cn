@@ -1346,6 +1346,13 @@ h3 {
   line-height: 1.7;
 }
 
+.fee-list dd strong,
+.fee-note strong,
+.guide-notes li strong {
+  color: var(--sky-ink);
+  font-weight: 800;
+}
+
 .guide-notes {
   display: grid;
   grid-template-columns: 34px 0.7fr 1fr;
@@ -1393,9 +1400,14 @@ h3 {
 .source-list a {
   position: relative;
   display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 5px 16px;
-  padding: 22px 50px 22px 23px;
+  grid-template-columns: minmax(190px, 0.62fr) minmax(0, 1.38fr) 24px;
+  grid-template-areas:
+    "tag title icon"
+    "authority title icon";
+  gap: 8px 24px;
+  align-items: center;
+  min-height: 116px;
+  padding: 24px 22px 24px 28px;
   border: 1px solid var(--line);
   border-radius: 18px;
   background: var(--white);
@@ -1410,22 +1422,35 @@ h3 {
 .source-list span,
 .source-list small {
   color: var(--muted);
-  font-size: 10px;
+  font-size: 12px;
+  line-height: 1.5;
 }
 
 .source-list span {
+  grid-area: tag;
   color: var(--rose-deep);
-  font-weight: 750;
+  font-size: 12.5px;
+  font-weight: 800;
 }
 
 .source-list strong {
-  font-size: 14px;
+  grid-area: title;
+  align-self: center;
+  justify-self: stretch;
+  color: var(--ink);
+  font-size: clamp(15px, 1.2vw, 18px);
+  line-height: 1.45;
+  text-align: center;
+  text-wrap: balance;
+}
+
+.source-list small {
+  grid-area: authority;
 }
 
 .source-list svg {
-  position: absolute;
-  top: 22px;
-  right: 20px;
+  grid-area: icon;
+  justify-self: end;
   color: var(--rose-deep);
 }
 
@@ -1777,6 +1802,25 @@ h3 {
     grid-template-columns: 1fr;
     gap: 36px;
     padding-block: 78px 50px;
+  }
+
+  .source-list a {
+    grid-template-columns: minmax(116px, 0.72fr) minmax(0, 1.28fr) 20px;
+    gap: 7px 14px;
+    min-height: 104px;
+    padding: 20px 18px;
+  }
+
+  .source-list span {
+    font-size: 11.5px;
+  }
+
+  .source-list small {
+    font-size: 11px;
+  }
+
+  .source-list strong {
+    font-size: 14px;
   }
 }
 

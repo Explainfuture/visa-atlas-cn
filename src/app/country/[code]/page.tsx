@@ -18,6 +18,20 @@ import { SiteFooter, SiteHeader } from "@/components/site-chrome";
 import { getCountry, worldCountries } from "@/data/world-countries";
 import { getVisaGuide } from "@/data/visa-guides";
 
+const importantTextPattern =
+  /((?:不要|必须|务必|只有|只按|临行前|不是|不等于|不替代|不代表|不退|无需|拒签[^；。！]*不退)[^；。！]*)/g;
+const importantTextCheck = /(?:不要|必须|务必|只有|只按|临行前|不是|不等于|不替代|不代表|不退|无需|拒签)/;
+
+function ImportantText({ text }: { text: string }) {
+  return (
+    <>
+      {text.split(importantTextPattern).map((part, index) =>
+        importantTextCheck.test(part) ? <strong key={`${part}-${index}`}>{part}</strong> : part,
+      )}
+    </>
+  );
+}
+
 export function generateStaticParams() {
   return worldCountries.map((country) => ({ code: country.code }));
 }
@@ -183,11 +197,11 @@ export default async function CountryPage({
                     <span>{item.label}</span>
                     <strong>{item.amount}</strong>
                   </dt>
-                  <dd>{item.detail}</dd>
+                  <dd><ImportantText text={item.detail} /></dd>
                 </div>
               ))}
             </dl>
-            <p className="fee-note">{guide.cost.note}</p>
+            <p className="fee-note"><ImportantText text={guide.cost.note} /></p>
           </aside>
         </div>
 
@@ -199,7 +213,7 @@ export default async function CountryPage({
           </div>
           <ul>
             {guide.notes.map((note) => (
-              <li key={note}>{note}</li>
+              <li key={note}><ImportantText text={note} /></li>
             ))}
           </ul>
         </section>
