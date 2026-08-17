@@ -74,7 +74,7 @@ export default function Home() {
               <MapShell availableCodes={worldCountries.map((country) => country.code)} />
               <div className="map-folio-note">
                 <span className="map-pulse" aria-hidden="true" />
-                悬浮查看名称，点击打开完整攻略
+                滚轮或双指缩放 · 拖动平移 · 悬浮查看目的地
               </div>
             </div>
           </div>

@@ -328,10 +328,66 @@ h3 {
   margin-top: 30px;
 }
 
-.world-map-canvas > div,
+.world-map-canvas .worldmap__wrapper,
 .world-map-canvas svg {
   width: 100% !important;
   max-width: none !important;
+}
+
+.map-zoom-viewport {
+  width: 100% !important;
+  cursor: grab;
+  touch-action: none;
+}
+
+.map-zoom-viewport:active {
+  cursor: grabbing;
+}
+
+.map-zoom-content {
+  width: 100% !important;
+}
+
+.map-zoom-controls {
+  position: absolute;
+  z-index: 4;
+  top: 36px;
+  right: 2px;
+  display: flex;
+  gap: 3px;
+  padding: 4px;
+  border: 1px solid rgba(169, 56, 92, 0.22);
+  border-radius: 12px;
+  background: rgba(255, 253, 253, 0.94);
+  box-shadow: 0 10px 26px rgba(74, 39, 50, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.map-zoom-controls button {
+  display: grid;
+  width: 32px;
+  height: 32px;
+  place-items: center;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--rose-deep);
+  cursor: pointer;
+  transition: background 160ms ease, color 160ms ease, transform 160ms ease;
+}
+
+.map-zoom-controls button:hover {
+  background: var(--blush);
+  color: var(--ink);
+}
+
+.map-zoom-controls button:active {
+  transform: scale(0.94);
+}
+
+.map-zoom-controls button:focus-visible {
+  outline: 2px solid var(--rose-deep);
+  outline-offset: 2px;
 }
 
 .world-map-canvas path:hover {

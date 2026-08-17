@@ -1,6 +1,8 @@
 "use client";
 
+import { Minus, Plus, RotateCcw } from "lucide-react";
 import { useMemo, useState } from "react";
+import { TransformComponent, TransformWrapper } from "react-zoom-pan-pinch";
 import WorldMap, {
   regions,
   type CountryContext,
@@ -57,31 +59,80 @@ export function WorldMapExplorer({ availableCodes }: { availableCodes: string[] 
   return (
     <div className="world-map-explorer">
       <div className="world-map-canvas">
-        <WorldMap
-          backgroundColor="transparent"
-          borderColor="#fff8fa"
-          color="#e99bb3"
-          data={mapData}
-          frame={false}
-          hrefFunction={({ countryCode }) => {
-            const code = countryCode.toLowerCase();
-            return availableCodeSet.has(code) ? `/country/${code}` : undefined;
-          }}
-          onClickFunction={({ countryCode }) => {
-            const code = countryCode.toLowerCase();
+        <TransformWrapper
+          centerOnInit
+          centerZoomedOut
+          doubleClick={{ excluded: ["a", "button"], mode: "zoomIn", step: 0.7 }}
+          limitToBounds
+          maxScale={6}
+          minScale={1}
+          panning={{ excluded: ["a", "button"], velocityDisabled: true }}
+          wheel={{ step: 0.015 }}
+        >
+          {({ resetTransform, zoomIn, zoomOut }) => (
+            <>
+              <div className="map-zoom-controls" role="group" aria-label="地图缩放控制">
+                <button
+                  aria-label="缩小地图"
+                  onClick={() => zoomOut(0.6)}
+                  title="缩小地图"
+                  type="button"
+                >
+                  <Minus aria-hidden="true" size={17} />
+                </button>
+                <button
+                  aria-label="复位地图"
+                  onClick={() => resetTransform(240)}
+                  title="复位地图"
+                  type="button"
+                >
+                  <RotateCcw aria-hidden="true" size={16} />
+                </button>
+                <button
+                  aria-label="放大地图"
+                  onClick={() => zoomIn(0.6)}
+                  title="放大地图"
+                  type="button"
+                >
+                  <Plus aria-hidden="true" size={17} />
+                </button>
+              </div>
 
-            if (availableCodeSet.has(code)) setSelectedCode(code);
-          }}
-          richInteraction
-          size="responsive"
-          styleFunction={styleCountry}
-          title="可交互的世界签证地图"
-          tooltipBgColor="#2a2024"
-          tooltipTextColor="#fff8fa"
-          tooltipTextFunction={({ countryCode, countryValue }) =>
-            countryValue ?? displayNames.of(countryCode.toUpperCase()) ?? countryCode.toUpperCase()
-          }
-        />
+              <TransformComponent
+                contentClass="map-zoom-content"
+                wrapperClass="map-zoom-viewport"
+                wrapperProps={{ "aria-label": "可缩放的世界签证地图" }}
+              >
+                <WorldMap
+                  backgroundColor="transparent"
+                  borderColor="#fff8fa"
+                  color="#e99bb3"
+                  data={mapData}
+                  frame={false}
+                  hrefFunction={({ countryCode }) => {
+                    const code = countryCode.toLowerCase();
+                    return availableCodeSet.has(code) ? `/country/${code}` : undefined;
+                  }}
+                  onClickFunction={({ countryCode }) => {
+                    const code = countryCode.toLowerCase();
+
+                    if (availableCodeSet.has(code)) setSelectedCode(code);
+                  }}
+                  size="responsive"
+                  styleFunction={styleCountry}
+                  title="可交互的世界签证地图"
+                  tooltipBgColor="#2a2024"
+                  tooltipTextColor="#fff8fa"
+                  tooltipTextFunction={({ countryCode, countryValue }) =>
+                    countryValue ??
+                    displayNames.of(countryCode.toUpperCase()) ??
+                    countryCode.toUpperCase()
+                  }
+                />
+              </TransformComponent>
+            </>
+          )}
+        </TransformWrapper>
       </div>
 
       <div className="map-selection" aria-live="polite">
