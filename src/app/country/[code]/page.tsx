@@ -4,17 +4,22 @@ import { notFound } from "next/navigation";
 import {
   ArrowLeft,
   ArrowUpRight,
+  Building2,
   CalendarCheck,
   CheckCircle2,
   Clock3,
   FileCheck2,
+  Mail,
   MapPin,
+  MapPinned,
+  Phone,
   Route,
   ShieldAlert,
   WalletCards,
 } from "lucide-react";
 import { PreparationChecklist } from "@/components/preparation-checklist";
 import { SiteFooter, SiteHeader } from "@/components/site-chrome";
+import { consularKindLabels, getConsularLocation } from "@/data/consular-locations";
 import { getCountry, worldCountries } from "@/data/world-countries";
 import { getVisaGuide } from "@/data/visa-guides";
 
@@ -68,6 +73,7 @@ export default async function CountryPage({
   if (!country) notFound();
 
   const guide = getVisaGuide(country);
+  const consularLocation = getConsularLocation(country.code);
   const verifiedDate = new Intl.DateTimeFormat("zh-CN", {
     dateStyle: "long",
     timeZone: "UTC",
@@ -141,11 +147,94 @@ export default async function CountryPage({
 
         <nav className="guide-jumpbar" aria-label="攻略页内导航">
           <span>这页能解决</span>
+          <a href="#locations">去哪里办理</a>
           <a href="#materials">准备什么</a>
           <a href="#application">怎么申请</a>
           <a href="#fees">要交多少钱</a>
           <a href="#sources">去哪里核验</a>
         </nav>
+
+        <section className="consular-section" id="locations" aria-labelledby="locations-title">
+          <div className="consular-heading">
+            <p className="section-kicker">
+              <MapPinned aria-hidden="true" size={18} />
+              办理地点
+            </p>
+            <h2 id="locations-title">先找对受理渠道</h2>
+            <p>签证中心、线上系统和驻华机构分工不同。先按实际递交方式走，再用右侧信息联系或核验。</p>
+            <div className="consular-route">
+              <Route aria-hidden="true" size={22} />
+              <span>实际递交方式</span>
+              <strong>{guide.method}</strong>
+            </div>
+          </div>
+
+          <article className={`consular-card ${consularLocation.kind}`}>
+            <span className="consular-kind">{consularKindLabels[consularLocation.kind]}</span>
+            <div className="consular-office">
+              <Building2 aria-hidden="true" size={24} />
+              <h3>{consularLocation.office}</h3>
+            </div>
+
+            {consularLocation.address ? (
+              <div className="consular-detail">
+                <MapPin aria-hidden="true" size={19} />
+                <div>
+                  <span>{consularLocation.city ?? "地址"}</span>
+                  <strong>{consularLocation.address}</strong>
+                </div>
+              </div>
+            ) : null}
+
+            <div className="consular-contact-grid">
+              {consularLocation.phone ? (
+                <div className="consular-detail">
+                  <Phone aria-hidden="true" size={18} />
+                  <div>
+                    <span>电话</span>
+                    <strong>{consularLocation.phone}</strong>
+                  </div>
+                </div>
+              ) : null}
+              {consularLocation.email ? (
+                <a className="consular-detail" href={`mailto:${consularLocation.email}`}>
+                  <Mail aria-hidden="true" size={18} />
+                  <div>
+                    <span>邮箱</span>
+                    <strong>{consularLocation.email}</strong>
+                  </div>
+                </a>
+              ) : null}
+            </div>
+
+            <p className="consular-warning">
+              <strong>使馆地址不等于签证递交地址。</strong>
+              {consularLocation.note}
+            </p>
+
+            <div className="consular-links">
+              <a
+                href={consularLocation.website ?? consularLocation.sourceUrl}
+                rel="noreferrer"
+                target="_blank"
+              >
+                {consularLocation.kind === "domestic-authority"
+                  ? "查看办事指南"
+                  : consularLocation.website
+                    ? "打开机构网站"
+                    : "查看官方名录"}
+                <ArrowUpRight aria-hidden="true" size={17} />
+              </a>
+              {consularLocation.website && consularLocation.website !== consularLocation.sourceUrl ? (
+                <a href={consularLocation.sourceUrl} rel="noreferrer" target="_blank">
+                  核对外交部名录
+                  <ArrowUpRight aria-hidden="true" size={17} />
+                </a>
+              ) : null}
+            </div>
+            <small>来源：{consularLocation.sourceAuthority} · 核验于 {consularLocation.verifiedAt}</small>
+          </article>
+        </section>
 
         <section className="guide-workbench" id="materials" aria-labelledby="materials-title">
           <div className="guide-workbench-heading">

@@ -2,12 +2,15 @@
 
 面向中国普通护照持有人的全球旅行签证知识库。可以从世界地图、七大洲目录或搜索入口选择目的地，查看签证结论、材料清单、申请步骤、费用账单、注意事项与信息来源。
 
+**在线访问：[visa-atlas-cn.vercel.app](https://visa-atlas-cn.vercel.app)**
+
 > 当前数据快照：2026 年 8 月 18 日。签证与边检规则可能随时变化，付款或出发前请再次打开攻略中的官方入口核验。
 
 ## 当前进度
 
-- 覆盖 7 大洲、251 个国家和地区，无“正在核验”占位页
+- 覆盖 7 大洲、251 个目的地，无“正在核验”占位页
 - 每个目的地拥有独立的静态路由与完整攻略结构
+- 251 个目的地均有“在哪里办理”记录：178 个驻华机构、51 个属地主管机构联络点、3 个国内出入境渠道，以及 19 个明确标注的官方确认项
 - 日本、泰国、新加坡、法国、英国、美国、加拿大、巴西、摩洛哥、南非、澳大利亚、新西兰等常用目的地已加入更细的官方材料、费用和申请入口
 - 支持世界地图点选、大洲目录、国家搜索与热门目的地快捷入口
 - 响应式浅粉色界面，适配桌面端与移动端，并支持键盘导航
@@ -17,6 +20,7 @@
 | 模块 | 内容 |
 | --- | --- |
 | 办理结论 | 是否免签、电子签、落地签或需要提前办理，以及可停留时间 |
+| 办理地点 | 实际递交方式、驻华主要联络点、地址、电话、邮箱及官方入口；缺少常设机构时明确提示兼辖馆核验 |
 | 准备材料 | 按“必备 / 按情况 / 建议”分类的可勾选清单，支持一键复制与重置 |
 | 申请步骤 | 从确认资格到提交申请、录指纹和入境准备的顺序指引 |
 | 费用账单 | 政府费用、签证中心服务费及可能发生的附加费用 |
@@ -27,8 +31,9 @@
 
 - Next.js 16 App Router、React 19、TypeScript
 - `react-svg-worldmap`：世界地图交互
-- `countries-list`：国家和地区目录
-- `flag-icons`：国家和地区旗帜
+- `react-zoom-pan-pinch`：地图自由缩放与拖动
+- `countries-list`：目的地目录
+- `flag-icons`：目的地旗帜
 - `lucide-react`：界面图标
 - Playwright CLI：桌面端与移动端浏览器回归测试
 
@@ -56,18 +61,21 @@ npm start
 
 ```bash
 npm run verify:visa-data
+npm run verify:consular-data
 npm run lint
 npx tsc --noEmit
 npm run build
 ```
 
-`verify:visa-data` 会检查 251 个目的地是否完整覆盖、国家代码是否重复，以及是否仍存在占位攻略。
+`verify:visa-data` 会检查 251 个目的地是否完整覆盖、代码是否重复，以及是否仍存在占位攻略；`verify:consular-data` 会检查办理地点覆盖、必填来源、机构类型与中国香港、中国澳门、中国台湾的国内受理渠道。
 
 ## 数据结构与维护
 
 ```text
 src/data/
-├── world-countries.ts            # 国家、地区与大洲目录
+├── world-countries.ts            # 目的地与大洲目录
+├── consular-locations.generated.json # 251 个目的地的办理地点快照
+├── consular-locations.ts         # 办理地点类型与查询接口
 ├── visa-baseline.generated.ts    # 自动生成的 251 个目的地数据快照
 ├── baseline-visa-guide.ts        # 将数据快照转换成完整攻略结构
 └── visa-guides.ts                # 高频目的地的人工增强内容与官方来源
@@ -80,7 +88,18 @@ npm run data:visa
 npm run verify:visa-data
 ```
 
+更新驻华机构与办理地点数据：
+
+```bash
+npm run data:consular
+npm run verify:consular-data
+```
+
 `visa-baseline.generated.ts` 来自 [Wikipedia：中国公民签证要求](https://en.wikipedia.org/wiki/Visa_requirements_for_Chinese_citizens) 的固定修订版本，由脚本生成，不应手工编辑。高频目的地的细节在 `visa-guides.ts` 中使用目的地移民局、外交部、使领馆等一手来源补充。
+
+`consular-locations.generated.json` 由脚本读取中国外交部的[外国驻华使馆机构信息](https://www.mfa.gov.cn/web/lbfw_673061/wgzhslgjgxx/)生成，并保留[外国驻华领事机构名录](https://www.mfa.gov.cn/web/lbfw_673061/lsgmd_673079/index.shtml)作为领区复核入口。项目评估了开源的 [Database of Embassies](https://github.com/database-of-embassies/database-of-embassies) 作为字段结构参考，但该项目明确说明数据尚不完整，因此本站的地址与联系方式不以它作为最终依据。
+
+驻华机构地址用于联系与核验，**不代表该地址一定直接接收个人签证申请**。实际递交仍以目的地官方签证页、签证中心、指定代办机构或线上系统为准。
 
 ## 内容原则
 
