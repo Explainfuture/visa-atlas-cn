@@ -5,12 +5,15 @@ import {
   ArrowLeft,
   ArrowUpRight,
   CalendarCheck,
-  Check,
+  CheckCircle2,
   Clock3,
   FileCheck2,
   MapPin,
+  Route,
   ShieldAlert,
+  WalletCards,
 } from "lucide-react";
+import { PreparationChecklist } from "@/components/preparation-checklist";
 import { SiteFooter, SiteHeader } from "@/components/site-chrome";
 import { getCountry, worldCountries } from "@/data/world-countries";
 import { getVisaGuide } from "@/data/visa-guides";
@@ -30,13 +33,13 @@ export async function generateMetadata({
   if (!country) return {};
 
   const guide = getVisaGuide(country);
-  const description = `${country.name}旅游签证攻略：中国普通护照${guide.status}，${guide.stay}。含材料、步骤、官方来源和核验日期。`;
+  const description = `${country.name}旅游签证攻略：中国普通护照${guide.status}，预计${guide.cost.summary}。含材料清单、申请步骤、费用与官方来源。`;
 
   return {
-    title: `${country.name}签证攻略`,
+    title: `${country.name}签证材料、申请与费用`,
     description,
-    openGraph: { title: `${country.name}签证攻略｜签证地图`, description, images: [] },
-    twitter: { title: `${country.name}签证攻略｜签证地图`, description, images: [] },
+    openGraph: { title: `${country.name}签证办理手册｜签证地图`, description, images: [] },
+    twitter: { title: `${country.name}签证办理手册｜签证地图`, description, images: [] },
   };
 }
 
@@ -85,67 +88,114 @@ export default async function CountryPage({
             <p className="guide-overview">{guide.overview}</p>
           </div>
 
-          <div className="guide-status-card">
+          <aside className="guide-status-card" aria-label="办理结论">
             <span className={`visa-chip large ${guide.statusTone}`}>{guide.status}</span>
-            <strong>{guide.stay}</strong>
+            <strong>{guide.decision}</strong>
+            <span className="guide-status-cost">
+              <WalletCards aria-hidden="true" size={18} />
+              {guide.cost.summary}
+            </span>
             <span>
               <CalendarCheck aria-hidden="true" size={16} />
               核验于 {verifiedDate}
             </span>
-          </div>
+          </aside>
         </section>
 
         <section className="guide-facts" aria-label="办理概览">
           <div>
             <Clock3 aria-hidden="true" />
-            <span>办理节奏</span>
+            <span>什么时候开始</span>
             <strong>{guide.leadTime}</strong>
           </div>
           <div>
             <FileCheck2 aria-hidden="true" />
-            <span>办理方式</span>
+            <span>在哪里办理</span>
             <strong>{guide.method}</strong>
           </div>
           <div>
+            <WalletCards aria-hidden="true" />
+            <span>预计政府与必要费用</span>
+            <strong>{guide.cost.summary}</strong>
+          </div>
+          <div>
             <CalendarCheck aria-hidden="true" />
-            <span>停留规则</span>
+            <span>可以停留多久</span>
             <strong>{guide.stay}</strong>
           </div>
         </section>
 
-        <div className="guide-content-grid">
-          <section className="guide-section" aria-labelledby="steps-title">
-            <p className="section-kicker">办理流程</p>
-            <h2 id="steps-title">照着这三步准备</h2>
-            <ol className="guide-steps">
+        <nav className="guide-jumpbar" aria-label="攻略页内导航">
+          <span>这页能解决</span>
+          <a href="#materials">准备什么</a>
+          <a href="#application">怎么申请</a>
+          <a href="#fees">要交多少钱</a>
+          <a href="#sources">去哪里核验</a>
+        </nav>
+
+        <section className="guide-workbench" id="materials" aria-labelledby="materials-title">
+          <div className="guide-workbench-heading">
+            <div>
+              <p className="section-kicker">01 · 准备材料</p>
+              <h2 id="materials-title">先把申请文件夹装满</h2>
+            </div>
+            <p>点一下就能核对进度；“按情况”材料不要盲目堆，先看它是否与你的身份和旅行目的有关。</p>
+          </div>
+          <PreparationChecklist countryName={country.name} items={guide.materials} />
+        </section>
+
+        <div className="guide-application-grid">
+          <section className="guide-section application-section" id="application" aria-labelledby="steps-title">
+            <p className="section-kicker">02 · 提交申请</p>
+            <h2 id="steps-title">按这个顺序走</h2>
+            <ol className="action-steps">
               {guide.steps.map((step, index) => (
-                <li key={step}>
-                  <span>{String(index + 1).padStart(2, "0")}</span>
-                  <p>{step}</p>
+                <li key={step.title}>
+                  <span className="step-number">{String(index + 1).padStart(2, "0")}</span>
+                  <div>
+                    <h3>{step.title}</h3>
+                    <p>{step.detail}</p>
+                    {step.action ? (
+                      <a href={step.action.url} rel="noreferrer" target="_blank">
+                        {step.action.label}
+                        <ArrowUpRight aria-hidden="true" size={16} />
+                      </a>
+                    ) : null}
+                  </div>
                 </li>
               ))}
             </ol>
           </section>
 
-          <section className="guide-section materials-section" aria-labelledby="materials-title">
-            <p className="section-kicker">材料清单</p>
-            <h2 id="materials-title">先把这些放进文件夹</h2>
-            <ul className="materials-list">
-              {guide.materials.map((material) => (
-                <li key={material}>
-                  <Check aria-hidden="true" size={17} />
-                  {material}
-                </li>
+          <aside className="fee-ledger" id="fees" aria-labelledby="fees-title">
+            <div className="fee-ledger-heading">
+              <div>
+                <p className="section-kicker">03 · 费用账单</p>
+                <h2 id="fees-title">钱花在哪里</h2>
+              </div>
+              <WalletCards aria-hidden="true" size={28} />
+            </div>
+            <strong className="fee-total">{guide.cost.summary}</strong>
+            <dl className="fee-list">
+              {guide.cost.items.map((item) => (
+                <div key={item.label}>
+                  <dt>
+                    <span>{item.label}</span>
+                    <strong>{item.amount}</strong>
+                  </dt>
+                  <dd>{item.detail}</dd>
+                </div>
               ))}
-            </ul>
-          </section>
+            </dl>
+            <p className="fee-note">{guide.cost.note}</p>
+          </aside>
         </div>
 
         <section className="guide-notes" aria-labelledby="notes-title">
           <ShieldAlert aria-hidden="true" size={25} />
           <div>
-            <p className="section-kicker">出发前再看一眼</p>
-            <h2 id="notes-title">容易忽略的地方</h2>
+            <p className="section-kicker">提交前最后检查</p>
+            <h2 id="notes-title">别在这些地方踩坑</h2>
           </div>
           <ul>
             {guide.notes.map((note) => (
@@ -154,10 +204,11 @@ export default async function CountryPage({
           </ul>
         </section>
 
-        <section className="source-section" aria-labelledby="sources-title">
+        <section className="source-section" id="sources" aria-labelledby="sources-title">
           <div>
-            <p className="section-kicker"># 信息来源</p>
-            <h2 id="sources-title">从官方页面继续确认</h2>
+            <p className="section-kicker">04 · # 官方来源</p>
+            <h2 id="sources-title">每个数字都有出处</h2>
+            <p className="source-intro">政策、材料和费用均从官方页面提取。付款前点开再确认一次，就能看到是否发生变化。</p>
           </div>
           <div className="source-list">
             {guide.sources.map((source) => (
@@ -170,6 +221,15 @@ export default async function CountryPage({
             ))}
           </div>
         </section>
+
+        <div className="guide-ready-note">
+          <CheckCircle2 aria-hidden="true" />
+          <div>
+            <strong>准备完成后，再做一次一致性检查</strong>
+            <span>表格、银行流水、在职证明、机酒订单和口头说明里的日期与金额要能对得上。</span>
+          </div>
+          <Route aria-hidden="true" />
+        </div>
 
         <p className="guide-disclaimer">
           签证与边检规则会变化，本页用于行前整理，不替代使领馆或入境机关的最终答复。
