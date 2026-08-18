@@ -20,6 +20,7 @@ import {
 import { PreparationChecklist } from "@/components/preparation-checklist";
 import { SiteFooter, SiteHeader } from "@/components/site-chrome";
 import { getApplicationNetwork, type ApplicationNetwork } from "@/data/application-networks";
+import { getApplicationPortal } from "@/data/application-portals";
 import { consularKindLabels, getConsularLocation } from "@/data/consular-locations";
 import { getCountry, worldCountries } from "@/data/world-countries";
 import { getVisaGuide } from "@/data/visa-guides";
@@ -146,6 +147,22 @@ export default async function CountryPage({
   const guide = getVisaGuide(country);
   const consularLocation = getConsularLocation(country.code);
   const applicationNetwork = getApplicationNetwork(country.code);
+  const applicationPortal = getApplicationPortal(
+    country.code,
+    consularLocation,
+    guide.statusTone === "visa-free",
+  );
+  const sourceEntries = guide.sources.some((source) => source.url === applicationPortal.url)
+    ? guide.sources
+    : [
+        {
+          title: applicationPortal.title,
+          authority: applicationPortal.authority,
+          url: applicationPortal.url,
+          tag: applicationPortal.isDirect ? "申请入口" : "官方指引",
+        },
+        ...guide.sources,
+      ];
   const verifiedDate = new Intl.DateTimeFormat("zh-CN", {
     dateStyle: "long",
     timeZone: "UTC",
@@ -320,29 +337,54 @@ export default async function CountryPage({
             </div>
             <p>点一下就能核对进度；“按情况”材料不要盲目堆，先看它是否与你的身份和旅行目的有关。</p>
           </div>
-          <PreparationChecklist countryName={country.name} items={guide.materials} />
+          <PreparationChecklist
+            countryName={country.name}
+            fallbackReference={{
+              label: applicationPortal.authority,
+              url: applicationPortal.url,
+            }}
+            items={guide.materials}
+          />
         </section>
 
         <div className="guide-application-grid">
           <section className="guide-section application-section" id="application" aria-labelledby="steps-title">
             <p className="section-kicker">02 · 提交申请</p>
             <h2 id="steps-title">按这个顺序走</h2>
+            <div className={`application-portal ${applicationPortal.kind}`}>
+              <span>{applicationPortal.isDirect ? "可从这里开始" : "官方起点 · 非商业代办"}</span>
+              <h3>{applicationPortal.title}</h3>
+              <p>{applicationPortal.note}</p>
+              <a href={applicationPortal.url} rel="noreferrer" target="_blank">
+                {applicationPortal.actionLabel}
+                <ArrowUpRight aria-hidden="true" size={17} />
+              </a>
+              <small>
+                {applicationPortal.authority} · 核验于 {applicationPortal.verifiedAt}
+              </small>
+            </div>
             <ol className="action-steps">
-              {guide.steps.map((step, index) => (
-                <li key={step.title}>
-                  <span className="step-number">{String(index + 1).padStart(2, "0")}</span>
-                  <div>
-                    <h3>{step.title}</h3>
-                    <p>{step.detail}</p>
-                    {step.action ? (
-                      <a href={step.action.url} rel="noreferrer" target="_blank">
-                        {step.action.label}
-                        <ArrowUpRight aria-hidden="true" size={16} />
-                      </a>
-                    ) : null}
-                  </div>
-                </li>
-              ))}
+              {guide.steps.map((step, index) => {
+                const action = index === 0
+                  ? { label: applicationPortal.actionLabel, url: applicationPortal.url }
+                  : step.action;
+
+                return (
+                  <li key={step.title}>
+                    <span className="step-number">{String(index + 1).padStart(2, "0")}</span>
+                    <div>
+                      <h3>{step.title}</h3>
+                      <p>{step.detail}</p>
+                      {action ? (
+                        <a href={action.url} rel="noreferrer" target="_blank">
+                          {action.label}
+                          <ArrowUpRight aria-hidden="true" size={16} />
+                        </a>
+                      ) : null}
+                    </div>
+                  </li>
+                );
+              })}
             </ol>
           </section>
 
@@ -390,7 +432,7 @@ export default async function CountryPage({
             <p className="source-intro">官方规则、资料基线与临行核验分别标注。付款前打开对应入口再确认一次。</p>
           </div>
           <div className="source-list">
-            {guide.sources.map((source) => (
+            {sourceEntries.map((source) => (
               <a href={source.url} key={source.url} rel="noreferrer" target="_blank">
                 <span># {source.tag ?? "官方来源"}</span>
                 <strong>{source.title}</strong>
