@@ -6,8 +6,10 @@
     "dev": "next dev",
     "data:visa": "node scripts/generate-visa-baseline.mjs",
     "data:consular": "node scripts/generate-consular-locations.mjs",
+    "data:passport": "node scripts/generate-passport-offices.mjs",
     "verify:visa-data": "node scripts/verify-visa-coverage.mjs",
     "verify:consular-data": "node scripts/verify-consular-coverage.mjs",
+    "verify:passport-data": "node scripts/verify-passport-coverage.mjs",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"
