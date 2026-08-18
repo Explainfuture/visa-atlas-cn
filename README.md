@@ -2,7 +2,7 @@
 
 面向中国旅行者的出境准备知识库。没有护照的新手可以先按省份和城市查询首次申领材料与办理窗口；已有护照的旅行者可以从世界地图、七大洲目录或搜索入口选择目的地，查看签证结论、材料清单、申请步骤、费用账单、注意事项与信息来源。
 
-**在线访问：[visa-atlas-cn.vercel.app](https://visa-atlas-cn.vercel.app)**
+**在线访问：[visa.explainsf.com](https://visa.explainsf.com)**
 
 > 当前数据快照：2026 年 8 月 18 日。签证与边检规则可能随时变化，付款或出发前请再次打开攻略中的官方入口核验。
 
@@ -32,7 +32,7 @@
 
 ## 第一次办护照
 
-访问 [/passport](https://visa-atlas-cn.vercel.app/passport) 可查看从零开始的普通护照攻略：
+访问 [/passport](https://visa.explainsf.com/passport) 可查看从零开始的普通护照攻略：
 
 - 护照是什么、为什么需要，以及护照与签证、港澳台通行证的区别
 - 普通成年人基础材料，以及未满 16 周岁、登记备案人员和现役军人的额外材料
