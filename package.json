@@ -15,6 +15,7 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@radix-ui/react-select": "^2.3.7",
     "countries-list": "^3.4.1",
     "flag-icons": "^7.5.0",
     "lucide-react": "^1.31.0",

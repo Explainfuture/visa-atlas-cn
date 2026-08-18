@@ -2142,22 +2142,145 @@ a.consular-detail:hover strong {
   font-weight: 750;
 }
 
-.passport-picker-field select {
+.passport-select-trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
   width: 100%;
   min-height: 56px;
-  padding: 0 46px 0 17px;
+  padding: 0 10px 0 18px;
   border: 1px solid var(--sky-line);
   border-radius: 14px;
   background: var(--white);
+  box-shadow: 0 1px 0 rgb(255 255 255 / 76%) inset;
   color: var(--ink);
   font: inherit;
   font-size: 17px;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 160ms ease, box-shadow 160ms ease,
+    transform 160ms ease;
 }
 
-.passport-picker-field select:disabled {
+.passport-select-trigger:hover:not([data-disabled]) {
+  border-color: color-mix(in srgb, var(--rose-deep) 52%, var(--sky-line));
+  box-shadow: 0 8px 24px rgb(35 73 94 / 8%),
+    0 1px 0 rgb(255 255 255 / 76%) inset;
+}
+
+.passport-select-trigger[data-state="open"] {
+  border-color: var(--rose-deep);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--rose) 20%, transparent),
+    0 10px 28px rgb(35 73 94 / 10%);
+}
+
+.passport-select-trigger[data-placeholder] {
+  color: var(--sky-muted);
+}
+
+.passport-select-trigger[data-disabled] {
   cursor: not-allowed;
   color: var(--sky-muted);
   background: color-mix(in srgb, var(--white) 68%, var(--sky-deep));
+}
+
+.passport-select-icon {
+  display: grid;
+  width: 36px;
+  height: 36px;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--sky-deep) 72%, white);
+  color: var(--sky-ink);
+  transition: background 160ms ease, color 160ms ease, transform 160ms ease;
+}
+
+.passport-select-trigger[data-state="open"] .passport-select-icon {
+  background: var(--rose-deep);
+  color: white;
+  transform: rotate(180deg);
+}
+
+.passport-select-trigger[data-disabled] .passport-select-icon {
+  opacity: 0.55;
+}
+
+.passport-select-content {
+  z-index: 300;
+  width: var(--radix-select-trigger-width);
+  max-height: min(360px, var(--radix-select-content-available-height));
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--rose-deep) 30%, var(--sky-line));
+  border-radius: 16px;
+  background: color-mix(in srgb, var(--white) 96%, var(--paper));
+  box-shadow: 0 24px 70px rgb(38 29 33 / 18%),
+    0 0 0 1px rgb(255 255 255 / 88%) inset;
+}
+
+.passport-select-viewport {
+  padding: 8px;
+}
+
+.passport-select-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 46px;
+  padding: 0 42px 0 44px;
+  border-radius: 10px;
+  color: var(--ink);
+  font-size: 16px;
+  line-height: 1.35;
+  cursor: pointer;
+  user-select: none;
+}
+
+.passport-select-item[data-highlighted] {
+  outline: none;
+  background: color-mix(in srgb, var(--sky-deep) 65%, white);
+  color: var(--sky-ink);
+}
+
+.passport-select-item[data-state="checked"] {
+  background: color-mix(in srgb, var(--blush) 48%, white);
+  color: var(--rose-deep);
+  font-weight: 750;
+}
+
+.passport-select-item[data-highlighted][data-state="checked"] {
+  background: color-mix(in srgb, var(--blush) 72%, white);
+}
+
+.passport-select-item-mark {
+  position: absolute;
+  left: 10px;
+  display: grid;
+  width: 25px;
+  height: 25px;
+  place-items: center;
+  border: 1px solid color-mix(in srgb, var(--sky-line) 70%, white);
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--sky) 72%, white);
+  color: transparent;
+}
+
+.passport-select-item[data-state="checked"] .passport-select-item-mark {
+  border-color: var(--rose-deep);
+  background: var(--rose-deep);
+  color: white;
+  box-shadow: 0 4px 12px rgb(169 56 92 / 20%);
+}
+
+.passport-select-scroll-button {
+  display: flex;
+  height: 32px;
+  align-items: center;
+  justify-content: center;
+  background: color-mix(in srgb, var(--white) 92%, var(--sky));
+  color: var(--sky-muted);
+  cursor: default;
 }
 
 .passport-picker-arrow {
@@ -2167,7 +2290,7 @@ a.consular-detail:hover strong {
   color: var(--sky-muted);
 }
 
-.passport-picker button {
+.passport-picker-submit {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -2185,12 +2308,12 @@ a.consular-detail:hover strong {
   transition: background 160ms ease, transform 160ms ease;
 }
 
-.passport-picker button:hover:not(:disabled) {
+.passport-picker-submit:hover:not(:disabled) {
   background: var(--rose-deep);
   transform: translateY(-2px);
 }
 
-.passport-picker button:disabled {
+.passport-picker-submit:disabled {
   cursor: not-allowed;
   opacity: 0.52;
 }
@@ -2653,7 +2776,7 @@ a.consular-detail:hover strong {
     grid-template-columns: 1fr 28px 1fr;
   }
 
-  .passport-picker button {
+  .passport-picker-submit {
     grid-column: 1 / -1;
   }
 
@@ -2778,7 +2901,7 @@ a.consular-detail:hover strong {
     display: none;
   }
 
-  .passport-picker button {
+  .passport-picker-submit {
     grid-column: 1;
   }
 
