@@ -4,6 +4,7 @@ import {
   ArrowRight,
   BookOpen,
   Compass,
+  IdCard,
   ShieldCheck,
 } from "lucide-react";
 import { MapShell } from "@/components/map-shell";
@@ -78,6 +79,20 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </section>
+
+        <section className="passport-home-entry" aria-labelledby="passport-entry-title">
+          <div className="passport-home-number" aria-hidden="true">01</div>
+          <div>
+            <p className="section-kicker">还没有护照？从这里开始</p>
+            <h2 id="passport-entry-title">第一次办护照，不用自己到处查</h2>
+            <p>看懂护照有什么用、要带什么、交多少钱，再按省份和城市找到出入境办理窗口。</p>
+          </div>
+          <Link href="/passport">
+            <IdCard aria-hidden="true" size={22} />
+            打开新手攻略
+            <ArrowRight aria-hidden="true" size={19} />
+          </Link>
         </section>
 
         <section className="continent-section" id="continents" aria-labelledby="continents-title">

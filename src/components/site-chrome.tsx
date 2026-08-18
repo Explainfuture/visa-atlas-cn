@@ -15,10 +15,11 @@ export function SiteHeader() {
         <Link href="/#world-map">世界地图</Link>
         <Link href="/#continents">七大洲</Link>
         <Link href="/#featured-guides">签证攻略</Link>
+        <Link href="/passport">第一次办护照</Link>
       </nav>
 
-      <Link className="header-action" href="/#featured-guides">
-        开始探索
+      <Link className="header-action" href="/passport">
+        办护照
         <ArrowRight aria-hidden="true" size={17} strokeWidth={2.2} />
       </Link>
     </header>
