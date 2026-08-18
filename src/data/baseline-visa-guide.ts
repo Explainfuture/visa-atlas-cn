@@ -10,7 +10,22 @@ import type { ApplicationStep, MaterialItem, VisaGuide, VisaStatusTone } from "@
 const IATA_URL = "https://www.iatatravelcentre.com/";
 const MFA_URL = "https://cs.mfa.gov.cn/zggmcg/ljmdd/";
 const SCHENGEN_URL =
-  "https://home-affairs.ec.europa.eu/policies/schengen-borders-and-visa/visa-policy/applying-schengen-visa_en";
+  "https://home-affairs.ec.europa.eu/policies/schengen/visa-policy/applying-schengen-visa_en";
+const SCHENGEN_CHINA_CHECKLIST_URL =
+  "https://home-affairs.ec.europa.eu/document/download/99f6ef02-bd70-4c1e-bc35-b780bea8c9da_en";
+const SCHENGEN_VISA_CODE_URL =
+  "https://eur-lex.europa.eu/eli/reg/2009/810/2024-06-11/eng";
+const SCHENGEN_VERIFIED_AT = "2026-08-19";
+
+const schengenChinaChecklistReference = {
+  label: "欧盟 2024 在华材料清单",
+  url: SCHENGEN_CHINA_CHECKLIST_URL,
+};
+
+const schengenVisaCodeReference = {
+  label: "欧盟签证法典",
+  url: SCHENGEN_VISA_CODE_URL,
+};
 
 const schengenCodes = new Set([
   "at", "be", "bg", "hr", "cz", "dk", "ee", "fi", "fr", "de", "gr", "hu", "is", "it", "lv",
@@ -349,17 +364,61 @@ function createSchengenGuide(country: CountrySummary, entry: VisaBaselineEntry):
       { title: "验签后再锁定不可退项目", detail: "核对有效期、停留天数和入境次数；签证有效期不等于允许停留天数。" },
     ],
     materials: [
-      { title: "申请表、照片与护照", detail: "护照离开申根后通常仍需有效至少 3 个月，并有至少 2 页空白页。", kind: "必备" },
-      { title: "全程交通和住宿", detail: "包含每个申根国家的日期、城市、酒店与跨城交通，优先可取消订单。", kind: "必备" },
-      { title: "旅行医疗保险", detail: "最低保额 €30,000，覆盖全申根区域、全部日期和医疗遣返。", kind: "必备" },
-      { title: "近 3—6 个月银行流水", detail: "体现稳定收入与足够余额；避免递交前突然存入无法解释的大额资金。", kind: "必备" },
-      { title: "在职 / 在读 / 退休材料", detail: "说明职位、收入、准假与回国约束；自由职业者补业务与纳税材料。", kind: "必备" },
-      { title: "户口、关系与资助材料", detail: "未成年人、无业或由他人出资时补关系证明、同意书和资助人流水。", kind: "按情况" },
+      {
+        title: "申请表、照片与护照",
+        detail: "护照通常须在离开申根区后仍有效至少 3 个月、签发不超过 10 年，并留有至少 2 页空白页。",
+        kind: "必备",
+        reference: schengenVisaCodeReference,
+      },
+      {
+        title: "往返预订单、住宿与行程",
+        detail: "个人旅游必须提供往返预订单、全程住宿证明和旅行计划；机票不要求提前付款，优先选择可取消订单。",
+        kind: "必备",
+        reference: schengenChinaChecklistReference,
+      },
+      {
+        title: "旅行医疗保险",
+        detail: "普通旅游申请必须提交；最低保额 €30,000，覆盖整个申根区、全部行程日期、紧急医疗和遣返。",
+        kind: "必备",
+        reference: schengenVisaCodeReference,
+      },
+      {
+        title: "近 3 个月银行流水",
+        detail: "必须提交连续的个人活期流水；不要用存款证明替代，也避免递交前突然存入无法解释的大额资金。",
+        kind: "必备",
+        reference: schengenChinaChecklistReference,
+      },
+      {
+        title: "与本人身份对应的证明",
+        detail: "在职者交雇主信等，在读、退休、自由职业或无固定收入者提交与自己身份对应的那一组，不是每一组都交。",
+        kind: "按身份必备",
+        reference: schengenChinaChecklistReference,
+      },
+      {
+        title: "户口簿已使用页",
+        detail: "在中国申请申根短期签证时，这是欧盟统一材料清单列出的通用要求，无需翻译。",
+        kind: "必备",
+        reference: schengenChinaChecklistReference,
+      },
+      {
+        title: "未成年人关系与同意文件",
+        detail: "未满 18 岁、独自出行或只与一位家长同行时，按要求补亲属关系、监护和出行同意文件。",
+        kind: "按情况",
+        reference: schengenChinaChecklistReference,
+      },
+      {
+        title: "邀请、担保或资助材料",
+        detail: "探亲访友、由他人承担费用或无固定收入时，再补邀请、关系、资助人收入和担保文件。",
+        kind: "按情况",
+        reference: schengenChinaChecklistReference,
+      },
     ],
     notes: notesFor(country, entry),
-    verifiedAt: visaBaselineMetadata.generatedAt,
+    verifiedAt: SCHENGEN_VERIFIED_AT,
     sources: [
       { title: "申根签证申请规则与费用", authority: "欧盟委员会", url: SCHENGEN_URL, tag: "官方规则" },
+      { title: "在中国申请短期签证支持文件清单（2024）", authority: "欧盟委员会", url: SCHENGEN_CHINA_CHECKLIST_URL, tag: "材料清单" },
+      { title: "欧盟签证法典", authority: "EUR-Lex", url: SCHENGEN_VISA_CODE_URL, tag: "法律依据" },
       ...sourcesFor(country, entry),
     ],
   };

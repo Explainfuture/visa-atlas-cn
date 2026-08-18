@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@radix-ui/react-select": "^2.3.7",
+    "@radix-ui/react-tooltip": "^1.2.16",
     "countries-list": "^3.4.1",
     "flag-icons": "^7.5.0",
     "lucide-react": "^1.31.0",

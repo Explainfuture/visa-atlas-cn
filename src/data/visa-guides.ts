@@ -11,7 +11,7 @@ export type VisaStatusTone =
 export type MaterialItem = {
   title: string;
   detail: string;
-  kind: "必备" | "按情况" | "建议";
+  kind: "必备" | "按身份必备" | "按情况" | "建议";
   purpose?: string;
   reference?: {
     label: string;
@@ -61,6 +61,14 @@ export type VisaGuide = {
 };
 
 const verifiedAt = "2026-08-18";
+const schengenChinaChecklistReference = {
+  label: "欧盟 2024 在华材料清单",
+  url: "https://home-affairs.ec.europa.eu/document/download/99f6ef02-bd70-4c1e-bc35-b780bea8c9da_en",
+};
+const schengenVisaCodeReference = {
+  label: "欧盟签证法典",
+  url: "https://eur-lex.europa.eu/eli/reg/2009/810/2024-06-11/eng",
+};
 
 export const visaGuides: Record<string, VisaGuide> = {
   jp: {
@@ -239,19 +247,22 @@ export const visaGuides: Record<string, VisaGuide> = {
     materials: [
       { title: "护照与旧护照", detail: "护照签发不超过 10 年、计划离开申根后仍有效至少 3 个月，并留有空白页。", kind: "必备" },
       { title: "France-Visas 表格、回执与照片", detail: "签名和护照信息保持一致，照片使用符合 ICAO 标准的近期证件照。", kind: "必备" },
-      { title: "旅行医疗保险", detail: "覆盖全部申根国家和全部日期，医疗、急诊住院及遣返保额至少 €30,000。", kind: "必备" },
-      { title: "往返交通与逐日行程", detail: "交通、城市顺序和日期相互对应；未获签前优先选择可退改订单。", kind: "必备" },
-      { title: "全程住宿证明", detail: "酒店订单或邀请接待文件覆盖每一晚。", kind: "必备" },
-      { title: "银行流水与旅行预算", detail: "用稳定收入和账户余额说明能承担本次机酒与日常费用。", kind: "必备" },
-      { title: "在职 / 在读 / 退休材料", detail: "证明当前身份、准假安排和返回中国的约束力。", kind: "必备" },
+      { title: "旅行医疗保险", detail: "覆盖全部申根国家和全部日期，医疗、急诊住院及遣返保额至少 €30,000。", kind: "必备", reference: schengenVisaCodeReference },
+      { title: "往返交通与逐日行程", detail: "交通、城市顺序和日期相互对应；未获签前优先选择可退改订单。", kind: "必备", reference: schengenChinaChecklistReference },
+      { title: "全程住宿证明", detail: "酒店订单或邀请接待文件覆盖每一晚。", kind: "必备", reference: schengenChinaChecklistReference },
+      { title: "近 3 个月银行流水", detail: "提交连续的个人活期流水，用稳定收入和账户余额说明能承担本次机酒与日常费用。", kind: "必备", reference: schengenChinaChecklistReference },
+      { title: "与本人身份对应的证明", detail: "在职、在读、退休、自由职业或无固定收入者，只提交与自己身份对应的那一组材料。", kind: "按身份必备", reference: schengenChinaChecklistReference },
+      { title: "户口簿已使用页", detail: "在中国申请申根短期签证时，欧盟统一材料清单将户口簿已使用页列为通用要求。", kind: "必备", reference: schengenChinaChecklistReference },
       { title: "翻译件", detail: "France-Visas 清单要求翻译的中文材料应按规定提供法文或英文版本。", kind: "按情况" },
     ],
     notes: ["申请错国家是常见硬伤：按主要停留国判断，不是简单看哪国更容易出签。", "法国海外领地不一定适用申根签证，目的地是海外省或领地时重新走 Visa Wizard。"],
-    verifiedAt,
+    verifiedAt: "2026-08-19",
     sources: [
       { title: "在中国申请法国签证", authority: "France-Visas", url: "https://france-visas.gouv.fr/en/web/france-visas/chine" },
       { title: "法国签证费用表", authority: "France-Visas", url: "https://france-visas.gouv.fr/documents/d/france-visas/frais-de-visa-anglais" },
       { title: "旅行医疗保险要求", authority: "France-Visas", url: "https://www.france-visas.gouv.fr/en/faq" },
+      { title: "在中国申请短期签证支持文件清单（2024）", authority: "欧盟委员会", url: schengenChinaChecklistReference.url, tag: "材料清单" },
+      { title: "欧盟签证法典", authority: "EUR-Lex", url: schengenVisaCodeReference.url, tag: "法律依据" },
     ],
   },
   gb: {

@@ -18,6 +18,7 @@ import {
   WalletCards,
 } from "lucide-react";
 import { PreparationChecklist } from "@/components/preparation-checklist";
+import { SchengenVisaTooltip } from "@/components/schengen-visa-tooltip";
 import { SiteFooter, SiteHeader } from "@/components/site-chrome";
 import { getApplicationNetwork, type ApplicationNetwork } from "@/data/application-networks";
 import { getApplicationPortal } from "@/data/application-portals";
@@ -198,7 +199,14 @@ export default async function CountryPage({
           </div>
 
           <aside className="guide-status-card" aria-label="办理结论">
-            <span className={`visa-chip large ${guide.statusTone}`}>{guide.status}</span>
+            {guide.status.includes("申根") ? (
+              <SchengenVisaTooltip
+                className={`visa-chip large ${guide.statusTone}`}
+                label={guide.status}
+              />
+            ) : (
+              <span className={`visa-chip large ${guide.statusTone}`}>{guide.status}</span>
+            )}
             <strong>{guide.decision}</strong>
             <span className="guide-status-cost">
               <WalletCards aria-hidden="true" size={18} />
@@ -335,7 +343,7 @@ export default async function CountryPage({
               <p className="section-kicker">01 · 准备材料</p>
               <h2 id="materials-title">先把申请文件夹装满</h2>
             </div>
-            <p>点一下就能核对进度；“按情况”材料不要盲目堆，先看它是否与你的身份和旅行目的有关。</p>
+            <p>“必备”人人准备；“按身份必备”只交与你对应的一组；“按情况”命中条件才交。</p>
           </div>
           <PreparationChecklist
             countryName={country.name}
