@@ -3040,8 +3040,8 @@ a.consular-detail:hover strong {
 }
 
 .passport-steps li {
-  min-height: 300px;
-  padding: 30px 26px;
+  min-height: 252px;
+  padding: 28px 26px;
   border-right: 1px solid var(--line);
   background: var(--white);
 }
@@ -3058,7 +3058,7 @@ a.consular-detail:hover strong {
 }
 
 .passport-steps h3 {
-  margin: 74px 0 14px;
+  margin: 42px 0 12px;
   font-family: var(--font-display);
   font-size: 28px;
   font-weight: 500;
@@ -3386,7 +3386,7 @@ a.consular-detail:hover strong {
 
   .passport-steps li,
   .passport-steps li:nth-child(3) {
-    min-height: 220px;
+    min-height: 190px;
     border-right: 0;
     border-bottom: 1px solid var(--line);
   }
@@ -3396,7 +3396,7 @@ a.consular-detail:hover strong {
   }
 
   .passport-steps h3 {
-    margin-top: 46px;
+    margin-top: 30px;
   }
 
   .passport-time-fee {
