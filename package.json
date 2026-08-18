@@ -8,6 +8,7 @@
     "data:consular": "node scripts/generate-consular-locations.mjs",
     "data:passport": "node scripts/generate-passport-offices.mjs",
     "verify:visa-data": "node scripts/verify-visa-coverage.mjs",
+    "verify:application-portals": "node scripts/verify-application-portals.mjs",
     "verify:consular-data": "node scripts/verify-consular-coverage.mjs",
     "verify:passport-data": "node scripts/verify-passport-coverage.mjs",
     "build": "next build",

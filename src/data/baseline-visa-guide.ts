@@ -65,15 +65,6 @@ const baseBorderMaterials: MaterialItem[] = [
   { title: "旅行资金证明", detail: "准备银行卡、现金或近期流水，金额能够覆盖住宿、交通与日常开支。", kind: "建议" },
 ];
 
-const applicationMaterials: MaterialItem[] = [
-  { title: "护照资料页", detail: "彩色扫描，四角完整、无反光；护照有效期和空白页须满足目的地要求。", kind: "必备" },
-  { title: "签证照片", detail: "按官方尺寸、背景色和拍摄时间准备电子版或纸质版，不沿用不合规证件照。", kind: "必备" },
-  { title: "行程与住宿", detail: "提供往返计划、逐日行程、酒店订单；未获签前优先使用可取消预订。", kind: "必备" },
-  { title: "资金与在职 / 在读证明", detail: "近期银行流水、收入或资产、准假信；无业、退休或未成年人补充资助关系。", kind: "必备" },
-  { title: "旅行保险", detail: "按目的地要求购买；申根等地区会核对保额、承保区域和全程日期。", kind: "按情况" },
-  { title: "邀请与关系材料", detail: "探亲、访友或有人承担费用时，补邀请信、邀请人证件和关系证明。", kind: "按情况" },
-];
-
 function toneFor(kind: VisaBaselineKind): VisaStatusTone {
   if (kind === "visa-free") return "visa-free";
   if (kind === "conditional" || kind === "electronic-or-arrival") return "conditional";
@@ -207,7 +198,7 @@ function permitSteps(country: CountrySummary, restricted: boolean): ApplicationS
   ];
 }
 
-function materialsFor(entry: VisaBaselineEntry) {
+function materialsFor(country: CountrySummary, entry: VisaBaselineEntry) {
   if (entry.kind === "visa-free" || entry.kind === "conditional") {
     return [...baseBorderMaterials, ...extraMaterial(entry), { title: "入境申报与保险", detail: "按目的地填写电子到达卡；保险虽不总是强制，但应覆盖全程医疗和遣返。", kind: "按情况" as const }];
   }
@@ -220,7 +211,34 @@ function materialsFor(entry: VisaBaselineEntry) {
       { title: "途经国签证", detail: "访问许可不替代转机或登船国家的签证、ETA 和过境文件。", kind: "必备" as const },
     ];
   }
-  return [...applicationMaterials, ...extraMaterial(entry)];
+  if (entry.kind === "visa-on-arrival" || entry.kind === "electronic-or-arrival") {
+    return [
+      { title: "护照原件与资料页复印件", detail: `护照有效期须覆盖${country.name}要求；复印件用于口岸留档，原件用于现场贴签或盖章。`, kind: "必备" as const, purpose: "现场核对身份并签发入境许可" },
+      { title: "口岸申请表与证件照", detail: "提前下载或现场领取表格；照片尺寸、张数和背景色以官方口岸说明为准。", kind: "必备" as const, purpose: "建立落地签申请记录" },
+      { title: "返程票与首晚住宿", detail: "打印可核验的返程或下一程订单，以及首晚酒店地址和联系电话。", kind: "必备" as const },
+      { title: "现场签证费与备用支付方式", detail: "准备官方公布币种的现金，并携带可境外支付银行卡；拒绝没有收据的私人收费。", kind: "必备" as const, purpose: "在指定口岸完成政府收费" },
+      { title: "预登记或批准函", detail: "若官方提供在线预申请，打印带申请号或二维码的批准文件，截图不能替代可核验页面。", kind: "按情况" as const, purpose: "缩短口岸审查并证明已获预批准" },
+      ...extraMaterial(entry),
+    ];
+  }
+  if (entry.kind === "e-visa" || entry.kind === "eta") {
+    return [
+      { title: "护照资料页彩色文件", detail: `按${country.name}官方系统接受的格式上传，四角完整、无反光，姓名和证件号必须清晰。`, kind: "必备" as const, purpose: "让系统读取并绑定唯一护照" },
+      { title: "电子证件照", detail: "使用近期正面照片；尺寸、像素、背景和文件大小只按官方上传页面调整。", kind: "必备" as const, purpose: "用于电子签证或旅行授权的人像核验" },
+      { title: "可核验的行程与住宿文件", detail: "准备抵离日期、航班或交通、住宿地址；未获批前优先选择可取消订单。", kind: "必备" as const },
+      { title: "常用邮箱与在线支付工具", detail: "邮箱用于激活账户和接收决定；保存申请号、收费页和付款回执。", kind: "必备" as const, purpose: "完成账户验证、付款和结果接收" },
+      { title: "职业、资金或邀请附件", detail: "系统出现对应上传栏时再提交银行流水、工作/学籍、邀请或资助文件，不盲目上传隐私材料。", kind: "按情况" as const },
+      ...extraMaterial(entry),
+    ];
+  }
+  return [
+    { title: "护照原件、资料页与旧护照", detail: `原件用于${country.name}签证签发；按官方清单复印资料页，旧护照仅在需要说明旅行记录时提交。`, kind: "必备" as const, purpose: "核对身份、有效期与既往旅行记录" },
+    { title: "官方申请表与签证照片", detail: "从本页提供的官方入口下载或在线填写；签名、日期、姓名和护照号必须一致。", kind: "必备" as const, purpose: "形成可受理的正式申请" },
+    { title: "逐日行程、交通与住宿", detail: "把每天的城市、住宿和跨城交通放在同一张时间线上，避免订单互相矛盾。", kind: "必备" as const },
+    { title: "近 3—6 个月资金与身份材料", detail: "用连续流水解释收入与旅行费用；在职、在读、退休或自由职业材料应与流水来源对应。", kind: "必备" as const, purpose: "证明支付能力和按期回国的约束" },
+    { title: "保险、邀请与关系证明", detail: "申根保险、探亲邀请、资助或未成年人材料只在签证类型和个人情况要求时加入。", kind: "按情况" as const, purpose: "补充特定签证类别的责任与风险证明" },
+    ...extraMaterial(entry),
+  ];
 }
 
 function costsFor(entry: VisaBaselineEntry): VisaGuide["cost"] {
@@ -471,7 +489,7 @@ export function createBaselineVisaGuide(country: CountrySummary): VisaGuide {
         : `先确认“${localizeStay(entry.stay)}”覆盖你的完整行程，再按下方清单准备；涉及转机时，把转机地单独核验。`,
     cost: costsFor(entry),
     steps,
-    materials: materialsFor(entry),
+    materials: materialsFor(country, entry),
     notes: notesFor(country, entry),
     verifiedAt: visaBaselineMetadata.generatedAt,
     sources: sourcesFor(country, entry),

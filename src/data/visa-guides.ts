@@ -12,6 +12,11 @@ export type MaterialItem = {
   title: string;
   detail: string;
   kind: "必备" | "按情况" | "建议";
+  purpose?: string;
+  reference?: {
+    label: string;
+    url: string;
+  };
 };
 
 export type ApplicationStep = {
