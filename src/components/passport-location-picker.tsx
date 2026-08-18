@@ -1,15 +1,9 @@
 "use client";
 
-import { FormEvent, useMemo, useState, useTransition } from "react";
+import { useMemo, useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
 import * as Select from "@radix-ui/react-select";
-import {
-  ArrowRight,
-  Check,
-  ChevronDown,
-  ChevronUp,
-  MapPin,
-} from "lucide-react";
+import { ArrowRight, Check, ChevronDown, ChevronUp } from "lucide-react";
 import type { PassportProvince } from "@/data/passport-offices";
 
 type PassportLocationPickerProps = {
@@ -113,14 +107,13 @@ export function PassportLocationPicker({
     [provinceId, provinces],
   );
 
-  function openCityGuide(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    if (!cityId) return;
-    startTransition(() => router.push(`/passport/${cityId}#city-guide`));
+  function selectCity(value: string) {
+    setCityId(value);
+    startTransition(() => router.push(`/passport/${value}#city-guide`));
   }
 
   return (
-    <form className="passport-picker" onSubmit={openCityGuide}>
+    <div aria-busy={isPending} className="passport-picker">
       <div className="passport-picker-field">
         <label htmlFor="passport-province" id="passport-province-label">
           我在哪个省份
@@ -147,24 +140,19 @@ export function PassportLocationPicker({
           再选择城市
         </label>
         <PassportSelect
-          disabled={!provinceId}
+          disabled={!provinceId || isPending}
           id="passport-city"
           labelId="passport-city-label"
-          onValueChange={setCityId}
+          onValueChange={selectCity}
           options={cities}
           placeholder={provinceId ? "选择城市" : "请先选择省份"}
           value={cityId}
         />
       </div>
 
-      <button
-        className="passport-picker-submit"
-        disabled={!cityId || isPending}
-        type="submit"
-      >
-        <MapPin aria-hidden="true" size={19} />
-        {isPending ? "正在生成…" : "生成城市攻略"}
-      </button>
-    </form>
+      <span aria-live="polite" className="sr-only">
+        {isPending ? "正在显示城市攻略" : ""}
+      </span>
+    </div>
   );
 }

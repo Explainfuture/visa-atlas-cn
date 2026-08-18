@@ -157,9 +157,10 @@ export function PassportGuide({ cityId }: { cityId?: string }) {
           <div className="passport-city-intro">
             <p className="section-kicker">全国办理地点</p>
             <h2 id="choose-city-title">你在哪座城市办理？</h2>
-            <p>先选省份，再选城市。页面会从国家移民管理局办事机构目录中，生成可联系的出入境窗口。</p>
+            <p>先选省份，再选城市。选好城市后，页面会立即显示国家移民管理局目录中的可联系出入境窗口。</p>
           </div>
           <PassportLocationPicker
+            key={location?.city.id ?? "passport-location-picker"}
             provinces={passportRegions}
             selectedCityId={location?.city.id}
             selectedProvinceId={location?.province.id}
@@ -170,7 +171,7 @@ export function PassportGuide({ cityId }: { cityId?: string }) {
               <>
                 <div className="passport-city-result-heading">
                   <div>
-                    <p className="section-kicker">你的城市攻略已生成</p>
+                    <p className="section-kicker">当前办理城市</p>
                     <h2>{location.province.name} · {location.city.name}</h2>
                     <p>
                       首次申领应由本人前往公安机关出入境管理窗口。<strong>出发前先电话确认预约方式、护照首办业务和当天办公时间。</strong>
