@@ -2544,6 +2544,7 @@ a.consular-detail:hover strong {
 }
 
 .passport-picker {
+  position: relative;
   display: grid;
   grid-template-columns: minmax(210px, 1fr) 34px minmax(210px, 1fr);
   align-items: end;
@@ -2553,6 +2554,29 @@ a.consular-detail:hover strong {
   border: 1px solid var(--sky-line);
   border-radius: 26px;
   background: var(--sky-deep);
+  overflow: hidden;
+}
+
+.passport-picker[aria-busy="true"]::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 34%;
+  height: 3px;
+  border-radius: 999px;
+  background: var(--rose-deep);
+  content: "";
+  animation: passport-route-progress 900ms ease-in-out infinite;
+}
+
+@keyframes passport-route-progress {
+  from {
+    transform: translateX(-110%);
+  }
+
+  to {
+    transform: translateX(330%);
+  }
 }
 
 .passport-picker-field {
@@ -2838,18 +2862,57 @@ a.consular-detail:hover strong {
   margin-top: 18px;
 }
 
+.passport-extra-offices[open] {
+  display: flex;
+  flex-direction: column;
+}
+
 .passport-extra-offices summary {
+  display: flex;
   width: max-content;
+  align-items: center;
+  justify-content: center;
   margin: 0 auto;
   padding: 15px 22px;
   border: 1px solid var(--line);
   border-radius: 999px;
   font-weight: 700;
+  list-style: none;
   cursor: pointer;
 }
 
+.passport-extra-offices summary::-webkit-details-marker {
+  display: none;
+}
+
+.passport-extra-offices summary > span {
+  align-items: center;
+  gap: 7px;
+}
+
+.passport-extra-open-label {
+  display: flex;
+}
+
+.passport-extra-close-label {
+  display: none;
+}
+
 .passport-extra-offices[open] summary {
-  margin-bottom: 18px;
+  order: 2;
+  margin: 18px auto 0;
+}
+
+.passport-extra-offices[open] .passport-office-grid {
+  order: 1;
+}
+
+.passport-extra-offices[open] .passport-extra-open-label {
+  display: none;
+}
+
+.passport-extra-offices[open] .passport-extra-close-label {
+  display: flex;
 }
 
 .passport-official-directory {
@@ -3828,6 +3891,8 @@ a.consular-detail:hover strong {
   *,
   *::before,
   *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
   }

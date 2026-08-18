@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState, useTransition } from "react";
+import { useMemo, useRef, useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
 import * as Select from "@radix-ui/react-select";
 import { ArrowRight, Check, ChevronDown, ChevronUp } from "lucide-react";
@@ -21,6 +21,8 @@ type PassportSelectProps = {
   disabled?: boolean;
   id: string;
   labelId: string;
+  onOpenChange?: (open: boolean) => void;
+  onOptionIntent?: (value: string) => void;
   onValueChange: (value: string) => void;
   options: PassportSelectOption[];
   placeholder: string;
@@ -31,6 +33,8 @@ function PassportSelect({
   disabled = false,
   id,
   labelId,
+  onOpenChange,
+  onOptionIntent,
   onValueChange,
   options,
   placeholder,
@@ -39,6 +43,7 @@ function PassportSelect({
   return (
     <Select.Root
       disabled={disabled}
+      onOpenChange={onOpenChange}
       onValueChange={onValueChange}
       value={value}
     >
@@ -71,6 +76,8 @@ function PassportSelect({
               <Select.Item
                 className="passport-select-item"
                 key={option.id}
+                onFocus={() => onOptionIntent?.(option.id)}
+                onPointerEnter={() => onOptionIntent?.(option.id)}
                 value={option.id}
               >
                 <span aria-hidden="true" className="passport-select-item-mark">
@@ -98,6 +105,7 @@ export function PassportLocationPicker({
   selectedCityId = "",
 }: PassportLocationPickerProps) {
   const router = useRouter();
+  const prefetchedCityRoutes = useRef(new Set<string>());
   const [provinceId, setProvinceId] = useState(selectedProvinceId);
   const [cityId, setCityId] = useState(selectedCityId);
   const [isPending, startTransition] = useTransition();
@@ -107,7 +115,27 @@ export function PassportLocationPicker({
     [provinceId, provinces],
   );
 
+  function prefetchCity(value: string) {
+    const href = `/passport/${value}`;
+    if (prefetchedCityRoutes.current.has(href)) return;
+
+    prefetchedCityRoutes.current.add(href);
+    router.prefetch(href);
+  }
+
+  function prefetchVisibleCities(options: PassportSelectOption[]) {
+    options.slice(0, 10).forEach((option) => prefetchCity(option.id));
+  }
+
+  function selectProvince(value: string) {
+    const nextCities = provinces.find((province) => province.id === value)?.cities ?? [];
+    setProvinceId(value);
+    setCityId("");
+    prefetchVisibleCities(nextCities);
+  }
+
   function selectCity(value: string) {
+    prefetchCity(value);
     setCityId(value);
     startTransition(() => router.push(`/passport/${value}#city-guide`));
   }
@@ -124,10 +152,7 @@ export function PassportLocationPicker({
           options={provinces}
           placeholder="选择省份"
           value={provinceId}
-          onValueChange={(value) => {
-            setProvinceId(value);
-            setCityId("");
-          }}
+          onValueChange={selectProvince}
         />
       </div>
 
@@ -143,6 +168,10 @@ export function PassportLocationPicker({
           disabled={!provinceId || isPending}
           id="passport-city"
           labelId="passport-city-label"
+          onOpenChange={(open) => {
+            if (open) prefetchVisibleCities(cities);
+          }}
+          onOptionIntent={prefetchCity}
           onValueChange={selectCity}
           options={cities}
           placeholder={provinceId ? "选择城市" : "请先选择省份"}

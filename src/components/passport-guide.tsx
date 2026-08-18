@@ -5,6 +5,8 @@ import {
   BookOpen,
   CalendarCheck,
   Camera,
+  ChevronDown,
+  ChevronUp,
   Clock3,
   FileCheck2,
   Fingerprint,
@@ -205,7 +207,16 @@ export function PassportGuide({ cityId }: { cityId?: string }) {
 
                 {extraOffices.length ? (
                   <details className="passport-extra-offices">
-                    <summary>展开另外 {extraOffices.length} 个窗口</summary>
+                    <summary>
+                      <span className="passport-extra-open-label">
+                        <ChevronDown aria-hidden="true" size={18} />
+                        展开另外 {extraOffices.length} 个窗口
+                      </span>
+                      <span className="passport-extra-close-label">
+                        <ChevronUp aria-hidden="true" size={18} />
+                        收起另外 {extraOffices.length} 个窗口
+                      </span>
+                    </summary>
                     <div className="passport-office-grid">
                       {extraOffices.map((office) => <OfficeCard key={office.id} office={office} />)}
                     </div>
