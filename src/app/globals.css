@@ -1296,6 +1296,205 @@ a.consular-detail:hover strong {
   line-height: 1.5;
 }
 
+.application-network {
+  display: grid;
+  gap: 26px;
+  min-width: 0;
+  padding: clamp(28px, 4vw, 46px);
+  border: 1px solid var(--line);
+  border-radius: 34px 12px 34px 12px;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.96), rgba(255, 247, 249, 0.92));
+  box-shadow: 0 24px 58px rgba(75, 40, 52, 0.08);
+}
+
+.application-network-summary {
+  margin: -7px 0 0;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.application-network-steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--line);
+  list-style: none;
+}
+
+.application-network-steps li {
+  display: grid;
+  align-content: start;
+  gap: 13px;
+  min-height: 166px;
+  padding: 20px;
+  background: var(--white);
+}
+
+.application-network-steps span {
+  width: max-content;
+  color: var(--rose-deep);
+  font-size: 12px;
+  font-weight: 850;
+  letter-spacing: 0.12em;
+}
+
+.application-network-steps p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 650;
+  line-height: 1.65;
+}
+
+.application-network-advice {
+  display: grid;
+  gap: 8px;
+  padding: 20px 22px;
+  border-left: 4px solid var(--rose);
+  background: var(--sky);
+}
+
+.application-network-advice strong {
+  font-size: 16px;
+}
+
+.application-network-advice p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+.application-group-list {
+  display: grid;
+  gap: 16px;
+}
+
+.application-group {
+  display: grid;
+  gap: 18px;
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 20px 7px 20px 7px;
+  background: rgba(255, 255, 255, 0.78);
+}
+
+.application-group-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.application-group-heading h4 {
+  margin: 0;
+  font-size: 19px;
+}
+
+.application-group-heading p {
+  margin: 7px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.application-group-heading a {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 5px;
+  color: var(--rose-deep);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.application-group-heading a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.application-city-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.application-city-list span {
+  padding: 7px 11px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--paper-deep);
+  font-size: 13px;
+  font-weight: 750;
+}
+
+.application-center-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  padding-top: 2px;
+}
+
+.application-center-list article {
+  display: grid;
+  align-content: start;
+  gap: 10px;
+  min-width: 0;
+  padding: 16px;
+  border: 1px solid var(--sky-line);
+  border-radius: 14px;
+  background: var(--sky);
+}
+
+.application-center-list h5 {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin: 0;
+  color: var(--ink);
+  font-size: 15px;
+}
+
+.application-center-list h5 svg {
+  color: var(--rose-deep);
+}
+
+.application-center-list p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.application-center-list article > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 12px;
+}
+
+.application-center-list a {
+  overflow-wrap: anywhere;
+  color: var(--rose-deep);
+  font-size: 12px;
+  font-weight: 750;
+}
+
+.application-center-list a:hover {
+  text-decoration: underline;
+}
+
+.application-network > small {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
 .guide-workbench-heading > p,
 .source-intro {
   margin: 0;
@@ -3247,6 +3446,14 @@ a.consular-detail:hover strong {
     position: static;
   }
 
+  .application-network-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .application-network-steps li {
+    min-height: 0;
+  }
+
   .guide-workbench-heading {
     grid-template-columns: 1fr;
     gap: 20px;
@@ -3380,6 +3587,20 @@ a.consular-detail:hover strong {
 
   .consular-card {
     padding: 25px 21px;
+  }
+
+  .application-network {
+    padding: 25px 21px;
+  }
+
+  .application-group-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .application-center-list {
+    grid-template-columns: 1fr;
   }
 
   .consular-contact-grid {

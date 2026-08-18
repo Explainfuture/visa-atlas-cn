@@ -19,6 +19,7 @@ import {
 } from "lucide-react";
 import { PreparationChecklist } from "@/components/preparation-checklist";
 import { SiteFooter, SiteHeader } from "@/components/site-chrome";
+import { getApplicationNetwork, type ApplicationNetwork } from "@/data/application-networks";
 import { consularKindLabels, getConsularLocation } from "@/data/consular-locations";
 import { getCountry, worldCountries } from "@/data/world-countries";
 import { getVisaGuide } from "@/data/visa-guides";
@@ -34,6 +35,76 @@ function ImportantText({ text }: { text: string }) {
         importantTextCheck.test(part) ? <strong key={`${part}-${index}`}>{part}</strong> : part,
       )}
     </>
+  );
+}
+
+function ApplicationNetworkCard({ network }: { network: ApplicationNetwork }) {
+  return (
+    <article className="application-network">
+      <span className="consular-kind">{network.badge}</span>
+      <div className="consular-office">
+        <MapPinned aria-hidden="true" size={24} />
+        <h3>{network.title}</h3>
+      </div>
+      <p className="application-network-summary">{network.summary}</p>
+
+      <ol className="application-network-steps" aria-label="选择递交地点的步骤">
+        {network.steps.map((step, index) => (
+          <li key={step}>
+            <span>{String(index + 1).padStart(2, "0")}</span>
+            <p>{step}</p>
+          </li>
+        ))}
+      </ol>
+
+      <div className="application-network-advice">
+        <strong>怎么找才不踩广告</strong>
+        <p>{network.practicalAdvice}</p>
+      </div>
+
+      <div className="application-group-list">
+        {network.groups.map((group) => (
+          <section className="application-group" key={group.title}>
+            <div className="application-group-heading">
+              <div>
+                <h4>{group.title}</h4>
+                <p>{group.scope}</p>
+              </div>
+              <a href={group.sourceUrl} rel="noreferrer" target="_blank">
+                {group.sourceLabel}
+                <ArrowUpRight aria-hidden="true" size={16} />
+              </a>
+            </div>
+
+            <div className="application-city-list" aria-label={`${group.title}可联系城市`}>
+              {group.cities.map((city) => (
+                <span key={city}>{city}</span>
+              ))}
+            </div>
+
+            {group.centers?.length ? (
+              <div className="application-center-list">
+                {group.centers.map((center) => (
+                  <article key={`${group.title}-${center.city}`}>
+                    <h5>
+                      <MapPin aria-hidden="true" size={17} />
+                      {center.city}受理点
+                    </h5>
+                    {center.address ? <p>{center.address}</p> : null}
+                    <div>
+                      {center.phone ? <a href={`tel:${center.phone}`}>{center.phone}</a> : null}
+                      {center.email ? <a href={`mailto:${center.email}`}>{center.email}</a> : null}
+                    </div>
+                  </article>
+                ))}
+              </div>
+            ) : null}
+          </section>
+        ))}
+      </div>
+
+      <small>来源：{network.sourceAuthority} · 核验于 {network.verifiedAt}</small>
+    </article>
   );
 }
 
@@ -74,6 +145,7 @@ export default async function CountryPage({
 
   const guide = getVisaGuide(country);
   const consularLocation = getConsularLocation(country.code);
+  const applicationNetwork = getApplicationNetwork(country.code);
   const verifiedDate = new Intl.DateTimeFormat("zh-CN", {
     dateStyle: "long",
     timeZone: "UTC",
@@ -169,6 +241,9 @@ export default async function CountryPage({
             </div>
           </div>
 
+          {applicationNetwork ? (
+            <ApplicationNetworkCard network={applicationNetwork} />
+          ) : (
           <article className={`consular-card ${consularLocation.kind}`}>
             <span className="consular-kind">{consularKindLabels[consularLocation.kind]}</span>
             <div className="consular-office">
@@ -234,6 +309,7 @@ export default async function CountryPage({
             </div>
             <small>来源：{consularLocation.sourceAuthority} · 核验于 {consularLocation.verifiedAt}</small>
           </article>
+          )}
         </section>
 
         <section className="guide-workbench" id="materials" aria-labelledby="materials-title">

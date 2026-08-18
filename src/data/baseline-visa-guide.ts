@@ -18,6 +18,20 @@ const schengenCodes = new Set([
 ]);
 
 const specialSources: Partial<Record<string, VisaGuide["sources"]>> = {
+  es: [
+    {
+      title: "西班牙签证申请递交地点",
+      authority: "西班牙外交、欧盟与合作部驻华领事机构",
+      url: "https://www.exteriores.gob.es/Consulados/pekin/es/ServiciosConsulares/Paginas/index.aspx?scca=Visados&scco=China&scd=225&scs=Lugar+de+presentaci%C3%B3n+de+solicitudes+de+visado",
+      tag: "办理地点",
+    },
+    {
+      title: "BLS 中国签证申请中心",
+      authority: "西班牙驻华领事机构指定服务商",
+      url: "https://web.blscn.cn/",
+      tag: "预约入口",
+    },
+  ],
   hk: [
     {
       title: "往来港澳通行证和签注签发服务指南",

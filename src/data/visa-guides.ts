@@ -63,11 +63,11 @@ export const visaGuides: Record<string, VisaGuide> = {
     status: "需提前办签",
     statusTone: "visa-required",
     stay: "个人旅游通常获 15 天或 30 天",
-    method: "指定旅行社或代办机构递交",
+    method: "按常住地选择领区，再向使领馆指定旅行社递交",
     leadTime: "至少提前 3—4 周开始",
     overview:
       "持中国大陆普通护照赴日个人旅游，需要先办短期旅游签证。中国境内申请不能直接把材料交给使领馆，应先按居住地找到有送签资格的旅行社或代办机构。",
-    decision: "先选领区和代办机构，再按它给出的版本准备材料；不要先买不可退机票。",
+    decision: "先按常住地选领区，再到该使领馆官网核对指定旅行社公司全称；不要只凭淘宝、飞猪或地图搜索排名付款。",
     cost: {
       summary: "¥715 起 + 代办费",
       items: [
@@ -84,8 +84,9 @@ export const visaGuides: Record<string, VisaGuide> = {
         action: { label: "查看日本驻华申请说明", url: "https://www.cn.emb-japan.go.jp/consular/visa_dantai.htm" },
       },
       {
-        title: "向指定机构要最新版清单",
-        detail: "同一签证在不同领区、不同职业状态下会追加材料。先拿书面清单和完整报价，再开始开证明。",
+        title: "从官方名单选择指定旅行社",
+        detail: "淘宝、飞猪和线下门店都可以用来比价，但先索要营业执照公司全称，与所属领区官方名单逐字核对，再要书面材料清单和含税总价。",
+        action: { label: "查看使馆指定旅行社名单", url: "https://www.cn.emb-japan.go.jp/itpr_zh/visa_dantai_daili.html" },
       },
       {
         title: "交材料并核对电子签",
@@ -106,6 +107,7 @@ export const visaGuides: Record<string, VisaGuide> = {
       "旅行社说的“简化材料”不代表使领馆放弃审查，仍可能要求补件或面谈。",
       "一次签证有效期通常为 3 个月，停留 15 天或 30 天；以最终签发内容为准。",
       "个人旅游、探亲访友和商务不是同一种材料路径，不要混用邀请函或行程目的。",
+      "所谓‘旗舰店’、销量和搜索排名不代表有送签资格；付款前必须用公司全称核对所属领区官方名单。",
     ],
     verifiedAt,
     sources: [
