@@ -402,42 +402,6 @@ h3 {
   stroke-width: 1.5px;
 }
 
-.map-selection {
-  position: absolute;
-  z-index: 2;
-  right: 2px;
-  bottom: 18px;
-  display: grid;
-  min-width: 184px;
-  gap: 2px;
-  padding: 15px 18px;
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  background: rgba(255, 253, 253, 0.94);
-  box-shadow: 0 12px 30px rgba(74, 39, 50, 0.1);
-  backdrop-filter: blur(10px);
-}
-
-.map-selection span {
-  color: var(--rose-deep);
-  font-size: 11px;
-  font-weight: 750;
-  letter-spacing: 0.08em;
-}
-
-.map-selection strong {
-  font-family: var(--font-display);
-  font-size: 24px;
-}
-
-.map-selection a {
-  margin-top: 6px;
-  color: var(--muted);
-  font-size: 12px;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
 .map-loading {
   display: flex;
   min-height: 480px;
@@ -3550,12 +3514,6 @@ a.consular-detail:hover strong {
     min-height: 355px;
   }
 
-  .map-selection {
-    right: 0;
-    bottom: 0;
-    min-width: 160px;
-  }
-
   .map-folio::after {
     display: none;
   }
@@ -3795,10 +3753,6 @@ a.consular-detail:hover strong {
   .world-map-explorer,
   .map-loading {
     min-height: 305px;
-  }
-
-  .map-selection {
-    padding: 12px 14px;
   }
 
   .continent-card {

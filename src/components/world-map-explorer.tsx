@@ -1,7 +1,7 @@
 "use client";
 
 import { Minus, Plus, RotateCcw } from "lucide-react";
-import { useMemo, useState } from "react";
+import { useMemo } from "react";
 import { TransformComponent, TransformWrapper } from "react-zoom-pan-pinch";
 import WorldMap, {
   regions,
@@ -24,7 +24,6 @@ function getDestinationName(code: string, displayNames: Intl.DisplayNames) {
 }
 
 export function WorldMapExplorer({ availableCodes }: { availableCodes: string[] }) {
-  const [selectedCode, setSelectedCode] = useState("jp");
   const displayNames = useMemo(
     () => new Intl.DisplayNames(["zh-CN"], { type: "region" }),
     [],
@@ -45,21 +44,11 @@ export function WorldMapExplorer({ availableCodes }: { availableCodes: string[] 
     [availableCodes, displayNames],
   );
 
-  const selectedName = getDestinationName(selectedCode, displayNames);
-  const hasGuidePage = availableCodeSet.has(selectedCode);
-
   const styleCountry = (context: CountryContext<string>) => {
-    const code = context.countryCode.toLowerCase();
-
     return {
-      fill:
-        code === selectedCode
-          ? "#b94468"
-          : context.countryValue
-            ? "#e99bb3"
-            : "#eadde2",
+      fill: context.countryValue ? "#e99bb3" : "#eadde2",
       stroke: "#fff8fa",
-      strokeWidth: code === selectedCode ? 1.2 : 0.55,
+      strokeWidth: 0.55,
       cursor: context.countryValue ? "pointer" : "default",
       transition: "fill 180ms ease, filter 180ms ease, opacity 180ms ease",
     };
@@ -127,11 +116,6 @@ export function WorldMapExplorer({ availableCodes }: { availableCodes: string[] 
                         }
                       : undefined;
                   }}
-                  onClickFunction={({ countryCode }) => {
-                    const code = countryCode.toLowerCase();
-
-                    if (availableCodeSet.has(code)) setSelectedCode(code);
-                  }}
                   size="responsive"
                   styleFunction={styleCountry}
                   title="可交互的世界签证地图"
@@ -147,13 +131,6 @@ export function WorldMapExplorer({ availableCodes }: { availableCodes: string[] 
         </TransformWrapper>
       </div>
 
-      <div className="map-selection" aria-live="polite">
-        <span>{hasGuidePage ? "攻略已收录" : "地图已选中"}</span>
-        <strong>{selectedName}</strong>
-        <a href={hasGuidePage ? `/country/${selectedCode}` : "#continents"}>
-          {hasGuidePage ? "打开完整攻略" : "按地区继续找"}
-        </a>
-      </div>
     </div>
   );
 }
