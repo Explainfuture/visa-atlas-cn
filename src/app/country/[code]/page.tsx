@@ -20,9 +20,11 @@ import {
 import { PreparationChecklist } from "@/components/preparation-checklist";
 import { SchengenVisaTooltip } from "@/components/schengen-visa-tooltip";
 import { SiteFooter, SiteHeader } from "@/components/site-chrome";
+import { TravelDestinationIntro } from "@/components/travel-destination";
 import { getApplicationNetwork, type ApplicationNetwork } from "@/data/application-networks";
 import { getApplicationPortal } from "@/data/application-portals";
 import { consularKindLabels, getConsularLocation } from "@/data/consular-locations";
+import { getTravelDestination } from "@/data/travel-destinations";
 import { getCountry, worldCountries } from "@/data/world-countries";
 import { getVisaGuide } from "@/data/visa-guides";
 
@@ -125,13 +127,25 @@ export async function generateMetadata({
   if (!country) return {};
 
   const guide = getVisaGuide(country);
-  const description = `${country.name}旅游签证攻略：中国普通护照${guide.status}，预计${guide.cost.summary}。含材料清单、申请步骤、费用与官方来源。`;
+  const travel = getTravelDestination(country.code);
+  const mainImage = travel?.images[0];
+  const description = `${country.name}旅行与签证攻略：目的地介绍、代表性景点，以及中国普通护照${guide.status}的材料、申请步骤、费用与官方来源。`;
 
   return {
-    title: `${country.name}签证材料、申请与费用`,
+    title: `${country.name}旅行、景点与签证攻略`,
     description,
-    openGraph: { title: `${country.name}签证办理手册｜签证地图`, description, images: [] },
-    twitter: { title: `${country.name}签证办理手册｜签证地图`, description, images: [] },
+    openGraph: {
+      title: `${country.name}旅行与签证攻略｜签证地图`,
+      description,
+      images: mainImage
+        ? [{ alt: mainImage.alt, height: mainImage.height, url: mainImage.url, width: mainImage.width }]
+        : [],
+    },
+    twitter: {
+      title: `${country.name}旅行与签证攻略｜签证地图`,
+      description,
+      images: mainImage ? [mainImage.url] : [],
+    },
   };
 }
 
@@ -146,6 +160,8 @@ export default async function CountryPage({
   if (!country) notFound();
 
   const guide = getVisaGuide(country);
+  const travel = getTravelDestination(country.code);
+  if (!travel) notFound();
   const consularLocation = getConsularLocation(country.code);
   const applicationNetwork = getApplicationNetwork(country.code);
   const applicationPortal = getApplicationPortal(
@@ -185,16 +201,15 @@ export default async function CountryPage({
           <span>{country.name}</span>
         </nav>
 
-        <section className="guide-hero">
+        <TravelDestinationIntro country={country} destination={travel} />
+
+        <section className="guide-hero" id="visa" aria-labelledby="visa-title">
           <div>
             <p className="section-kicker">
               <MapPin aria-hidden="true" size={17} />
-              {country.continentName} · {country.englishName}
+              签证办理 · {country.continentName}
             </p>
-            <div className="guide-title-row">
-              <span className={`guide-flag fi fi-${country.code}`} aria-hidden="true" />
-              <h1>{country.name}</h1>
-            </div>
+            <h2 id="visa-title" className="guide-visa-title">去{country.name}，签证怎么办</h2>
             <p className="guide-overview">{guide.overview}</p>
           </div>
 
@@ -244,6 +259,8 @@ export default async function CountryPage({
 
         <nav className="guide-jumpbar" aria-label="攻略页内导航">
           <span>这页能解决</span>
+          <a href="#travel">看什么</a>
+          <a href="#passport">办护照</a>
           <a href="#locations">去哪里办理</a>
           <a href="#materials">准备什么</a>
           <a href="#application">怎么申请</a>
