@@ -7,10 +7,12 @@
     "data:visa": "node scripts/generate-visa-baseline.mjs",
     "data:consular": "node scripts/generate-consular-locations.mjs",
     "data:passport": "node scripts/generate-passport-offices.mjs",
+    "data:travel": "node scripts/generate-travel-destinations.mjs",
     "verify:visa-data": "node scripts/verify-visa-coverage.mjs",
     "verify:application-portals": "node scripts/verify-application-portals.mjs",
     "verify:consular-data": "node scripts/verify-consular-coverage.mjs",
     "verify:passport-data": "node scripts/verify-passport-coverage.mjs",
+    "verify:travel-data": "node scripts/verify-travel-coverage.mjs",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"
@@ -35,6 +37,7 @@
     "eslint": "^9",
     "eslint-config-next": "16.3.1",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "typescript": "^5",
+    "undici": "^7.29.0"
   }
 }

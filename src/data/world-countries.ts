@@ -50,7 +50,7 @@ const chineseCollator = new Intl.Collator("zh-CN");
 const destinationNameOverrides: Partial<
   Record<TCountryCode, { name: string; englishName: string; isTerritory?: boolean }>
 > = {
-  TW: { name: "中国台湾", englishName: "Taiwan, China", isTerritory: true },
+  TW: { name: "中国台湾", englishName: "Taiwan, China", isTerritory: false },
 };
 
 function toCountrySummary(country: ICountryData): CountrySummary {
