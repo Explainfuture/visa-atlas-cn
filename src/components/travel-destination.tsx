@@ -51,7 +51,7 @@ export function TravelDestinationIntro({ country, destination }: TravelDestinati
               <Image
                 alt={image.alt}
                 fill
-                loading={index === 0 ? undefined : "eager"}
+                loading={index === 0 ? undefined : "lazy"}
                 preload={index === 0}
                 sizes={
                   index === 0
@@ -59,7 +59,7 @@ export function TravelDestinationIntro({ country, destination }: TravelDestinati
                     : "(max-width: 760px) 46vw, (max-width: 1080px) 28vw, 310px"
                 }
                 src={image.url}
-                unoptimized
+                unoptimized={process.env.NODE_ENV === "development"}
               />
               <figcaption>
                 <strong>{image.caption}</strong>
