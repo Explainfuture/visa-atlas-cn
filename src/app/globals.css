@@ -699,6 +699,8 @@ h3 {
   min-width: 0;
   height: 340px;
   perspective: 1200px;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .popular-stack-stage:focus-visible {
@@ -737,6 +739,7 @@ h3 {
   color: var(--white);
   opacity: 1;
   pointer-events: auto;
+  touch-action: pan-x pinch-zoom;
   transform: translate3d(-50%, -50%, 0) scale(1) rotateX(0deg);
 }
 

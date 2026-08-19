@@ -21,6 +21,7 @@ export type PopularDestination = {
 
 const WHEEL_THRESHOLD = 20;
 const WHEEL_COOLDOWN = 260;
+const SWIPE_THRESHOLD = 36;
 const STACK_DEPTH = 3;
 
 function wrapIndex(index: number, length: number) {
@@ -38,6 +39,14 @@ export function PopularDestinationShowcase({ destinations }: {
 }) {
   const [activeIndex, setActiveIndex] = useState(0);
   const railRef = useRef<HTMLDivElement>(null);
+  const pointerGestureRef = useRef<{
+    handled: boolean;
+    pointerId: number;
+    startY: number;
+  } | null>(null);
+  const suppressClickRef = useRef(false);
+  const touchHandledRef = useRef(false);
+  const touchStartYRef = useRef<number | null>(null);
   const wheelAccumulatorRef = useRef(0);
   const wheelLockRef = useRef(0);
   const destinationCount = destinations.length;
@@ -70,8 +79,45 @@ export function PopularDestinationShowcase({ destinations }: {
       setActiveIndex((current) => wrapIndex(current + direction, destinationCount));
     }
 
+    function handleTouchStart(event: TouchEvent) {
+      if (event.touches.length !== 1) return;
+
+      suppressClickRef.current = false;
+      touchHandledRef.current = false;
+      touchStartYRef.current = event.touches[0].clientY;
+    }
+
+    function handleTouchMove(event: TouchEvent) {
+      const startY = touchStartYRef.current;
+      if (startY === null || touchHandledRef.current || event.touches.length !== 1) return;
+
+      const delta = startY - event.touches[0].clientY;
+      if (Math.abs(delta) < SWIPE_THRESHOLD) return;
+
+      if (event.cancelable) event.preventDefault();
+      touchHandledRef.current = true;
+      suppressClickRef.current = true;
+      setActiveIndex((current) => wrapIndex(current + (delta > 0 ? 1 : -1), destinationCount));
+    }
+
+    function handleTouchEnd() {
+      touchHandledRef.current = false;
+      touchStartYRef.current = null;
+    }
+
     rail.addEventListener("wheel", handleWheel, { passive: false });
-    return () => rail.removeEventListener("wheel", handleWheel);
+    rail.addEventListener("touchstart", handleTouchStart, { passive: true });
+    rail.addEventListener("touchmove", handleTouchMove, { passive: false });
+    rail.addEventListener("touchend", handleTouchEnd, { passive: true });
+    rail.addEventListener("touchcancel", handleTouchEnd, { passive: true });
+
+    return () => {
+      rail.removeEventListener("wheel", handleWheel);
+      rail.removeEventListener("touchstart", handleTouchStart);
+      rail.removeEventListener("touchmove", handleTouchMove);
+      rail.removeEventListener("touchend", handleTouchEnd);
+      rail.removeEventListener("touchcancel", handleTouchEnd);
+    };
   }, [destinationCount]);
 
   useEffect(() => {
@@ -101,6 +147,49 @@ export function PopularDestinationShowcase({ destinations }: {
     move(event.key === "ArrowRight" ? 1 : -1);
   }
 
+  function handlePointerDown(event: React.PointerEvent<HTMLDivElement>) {
+    if (destinationCount < 2 || event.pointerType !== "mouse" || event.button !== 0) return;
+
+    suppressClickRef.current = false;
+    pointerGestureRef.current = {
+      handled: false,
+      pointerId: event.pointerId,
+      startY: event.clientY,
+    };
+  }
+
+  function handlePointerMove(event: React.PointerEvent<HTMLDivElement>) {
+    const gesture = pointerGestureRef.current;
+    if (!gesture || gesture.pointerId !== event.pointerId || gesture.handled) return;
+
+    const delta = gesture.startY - event.clientY;
+    if (Math.abs(delta) < SWIPE_THRESHOLD) return;
+
+    event.preventDefault();
+    gesture.handled = true;
+    suppressClickRef.current = true;
+    event.currentTarget.setPointerCapture(event.pointerId);
+    move(delta > 0 ? 1 : -1);
+  }
+
+  function handlePointerEnd(event: React.PointerEvent<HTMLDivElement>) {
+    const gesture = pointerGestureRef.current;
+    if (!gesture || gesture.pointerId !== event.pointerId) return;
+
+    pointerGestureRef.current = null;
+    if (event.currentTarget.hasPointerCapture(event.pointerId)) {
+      event.currentTarget.releasePointerCapture(event.pointerId);
+    }
+  }
+
+  function handleClickCapture(event: React.MouseEvent<HTMLDivElement>) {
+    if (!suppressClickRef.current) return;
+
+    event.preventDefault();
+    event.stopPropagation();
+    suppressClickRef.current = false;
+  }
+
   if (!activeDestination) return null;
 
   const backgroundImage = activeDestination.image
@@ -124,14 +213,19 @@ export function PopularDestinationShowcase({ destinations }: {
       </div>
 
       <div
-        aria-label="热门国家层叠胶囊，悬停后使用滚轮或方向键旋转"
+        aria-label="热门国家层叠胶囊，可上下滑动、使用滚轮或方向键旋转"
         className="popular-destination-rail"
         role="region"
       >
         <div
           aria-label="滚动切换热门国家"
           className="popular-stack-stage"
+          onClickCapture={handleClickCapture}
           onKeyDown={handleKeyDown}
+          onPointerCancel={handlePointerEnd}
+          onPointerDown={handlePointerDown}
+          onPointerMove={handlePointerMove}
+          onPointerUp={handlePointerEnd}
           ref={railRef}
           role="group"
           tabIndex={0}
