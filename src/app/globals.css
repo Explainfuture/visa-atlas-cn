@@ -713,7 +713,7 @@ h3 {
   left: 50%;
   display: grid;
   grid-template-columns: 76px minmax(0, 1fr) auto;
-  width: min(calc(100% - 42px), 980px);
+  width: min(calc(100% - 42px), 780px);
   min-height: 116px;
   gap: 18px;
   align-items: center;
@@ -3976,7 +3976,7 @@ a.consular-detail:hover strong {
   }
 
   .popular-stack-card {
-    width: min(calc(100% - 30px), 900px);
+    width: min(calc(100% - 30px), 720px);
   }
 
   .directory-page,
