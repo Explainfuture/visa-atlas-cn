@@ -10,9 +10,9 @@
     "ac": {
       "attractions": [
         {
-          "description": "維基媒體消歧義頁",
-          "name": "乔治敦",
-          "sourceUrl": "https://zh.wikipedia.org/wiki/%E4%B9%94%E6%B2%BB%E6%95%A6"
+          "description": "南大西洋的一座岛屿",
+          "name": "阿森松岛",
+          "sourceUrl": "https://zh.wikipedia.org/wiki/%E9%98%BF%E6%A3%AE%E6%9D%BE%E5%B2%9B"
         }
       ],
       "images": [
@@ -61,7 +61,7 @@
     "ad": {
       "attractions": [
         {
-          "description": "安道尔的首都",
+          "description": "安道尔首都",
           "name": "安道尔城",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%AE%89%E9%81%93%E5%B0%94%E5%9F%8E"
         },
@@ -128,23 +128,23 @@
       "attractions": [
         {
           "description": "artificial islands in Dubai, United Arab Emirates",
-          "name": "棕櫚群島",
+          "name": "棕榈群岛",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%A3%95%E6%AB%9A%E7%BE%A4%E5%B3%B6"
         },
         {
-          "description": "位於阿拉伯聯合酋長國的摩天大樓",
+          "description": "位于阿拉伯联合酋长国迪拜的摩天大楼",
           "name": "哈利法塔",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%93%88%E5%88%A9%E6%B3%95%E5%A1%94"
         },
         {
-          "description": "阿拉伯聯合大公國最大都市",
-          "name": "杜拜",
+          "description": "阿联酋城市",
+          "name": "迪拜",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%9D%9C%E6%8B%9C"
         },
         {
-          "description": "维基媒体消歧义页",
-          "name": "Hydropolis",
-          "sourceUrl": "https://en.wikipedia.org/wiki/Hydropolis"
+          "description": "human settlement in United Arab Emirates",
+          "name": "Al Khan",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Al_Khan"
         }
       ],
       "images": [
@@ -259,8 +259,8 @@
     "ag": {
       "attractions": [
         {
-          "description": "安提瓜和巴布达的首都",
-          "name": "聖約翰",
+          "description": "安提瓜和巴布达首都",
+          "name": "圣约翰",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%9C%A3%E7%BA%A6%E7%BF%B0_(%E5%AE%89%E6%8F%90%E7%93%9C%E5%92%8C%E5%B7%B4%E5%B8%83%E8%BE%BE)"
         },
         {
@@ -275,7 +275,7 @@
         },
         {
           "description": "bridge in Antigua and Barbuda",
-          "name": "Devil's Bridge, Antigua and Barbuda",
+          "name": "Devil's Bridge",
           "sourceUrl": "https://en.wikipedia.org/wiki/Devil's_Bridge_(Antigua_and_Barbuda)"
         }
       ],
@@ -328,11 +328,6 @@
           "description": "英国海外领地安圭拉的行政区和村庄",
           "name": "岛港",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%B2%9B%E6%B8%AF"
-        },
-        {
-          "description": "维基媒体消歧义页",
-          "name": "The Valley",
-          "sourceUrl": "https://en.wikipedia.org/wiki/The_Valley"
         }
       ],
       "images": [
@@ -396,7 +391,7 @@
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%B8%83%E7%89%B9%E6%9E%97%E7%89%B9"
         },
         {
-          "description": "阿尔巴尼亚斯库台州的市镇",
+          "description": "阿尔巴尼亚的一座城市",
           "name": "斯库台",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%96%AF%E5%BA%93%E5%8F%B0"
         }
@@ -448,7 +443,7 @@
       "attractions": [
         {
           "description": "亚美尼亚首都",
-          "name": "葉里溫",
+          "name": "埃里温",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E8%91%89%E9%87%8C%E6%BA%AB"
         },
         {
@@ -513,16 +508,6 @@
     "ao": {
       "attractions": [
         {
-          "description": "27th edition of the Africa Cup of Nations",
-          "name": "2010年非洲國家盃",
-          "sourceUrl": "https://zh.wikipedia.org/wiki/2010%E5%B9%B4%E9%9D%9E%E6%B4%B2%E5%9C%8B%E5%AE%B6%E7%9B%83"
-        },
-        {
-          "description": "building in Angola",
-          "name": "Estádio Municipal de Benguela",
-          "sourceUrl": "https://en.wikipedia.org/wiki/Est%C3%A1dio_Municipal_Edelfride_Palhares_da_Costa"
-        },
-        {
           "description": "building in Angola",
           "name": "Fortress of São Francisco do Penedo",
           "sourceUrl": "https://en.wikipedia.org/wiki/Fortress_of_S%C3%A3o_Francisco_do_Penedo"
@@ -531,6 +516,16 @@
           "description": "安哥拉城市",
           "name": "万博",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E4%B8%87%E5%8D%9A"
+        },
+        {
+          "description": "national park of Angola",
+          "name": "坎甘达拉国家公园",
+          "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%9D%8E%E7%94%98%E9%81%94%E6%8B%89%E5%9C%8B%E5%AE%B6%E5%85%AC%E5%9C%92"
+        },
+        {
+          "description": "代表性目的地",
+          "name": "Floresta do Maiombe",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Floresta_do_Maiombe"
         }
       ],
       "images": [
@@ -579,9 +574,24 @@
     "aq": {
       "attractions": [
         {
-          "description": "维基媒体消歧义页",
-          "name": "Whalers Bay",
-          "sourceUrl": "https://en.wikipedia.org/wiki/Whalers_Bay"
+          "description": "南极洲面向南美洲的狭长半岛，是常见的南极旅行区域",
+          "name": "南极半岛",
+          "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%8D%97%E6%9E%81%E5%8D%8A%E5%B2%9B"
+        },
+        {
+          "description": "地球最南端的地理位置",
+          "name": "南极点",
+          "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%8D%97%E6%9E%81%E7%82%B9"
+        },
+        {
+          "description": "位于罗斯海沿岸的火山岛",
+          "name": "罗斯岛",
+          "sourceUrl": "https://zh.wikipedia.org/wiki/%E7%BD%97%E6%96%AF%E5%B2%9B"
+        },
+        {
+          "description": "南设得兰群岛中的活火山岛",
+          "name": "欺骗岛",
+          "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%AC%BA%E9%AA%97%E5%B2%9B"
         }
       ],
       "images": [
@@ -631,7 +641,7 @@
       "attractions": [
         {
           "description": "阿根廷首都",
-          "name": "布宜諾斯艾利斯",
+          "name": "布宜诺斯艾利斯",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%B8%83%E5%AE%9C%E8%AB%BE%E6%96%AF%E8%89%BE%E5%88%A9%E6%96%AF"
         },
         {
@@ -640,7 +650,7 @@
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E4%BC%8A%E7%93%9C%E8%8B%8F%E7%80%91%E5%B8%83"
         },
         {
-          "description": "阿根廷布宜诺斯艾利斯省城市",
+          "description": "阿根廷城市",
           "name": "马德普拉塔",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E9%A9%AC%E5%BE%B7%E6%99%AE%E6%8B%89%E5%A1%94"
         },
@@ -702,7 +712,7 @@
         },
         {
           "description": "United States national park in American Samoa",
-          "name": "美屬薩摩亞國家公園",
+          "name": "美属萨摩亚国家公园",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E7%BE%8E%E5%B1%AC%E8%96%A9%E6%91%A9%E4%BA%9E%E5%9C%8B%E5%AE%B6%E5%85%AC%E5%9C%92"
         },
         {
@@ -757,8 +767,8 @@
     "at": {
       "attractions": [
         {
-          "description": "奧地利首都",
-          "name": "維也納",
+          "description": "奥地利首都",
+          "name": "维也纳",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E7%B6%AD%E4%B9%9F%E7%B4%8D"
         },
         {
@@ -823,17 +833,17 @@
     "au": {
       "attractions": [
         {
-          "description": "澳大利亞新南威爾斯州首府",
+          "description": "澳大利亚新南威尔士州首府",
           "name": "悉尼",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%82%89%E5%B0%BC"
         },
         {
-          "description": "澳大利亞維多利亞州首府",
+          "description": "澳大利亚维多利亚州首府",
           "name": "墨尔本",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%A2%A8%E5%B0%94%E6%9C%AC"
         },
         {
-          "description": "澳大利亞昆士蘭州首府",
+          "description": "澳大利亚昆士兰州首府",
           "name": "布里斯班",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%B8%83%E9%87%8C%E6%96%AF%E7%8F%AD"
         },
@@ -890,7 +900,7 @@
       "attractions": [
         {
           "description": "阿鲁巴的首府",
-          "name": "奥腊涅斯塔德",
+          "name": "奥拉涅斯塔德",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%A5%A5%E6%8B%89%E6%B6%85%E6%96%AF%E5%A1%94%E5%BE%B7_(%E9%98%BF%E9%B2%81%E5%B7%B4)"
         },
         {
@@ -900,7 +910,7 @@
         },
         {
           "description": "lagoon and beach in Aruba",
-          "name": "Baby Beach, Aruba",
+          "name": "Baby Beach",
           "sourceUrl": "https://en.wikipedia.org/wiki/Baby_Beach%2C_Aruba"
         },
         {
@@ -961,7 +971,7 @@
         },
         {
           "description": "medieval castle on Åland, Sweden",
-          "name": "卡斯特霍爾姆城堡",
+          "name": "卡斯特霍尔姆城堡",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%8D%A1%E6%96%AF%E7%89%B9%E9%9C%8D%E7%88%BE%E5%A7%86%E5%9F%8E%E5%A0%A1"
         },
         {
@@ -970,9 +980,9 @@
           "sourceUrl": "https://en.wikipedia.org/wiki/Bomarsund_Bridge"
         },
         {
-          "description": "island group and village in Jomala, Åland Islands, Finland",
-          "name": "[https://www.kobbaklintarsvanner.ax/en Kobba Klintar]",
-          "sourceUrl": "https://www.wikidata.org/wiki/Q10546852"
+          "description": "island and village in Lemland, Åland Islands, Finland",
+          "name": "洛格斯凯尔",
+          "sourceUrl": "https://en.wikipedia.org/wiki/L%C3%A5gsk%C3%A4r"
         }
       ],
       "images": [
@@ -1032,7 +1042,7 @@
         },
         {
           "description": "阿塞拜疆城市",
-          "name": "漢肯德",
+          "name": "汉肯德",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%BC%A2%E8%82%AF%E5%BE%B7"
         },
         {
@@ -1088,12 +1098,12 @@
       "attractions": [
         {
           "description": "波黑波黑联邦黑塞哥维那-内雷特瓦州的城市",
-          "name": "莫斯塔爾",
+          "name": "莫斯塔尔",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E8%8E%AB%E6%96%AF%E5%A1%94%E7%88%BE"
         },
         {
-          "description": "波士尼亞與赫塞哥維納首都",
-          "name": "塞拉耶佛",
+          "description": "波斯尼亚和黑塞哥维纳首都",
+          "name": "萨拉热窝",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%A1%9E%E6%8B%89%E8%80%B6%E4%BD%9B"
         },
         {
@@ -1159,12 +1169,12 @@
         },
         {
           "description": "Botanical garden in St Joseph, Barbados",
-          "name": "Andromeda Gardens",
+          "name": "Andromeda Botanic Gardens",
           "sourceUrl": "https://en.wikipedia.org/wiki/Andromeda_Botanic_Gardens"
         },
         {
           "description": "巴巴多斯圣詹姆斯区城镇",
-          "name": "霍爾敦",
+          "name": "霍尔敦",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E9%9C%8D%E7%88%BE%E6%95%A6"
         },
         {
@@ -1219,8 +1229,8 @@
     "bd": {
       "attractions": [
         {
-          "description": "孟加拉國首都",
-          "name": "达卡市",
+          "description": "孟加拉国首都",
+          "name": "达卡",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E8%BE%BE%E5%8D%A1"
         },
         {
@@ -1300,7 +1310,7 @@
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%AE%89%E7%89%B9%E5%8D%AB%E6%99%AE"
         },
         {
-          "description": "比利时东佛兰德省城市与省会",
+          "description": "位于比利时弗拉芒大区的一个自治市",
           "name": "根特",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%A0%B9%E7%89%B9"
         }
@@ -1351,7 +1361,7 @@
     "bf": {
       "attractions": [
         {
-          "description": "布吉納法索首都",
+          "description": "布基纳法索首都",
           "name": "瓦加杜古",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E7%93%A6%E5%8A%A0%E6%9D%9C%E5%8F%A4"
         },
@@ -1362,13 +1372,13 @@
         },
         {
           "description": "national park",
-          "name": "卡博雷坦比國家公園",
+          "name": "卡博雷坦比国家公园",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%8D%A1%E5%8D%9A%E9%9B%B7%E5%9D%A6%E6%AF%94%E5%9C%8B%E5%AE%B6%E5%85%AC%E5%9C%92"
         },
         {
-          "description": "national park",
-          "name": "卡博雷坦比國家公園",
-          "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%8D%A1%E5%8D%9A%E9%9B%B7%E5%9D%A6%E6%AF%94%E5%9C%8B%E5%AE%B6%E5%85%AC%E5%9C%92"
+          "description": "national park in West Africa, on River Niger",
+          "name": "W国家公园",
+          "sourceUrl": "https://zh.wikipedia.org/wiki/W%E5%9B%BD%E5%AE%B6%E5%85%AC%E5%9B%AD"
         }
       ],
       "images": [
@@ -1417,8 +1427,8 @@
     "bg": {
       "attractions": [
         {
-          "description": "保加利亞首都",
-          "name": "索菲亞",
+          "description": "保加利亚的首都",
+          "name": "索非亚",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E7%B4%A2%E8%8F%B2%E4%BA%9E"
         },
         {
@@ -1428,7 +1438,7 @@
         },
         {
           "description": "city in Sozopol municipality, Burgas oblast, Bulgaria",
-          "name": "索佐波爾",
+          "name": "索佐波尔",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E7%B4%A2%E4%BD%90%E6%B3%A2%E7%88%BE"
         },
         {
@@ -1483,22 +1493,22 @@
     "bh": {
       "attractions": [
         {
-          "description": "square in Manama, Bahrain",
-          "name": "珍珠廣場",
-          "sourceUrl": "https://zh.wikipedia.org/wiki/%E7%8F%8D%E7%8F%A0%E5%BB%A3%E5%A0%B4"
+          "description": "巴林首都与主要城市",
+          "name": "麦纳麦",
+          "sourceUrl": "https://zh.wikipedia.org/wiki/%E9%BA%A6%E7%BA%B3%E9%BA%A6"
         },
         {
-          "description": "骚乱",
-          "name": "2011年巴林反政府示威",
-          "sourceUrl": "https://zh.wikipedia.org/wiki/2011%E5%B9%B4%E5%B7%B4%E6%9E%97%E5%8F%8D%E6%94%BF%E5%BA%9C%E7%A4%BA%E5%A8%81"
+          "description": "记录迪尔蒙文明历史的世界文化遗产",
+          "name": "巴林堡",
+          "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%B7%B4%E6%9E%97%E5%A0%A1"
         },
         {
-          "description": "governorate of Bahrain",
-          "name": "南方省",
-          "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%8D%97%E6%96%B9%E7%9C%81_(%E5%B7%B4%E6%9E%97)"
+          "description": "集中展示巴林考古与文化历史的国家博物馆",
+          "name": "巴林国家博物馆",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Bahrain_National_Museum"
         },
         {
-          "description": "desert islands in the Gulf of Bahrain",
+          "description": "巴林南部以自然生态著称的群岛",
           "name": "侯瓦尔群岛",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E4%BE%AF%E7%93%A6%E5%B0%94%E7%BE%A4%E5%B2%9B"
         }
@@ -1560,7 +1570,7 @@
         },
         {
           "description": "national park in northwestern Burundi",
-          "name": "基比拉國家公園",
+          "name": "基比拉国家公园",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%9F%BA%E6%AF%94%E6%8B%89%E5%9C%8B%E5%AE%B6%E5%85%AC%E5%9C%92"
         },
         {
@@ -1615,13 +1625,13 @@
     "bj": {
       "attractions": [
         {
-          "description": "city in Benin, seat of the government",
+          "description": "贝南的首都",
           "name": "科托努",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E7%A7%91%E6%89%98%E5%8A%AA"
         },
         {
           "description": "贝宁国家公园",
-          "name": "彭賈里國家公園",
+          "name": "彭贾里国家公园",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%BD%AD%E8%B3%88%E9%87%8C%E5%9C%8B%E5%AE%B6%E5%85%AC%E5%9C%92"
         },
         {
@@ -1681,14 +1691,19 @@
     "bl": {
       "attractions": [
         {
-          "description": "荷属圣马丁的首都",
-          "name": "菲利普斯堡",
-          "sourceUrl": "https://zh.wikipedia.org/wiki/%E8%8F%B2%E5%88%A9%E6%99%AE%E6%96%AF%E5%A0%A1"
+          "description": "圣巴泰勒米的首府与主要港口",
+          "name": "古斯塔维亚",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Gustavia,_Saint_Barth%C3%A9lemy"
         },
         {
-          "description": "圣巴泰勒米的首府",
-          "name": "古斯塔维亚",
-          "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%B1%85%E6%96%AF%E5%A1%94%E7%BB%B4%E4%BA%9A"
+          "description": "圣巴泰勒米北岸的海湾与沙滩",
+          "name": "圣让湾",
+          "sourceUrl": "https://en.wikivoyage.org/wiki/Saint_Barth%C3%A9lemy"
+        },
+        {
+          "description": "需要步行或乘船前往的安静海滩",
+          "name": "科隆比耶海滩",
+          "sourceUrl": "https://en.wikivoyage.org/wiki/Saint_Barth%C3%A9lemy"
         }
       ],
       "images": [
@@ -1737,13 +1752,8 @@
         },
         {
           "description": "island in Bermuda",
-          "name": "愛爾蘭島",
+          "name": "爱尔兰岛",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%84%9B%E7%88%BE%E8%98%AD%E5%B3%B6_(%E7%99%BE%E6%85%95%E9%81%94)"
-        },
-        {
-          "description": "維基媒體消歧義頁",
-          "name": "汉密尔顿",
-          "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%B1%89%E5%AF%86%E5%B0%94%E9%A1%BF"
         }
       ],
       "images": [
@@ -1792,14 +1802,9 @@
     "bn": {
       "attractions": [
         {
-          "description": "汶萊首都",
-          "name": "斯里巴加灣市",
+          "description": "文莱首都",
+          "name": "斯里巴加湾市",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%96%AF%E9%87%8C%E5%B7%B4%E5%8A%A0%E6%B9%BE%E5%B8%82"
-        },
-        {
-          "description": "维基媒体消歧义页",
-          "name": "[[Bangar#See",
-          "sourceUrl": "https://en.wikipedia.org/wiki/Bangar"
         },
         {
           "description": "district of Brunei",
@@ -1810,6 +1815,11 @@
           "description": "town in Brunei",
           "name": "邦阿",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E9%82%A6%E9%98%BF"
+        },
+        {
+          "description": "文莱城镇",
+          "name": "马来奕",
+          "sourceUrl": "https://zh.wikipedia.org/wiki/%E9%A9%AC%E6%9D%A5%E5%A5%95"
         }
       ],
       "images": [
@@ -1858,7 +1868,7 @@
     "bo": {
       "attractions": [
         {
-          "description": "玻利维亚城市",
+          "description": "玻利维亚的政府所在地和实际上的首都",
           "name": "拉巴斯",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%8B%89%E5%B7%B4%E6%96%AF"
         },
@@ -1869,12 +1879,12 @@
         },
         {
           "description": "archaeological site in Bolivia",
-          "name": "蒂亞瓦納科",
+          "name": "蒂亚瓦纳科",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E8%92%82%E4%BA%9E%E7%93%A6%E7%B4%8D%E7%A7%91"
         },
         {
           "description": "玻利维亚拉巴斯省城镇",
-          "name": "科帕卡瓦納",
+          "name": "科帕卡瓦纳",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E7%A7%91%E5%B8%95%E5%8D%A1%E7%93%A6%E7%B4%8D_(%E7%8E%BB%E5%88%A9%E7%B6%AD%E4%BA%9E)"
         }
       ],
@@ -1975,8 +1985,8 @@
     "br": {
       "attractions": [
         {
-          "description": "巴西聖保羅州的首府",
-          "name": "聖保羅",
+          "description": "巴西圣保罗州的首府",
+          "name": "圣保罗",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E8%81%96%E4%BF%9D%E7%BE%85_(%E5%B7%B4%E8%A5%BF)"
         },
         {
@@ -1990,7 +2000,7 @@
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E8%90%A8%E5%B0%94%E7%93%A6%E5%A4%9A_(%E5%B7%B4%E8%A5%BF)"
         },
         {
-          "description": "巴西里約熱內盧州首府",
+          "description": "巴西城市",
           "name": "里约热内卢",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E9%87%8C%E7%BA%A6%E7%83%AD%E5%86%85%E5%8D%A2"
         }
@@ -2042,12 +2052,12 @@
       "attractions": [
         {
           "description": "a resort island in the Bahamas near Nassau",
-          "name": "帕拉代斯島",
+          "name": "帕拉代斯岛",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%A4%A9%E5%A0%82%E5%B3%B6"
         },
         {
           "description": "populated place in Grand Bahama, Bahamas",
-          "name": "Lucaya, Bahamas",
+          "name": "Lucaya",
           "sourceUrl": "https://en.wikipedia.org/wiki/Lucaya%2C_Bahamas"
         },
         {
@@ -2118,12 +2128,12 @@
         },
         {
           "description": "national park of Bhutan",
-          "name": "吉格梅·多吉國家公園",
+          "name": "吉格梅·多吉国家公园",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%90%89%E6%A0%BC%E6%A2%85%E5%A4%9A%E5%90%89%E5%9C%8B%E5%AE%B6%E5%85%AC%E5%9C%92"
         },
         {
           "description": "national park",
-          "name": "吉格梅辛格旺楚克國家公園",
+          "name": "吉格梅辛格旺楚克国家公园",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%90%89%E6%A0%BC%E6%A2%85%E8%BE%9B%E6%A0%BC%E6%97%BA%E6%A5%9A%E5%85%8B%E5%9C%8B%E5%AE%B6%E5%85%AC%E5%9C%92"
         }
       ],
@@ -2174,17 +2184,17 @@
       "attractions": [
         {
           "description": "mountain",
-          "name": "奧拉夫峰",
+          "name": "奥拉夫峰",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%A5%A7%E6%8B%89%E5%A4%AB%E5%B3%B0"
         },
         {
           "description": "headland",
-          "name": "瓦爾迪維瓦角",
+          "name": "瓦尔迪维瓦角",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E7%93%A6%E7%88%BE%E8%BF%AA%E7%B6%AD%E7%93%A6%E8%A7%92"
         },
         {
           "description": "headland",
-          "name": "西爾孔西申角",
+          "name": "西尔孔西申角",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%89%B2%E7%A6%AE%E8%A7%92"
         },
         {
@@ -2239,24 +2249,24 @@
     "bw": {
       "attractions": [
         {
-          "description": "town in Botswana",
-          "name": "卡薩內",
-          "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%8D%A1%E8%96%A9%E5%85%A7"
+          "description": "博茨瓦纳北部以象群和河岸生态闻名的国家公园",
+          "name": "乔贝国家公园",
+          "sourceUrl": "https://zh.wikipedia.org/wiki/%E4%B9%94%E8%B4%9D%E5%9B%BD%E5%AE%B6%E5%85%AC%E5%9B%AD"
         },
         {
-          "description": "human settlement in Zambia",
-          "name": "卡宗古拉",
-          "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%8D%A1%E5%AE%97%E5%8F%A4%E6%8B%89"
-        },
-        {
-          "description": "river delta in Botswana",
+          "description": "卡拉哈里沙漠中的大型内陆河三角洲",
           "name": "奥卡万戈三角洲",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%A5%A5%E5%8D%A1%E4%B8%87%E6%88%88%E4%B8%89%E8%A7%92%E6%B4%B2"
         },
         {
-          "description": "national park in the Kalahari desert of Botswana",
+          "description": "奥卡万戈三角洲东部的野生动物保护区",
+          "name": "莫雷米野生动物保护区",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Moremi_Game_Reserve"
+        },
+        {
+          "description": "博茨瓦纳中部广阔的自然保护区",
           "name": "卡拉哈里中部野生动物保护区",
-          "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%8D%A1%E6%8B%89%E5%93%88%E9%87%8C%E4%B8%AD%E9%83%A8%E9%87%8E%E7%94%9F%E5%8A%A8%E7%89%A9%E4%BF%9D%E6%8A%A4%E5%8C%BA"
+          "sourceUrl": "https://zh.wikipedia.org/wiki/%E4%B8%AD%E5%A4%AE%E5%8D%A1%E6%8B%89%E5%93%88%E9%87%8C%E9%87%8E%E7%94%9F%E5%8A%A8%E7%89%A9%E4%BF%9D%E6%8A%A4%E5%8C%BA"
         }
       ],
       "images": [
@@ -2305,12 +2315,12 @@
     "by": {
       "attractions": [
         {
-          "description": "白俄羅斯的首都",
+          "description": "白俄罗斯首都",
           "name": "明斯克",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%98%8E%E6%96%AF%E5%85%8B"
         },
         {
-          "description": "白俄罗斯炮台",
+          "description": "要塞，位于白俄罗斯",
           "name": "布列斯特要塞",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%B8%83%E5%88%97%E6%96%AF%E7%89%B9%E8%A6%81%E5%A1%9E"
         },
@@ -2321,7 +2331,7 @@
         },
         {
           "description": "palace in Gomel, Belarus",
-          "name": "戈梅利宮",
+          "name": "戈梅利宫",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%88%88%E6%A2%85%E5%88%A9%E5%AE%AE"
         }
       ],
@@ -2377,12 +2387,12 @@
         },
         {
           "description": "island",
-          "name": "考克島",
+          "name": "考克岛",
           "sourceUrl": "https://en.wikipedia.org/wiki/Caye_Caulker"
         },
         {
           "description": "town in Belize",
-          "name": "聖佩德羅",
+          "name": "圣佩德罗",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E8%81%96%E4%BD%A9%E5%BE%B7%E7%BE%85_(%E4%BC%AF%E5%88%A9%E8%8C%B2)"
         },
         {
@@ -2443,17 +2453,17 @@
         },
         {
           "description": "the largest metropolitan area in Canada, centered on Toronto, Onta…",
-          "name": "大多倫多地區",
+          "name": "大多伦多地区",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%A4%A7%E5%A4%9A%E5%80%AB%E5%A4%9A%E5%9C%B0%E5%8D%80"
         },
         {
-          "description": "加拿大东南部城市",
+          "description": "位于加拿大魁北克西南部的城市",
           "name": "蒙特利尔",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E8%92%99%E7%89%B9%E5%88%A9%E5%B0%94"
         },
         {
           "description": "加拿大城市",
-          "name": "溫哥華",
+          "name": "温哥华",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%BA%AB%E5%93%A5%E8%8F%AF"
         }
       ],
@@ -2554,17 +2564,17 @@
     "cd": {
       "attractions": [
         {
-          "description": "national park in the Democratic Republic of the Congo",
-          "name": "維龍加國家公園",
+          "description": "刚果民主共和国国家公园",
+          "name": "维龙加国家公园",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E7%B6%AD%E9%BE%8D%E5%8A%A0%E5%9C%8B%E5%AE%B6%E5%85%AC%E5%9C%92"
         },
         {
-          "description": "位於剛果民主共和國東部的國家公園",
+          "description": "位于刚果民主共和国东部的国家公园",
           "name": "卡胡兹－别加国家公园",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%8D%A1%E8%83%A1%E5%85%B9-%E5%88%AB%E5%8A%A0%E5%9B%BD%E5%AE%B6%E5%85%AC%E5%9B%AD"
         },
         {
-          "description": "national park in DR Congo",
+          "description": "刚果民主共和国国家公园",
           "name": "加兰巴国家公园",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%8A%A0%E5%85%B0%E5%B7%B4%E5%9B%BD%E5%AE%B6%E5%85%AC%E5%9B%AD"
         },
@@ -2620,24 +2630,24 @@
     "cf": {
       "attractions": [
         {
-          "description": "Protected area within the Central African Republic",
-          "name": "[[Dzanga Sangha National Reserve",
-          "sourceUrl": "https://en.wikipedia.org/wiki/Dzanga-Sangha_Special_Reserve"
-        },
-        {
           "description": "national park",
-          "name": "馬諾沃-貢達聖弗洛里斯國家公園",
+          "name": "马诺沃-贡达圣弗洛里斯国家公园",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E9%A6%AC%E8%AB%BE%E6%B2%83-%E8%B2%A2%E9%81%94%E8%81%96%E5%BC%97%E6%B4%9B%E9%87%8C%E6%96%AF%E5%9C%8B%E5%AE%B6%E5%85%AC%E5%9C%92"
         },
         {
           "description": "中非共和国首都",
-          "name": "班基",
+          "name": "班吉",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E7%8F%AD%E5%9F%BA"
         },
         {
           "description": "中非的城市",
           "name": "班巴里",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E7%8F%AD%E5%B7%B4%E9%87%8C"
+        },
+        {
+          "description": "city in Central African Republic",
+          "name": "班加苏",
+          "sourceUrl": "https://zh.wikipedia.org/wiki/%E7%8F%AD%E5%8A%A0%E8%98%87"
         }
       ],
       "images": [
@@ -2687,7 +2697,7 @@
       "attractions": [
         {
           "description": "national Park in the Republic of the Congo",
-          "name": "孔夸提-杜里國家公園",
+          "name": "孔夸提-杜里国家公园",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%AD%94%E5%A4%B8%E6%8F%90-%E6%9D%9C%E9%87%8C%E5%9C%8B%E5%AE%B6%E5%85%AC%E5%9C%92"
         },
         {
@@ -2752,17 +2762,17 @@
     "ch": {
       "attractions": [
         {
-          "description": "瑞士蘇黎世州首府",
+          "description": "瑞士苏黎世州首府",
           "name": "苏黎世",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E8%8B%8F%E9%BB%8E%E4%B8%96"
         },
         {
-          "description": "瑞士日內瓦州首府",
-          "name": "日內瓦",
+          "description": "瑞士日内瓦州首府",
+          "name": "日内瓦",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%97%A5%E5%86%85%E7%93%A6"
         },
         {
-          "description": "瑞士盧塞恩湖邊上的城市",
+          "description": "瑞士卢塞恩湖边上的城市",
           "name": "卢塞恩",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E7%90%89%E6%A3%AE"
         },
@@ -2889,19 +2899,19 @@
           "sourceUrl": "https://en.wikipedia.org/wiki/Moturakau"
         },
         {
-          "description": "代表性目的地",
-          "name": "Pacific Resort Rarotonga",
-          "sourceUrl": "https://en.wikipedia.org/wiki/Pacific_Resort_Rarotonga"
-        },
-        {
           "description": "库克群岛的首府",
           "name": "阿瓦鲁阿",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E9%98%BF%E7%93%A6%E9%B2%81%E9%98%BF"
         },
         {
           "description": "island of the Cook Islands",
-          "name": "阿伊圖塔基島",
+          "name": "阿伊图塔基岛",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E9%98%BF%E4%BC%8A%E5%9B%BE%E5%A1%94%E5%9F%BA%E5%B2%9B"
+        },
+        {
+          "description": "national park in the Cook Islands",
+          "name": "Suwarrow Atoll National Park",
+          "sourceUrl": "https://www.wikidata.org/wiki/Q4315054"
         }
       ],
       "images": [
@@ -3082,14 +3092,9 @@
     "co": {
       "attractions": [
         {
-          "description": "哥倫比亞的首都",
+          "description": "哥伦比亚的首都",
           "name": "波哥大",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%B3%A2%E5%93%A5%E5%A4%A7"
-        },
-        {
-          "description": "maritime warfare branch of Colombia's military",
-          "name": "哥倫比亞海軍",
-          "sourceUrl": "https://en.wikipedia.org/wiki/Colombian_Navy"
         },
         {
           "description": "哥伦比亚城市",
@@ -3100,6 +3105,11 @@
           "description": "哥伦比亚市镇",
           "name": "圣玛尔塔",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%9C%A3%E7%8E%9B%E5%B0%94%E5%A1%94_(%E5%93%A5%E4%BC%A6%E6%AF%94%E4%BA%9A)"
+        },
+        {
+          "description": "building in Cali, Colombia",
+          "name": "Cali Tower",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Cali_Tower"
         }
       ],
       "images": [
@@ -3154,7 +3164,7 @@
         },
         {
           "description": "national park",
-          "name": "曼努埃爾安東尼奧國家公園",
+          "name": "曼努埃尔安东尼奥国家公园",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%9B%BC%E5%8A%AA%E5%9F%83%E7%88%BE%E5%AE%89%E6%9D%B1%E5%B0%BC%E5%A5%A7%E5%9C%8B%E5%AE%B6%E5%85%AC%E5%9C%92"
         },
         {
@@ -3164,7 +3174,7 @@
         },
         {
           "description": "中美洲城市",
-          "name": "蓬塔雷納斯",
+          "name": "蓬塔雷纳斯",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E8%93%AC%E5%A1%94%E9%9B%B7%E7%B4%8D%E6%96%AF"
         }
       ],
@@ -3281,7 +3291,7 @@
       "attractions": [
         {
           "description": "佛得角萨尔市镇的城市",
-          "name": "聖瑪麗亞",
+          "name": "圣玛丽亚",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E8%81%96%E7%91%AA%E9%BA%97%E4%BA%9E_(%E4%BD%9B%E5%BE%97%E8%A7%92)"
         },
         {
@@ -3291,7 +3301,7 @@
         },
         {
           "description": "佛得角博阿维斯塔市镇的城市",
-          "name": "薩爾雷",
+          "name": "萨尔雷",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E8%96%A9%E7%88%BE%E9%9B%B7"
         },
         {
@@ -3349,11 +3359,6 @@
           "description": "库拉索的首都",
           "name": "威廉斯塔德",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%A8%81%E5%BB%89%E6%96%AF%E5%A1%94%E5%BE%B7"
-        },
-        {
-          "description": "维基媒体消歧义页",
-          "name": "Hato",
-          "sourceUrl": "https://en.wikipedia.org/wiki/Hato"
         }
       ],
       "images": [
@@ -3453,7 +3458,7 @@
     "cy": {
       "attractions": [
         {
-          "description": "塞浦路斯共和國首都",
+          "description": "塞浦路斯共和国首都",
           "name": "尼科西亚",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%B0%BC%E7%A7%91%E8%A5%BF%E4%BA%9A"
         },
@@ -3519,7 +3524,7 @@
     "cz": {
       "attractions": [
         {
-          "description": "捷克首都",
+          "description": "捷克共和国的首都",
           "name": "布拉格",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%B8%83%E6%8B%89%E6%A0%BC"
         },
@@ -3585,22 +3590,22 @@
     "de": {
       "attractions": [
         {
-          "description": "德國巴伐利亞自由邦首府",
+          "description": "德国巴伐利亚自由州首府",
           "name": "慕尼黑",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%85%95%E5%B0%BC%E9%BB%91"
         },
         {
-          "description": "在德國巴伐利亞州的宮殿",
+          "description": "在德国巴伐利亚州的宫殿",
           "name": "新天鹅堡",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%96%B0%E5%A4%A9%E9%B9%85%E5%A0%A1"
         },
         {
-          "description": "德國首都",
+          "description": "德国首都",
           "name": "柏林",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%9F%8F%E6%9E%97"
         },
         {
-          "description": "德国北莱茵-威斯特法伦州城市",
+          "description": "位于德国北威州的城市",
           "name": "科隆",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E7%A7%91%E9%9A%86"
         }
@@ -3657,12 +3662,12 @@
         },
         {
           "description": "national park",
-          "name": "白日森林國家公園",
+          "name": "白日森林国家公园",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E7%99%BD%E6%97%A5%E6%A3%AE%E6%9E%97%E5%9C%8B%E5%AE%B6%E5%85%AC%E5%9C%92"
         },
         {
           "description": "salt lake",
-          "name": "阿貝湖",
+          "name": "阿贝湖",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E9%98%BF%E8%B2%9D%E6%B9%96"
         },
         {
@@ -3717,13 +3722,13 @@
     "dk": {
       "attractions": [
         {
-          "description": "丹麥首都",
+          "description": "丹麦首都",
           "name": "哥本哈根",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%93%A5%E6%9C%AC%E5%93%88%E6%A0%B9"
         },
         {
           "description": "丹麦的城市",
-          "name": "赫爾辛格",
+          "name": "赫尔辛格",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E8%B5%AB%E7%88%BE%E8%BE%9B%E6%A0%BC"
         },
         {
@@ -3784,7 +3789,7 @@
       "attractions": [
         {
           "description": "多米尼克国的首都",
-          "name": "羅索",
+          "name": "罗索",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E7%BE%85%E7%B4%A2"
         },
         {
@@ -3794,7 +3799,7 @@
         },
         {
           "description": "多米尼克城镇",
-          "name": "馬里戈特",
+          "name": "马里戈特",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E9%A6%AC%E9%87%8C%E6%88%88%E7%89%B9_(%E5%A4%9A%E7%B1%B3%E5%B0%BC%E5%85%8B)"
         },
         {
@@ -3855,7 +3860,7 @@
         },
         {
           "description": "human settlement in the Dominican Republic",
-          "name": "巴瓦諾",
+          "name": "巴瓦诺",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%B7%B4%E7%93%A6%E7%BD%97"
         },
         {
@@ -3865,7 +3870,7 @@
         },
         {
           "description": "多米尼加城镇",
-          "name": "索蘇阿",
+          "name": "索苏阿",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E7%B4%A2%E8%98%87%E9%98%BF"
         }
       ],
@@ -3915,13 +3920,8 @@
     "dz": {
       "attractions": [
         {
-          "description": "维基媒体消歧义页",
-          "name": "Great Mosque of Algiers",
-          "sourceUrl": "https://en.wikipedia.org/wiki/Great_Mosque_of_Algiers"
-        },
-        {
           "description": "阿尔及利亚城市",
-          "name": "瓦赫蘭",
+          "name": "瓦赫兰",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E7%93%A6%E8%B5%AB%E8%98%AD"
         },
         {
@@ -3933,6 +3933,11 @@
           "description": "World Heritage Site",
           "name": "蒂帕萨",
           "sourceUrl": "https://en.wikipedia.org/wiki/Tipasa"
+        },
+        {
+          "description": "National parks in Algeria",
+          "name": "古拉亚国家公园",
+          "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%8F%A4%E6%8B%89%E4%BA%9E%E5%9C%8B%E5%AE%B6%E5%85%AC%E5%9C%92"
         }
       ],
       "images": [
@@ -3982,7 +3987,7 @@
       "attractions": [
         {
           "description": "mountain in Quito, Ecuador",
-          "name": "麵包山",
+          "name": "面包山",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%9F%83%E5%B0%94%E5%B7%B4%E5%A5%88%E8%A5%BF%E7%94%B1%E7%81%AB%E5%B1%B1"
         },
         {
@@ -3996,9 +4001,9 @@
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%98%86%E5%8D%A1_(%E5%8E%84%E7%93%9C%E5%A4%9A%E5%B0%94)"
         },
         {
-          "description": "維基媒體消歧義頁",
-          "name": "Mitad del Mundo",
-          "sourceUrl": "https://en.wikipedia.org/wiki/Mitad_del_Mundo"
+          "description": "厄瓜多尔城市",
+          "name": "巴尼奥斯",
+          "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%B7%B4%E5%B0%BC%E5%A5%A7%E6%96%AF"
         }
       ],
       "images": [
@@ -4047,7 +4052,7 @@
     "ee": {
       "attractions": [
         {
-          "description": "愛沙尼亞首都",
+          "description": "爱沙尼亚首都",
           "name": "塔林",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%A1%94%E6%9E%97"
         },
@@ -4113,7 +4118,7 @@
     "eg": {
       "attractions": [
         {
-          "description": "古埃及建築",
+          "description": "古埃及建筑",
           "name": "胡夫金字塔",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E8%83%A1%E5%A4%AB%E9%87%91%E5%AD%97%E5%A1%94"
         },
@@ -4184,19 +4189,19 @@
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E9%98%BF%E5%B0%A4%E6%81%A9"
         },
         {
-          "description": "西撒哈拉城市",
-          "name": "阿尤恩",
-          "sourceUrl": "https://zh.wikipedia.org/wiki/%E9%98%BF%E5%B0%A4%E6%81%A9"
-        },
-        {
           "description": "cape in Western Sahara",
-          "name": "博哈多爾角",
+          "name": "博哈多尔角",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%8D%9A%E5%93%88%E5%A4%9A%E7%88%BE%E8%A7%92"
         },
         {
           "description": "city in Western Sahara",
-          "name": "達克拉",
+          "name": "达克拉",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E9%81%94%E8%B5%AB%E6%8B%89"
+        },
+        {
+          "description": "port city in Western Sahara",
+          "name": "El Marsa",
+          "sourceUrl": "https://en.wikipedia.org/wiki/El_Marsa%2C_Western_Sahara"
         }
       ],
       "images": [
@@ -4251,7 +4256,7 @@
         },
         {
           "description": "archipelago",
-          "name": "達赫拉克群島",
+          "name": "达赫拉克群岛",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E9%81%94%E8%B5%AB%E6%8B%89%E5%85%8B%E7%BE%A4%E5%B3%B6"
         },
         {
@@ -4311,7 +4316,7 @@
     "es": {
       "attractions": [
         {
-          "description": "西班牙加泰隆尼亞自治區首府",
+          "description": "西班牙加泰罗尼亚自治区首府",
           "name": "巴塞罗那",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%B7%B4%E5%A1%9E%E7%BD%97%E9%82%A3"
         },
@@ -4327,7 +4332,7 @@
         },
         {
           "description": "西班牙中部自治市",
-          "name": "托萊多",
+          "name": "托莱多",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%89%98%E8%90%8A%E5%A4%9A_(%E8%A5%BF%E7%8F%AD%E7%89%99)"
         }
       ],
@@ -4383,17 +4388,17 @@
         },
         {
           "description": "Town of Ethiopia",
-          "name": "拉利貝拉",
+          "name": "拉利贝拉",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%8B%89%E5%88%A9%E8%B2%9D%E6%8B%89"
         },
         {
           "description": "city, former capital of Ethiopia",
-          "name": "貢德爾",
+          "name": "贡德尔",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E8%B2%A2%E5%BE%B7%E7%88%BE"
         },
         {
           "description": "ancient church in Axum, claimed location of the Ark of the Covenan…",
-          "name": "錫安的聖母瑪利亞大教堂",
+          "name": "锡安的圣母玛利亚大教堂",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E9%94%A1%E5%AE%89%E5%9C%A3%E6%AF%8D%E7%8E%9B%E5%88%A9%E4%BA%9A%E6%95%99%E5%A0%82"
         }
       ],
@@ -4443,7 +4448,7 @@
     "fi": {
       "attractions": [
         {
-          "description": "芬蘭首都",
+          "description": "芬兰首都",
           "name": "赫尔辛基",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E8%B5%AB%E5%B0%94%E8%BE%9B%E5%9F%BA"
         },
@@ -4454,7 +4459,7 @@
         },
         {
           "description": "medieval castle in Savonlinna, Finland",
-          "name": "奧拉維城堡",
+          "name": "奥拉维城堡",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%A5%A7%E6%8B%89%E7%B6%AD%E5%9F%8E%E5%A0%A1"
         },
         {
@@ -4510,23 +4515,23 @@
       "attractions": [
         {
           "description": "volcanic archipelago in Fiji",
-          "name": "馬馬努卡群島",
+          "name": "马马努卡群岛",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E9%A6%AC%E9%A6%AC%E5%8A%AA%E8%96%A9%E7%BE%A4%E5%B3%B6"
         },
         {
-          "description": "代表性目的地",
-          "name": "Sheraton Fiji Resort",
-          "sourceUrl": "https://en.wikipedia.org/wiki/Sheraton_Fiji_Resort"
-        },
-        {
-          "description": "斐濟首都",
-          "name": "蘇瓦",
+          "description": "斐济首都",
+          "name": "苏瓦",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E8%98%87%E7%93%A6"
         },
         {
-          "description": "代表性目的地",
-          "name": "Treasure Island Resort",
-          "sourceUrl": "https://en.wikipedia.org/wiki/Treasure_Island_Resort"
+          "description": "Fijian Island",
+          "name": "Denarau",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Denarau_Island"
+        },
+        {
+          "description": "island in Fiji",
+          "name": "Nananu-i-Ra",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Nananu-i-Ra"
         }
       ],
       "images": [
@@ -4575,14 +4580,9 @@
     "fk": {
       "attractions": [
         {
-          "description": "福克蘭群島首府",
+          "description": "福克兰群岛（马尔维纳斯群岛）首府",
           "name": "斯坦利",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%96%AF%E5%9D%A6%E5%88%A9_(%E7%A6%8F%E5%85%8B%E5%85%B0%E7%BE%A4%E5%B2%9B)"
-        },
-        {
-          "description": "维基媒体消歧义页",
-          "name": "斯坦利",
-          "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%8F%B2%E4%B8%B9%E5%88%A9"
         }
       ],
       "images": [
@@ -4631,24 +4631,24 @@
     "fm": {
       "attractions": [
         {
-          "description": "ruined city of Federated States of Micronesesia",
-          "name": "南馬都爾",
-          "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%8D%97%E9%A6%AC%E9%83%BD%E7%88%BE"
+          "description": "密克罗尼西亚联邦的首都",
+          "name": "帕利基尔",
+          "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%B8%95%E5%88%A9%E5%9F%BA%E5%B0%94"
         },
         {
-          "description": "protected area in Guam",
-          "name": "War in the Pacific National Historical Park",
-          "sourceUrl": "https://en.wikipedia.org/wiki/War_in_the_Pacific_National_Historical_Park"
+          "description": "波纳佩岛东岸的古代人工岛遗址",
+          "name": "南马都尔",
+          "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%8D%97%E9%A9%AC%E9%83%BD%E5%B0%94"
         },
         {
-          "description": "protected area of the United States",
-          "name": "太平洋離島海洋國家名勝",
-          "sourceUrl": "https://en.wikipedia.org/wiki/Pacific_Islands_Heritage_Marine_National_Monument"
+          "description": "密克罗尼西亚联邦人口最多的高岛",
+          "name": "波纳佩岛",
+          "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%B3%A2%E7%BA%B3%E4%BD%A9%E5%B2%9B"
         },
         {
-          "description": "chain of islands, western sub-archipelago of the Marshall Islands",
-          "name": "拉利克礁鏈",
-          "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%8B%89%E5%88%A9%E5%85%8B%E7%A4%81%E9%8F%88"
+          "description": "密克罗尼西亚联邦西部的主要群岛",
+          "name": "楚克群岛",
+          "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%A5%9A%E5%85%8B%E7%BE%A4%E5%B2%9B"
         }
       ],
       "images": [
@@ -4698,7 +4698,7 @@
       "attractions": [
         {
           "description": "法罗群岛的首府",
-          "name": "托爾斯港",
+          "name": "托尔斯港",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%89%98%E7%88%BE%E6%96%AF%E6%B8%AF"
         },
         {
@@ -4763,7 +4763,7 @@
     "fr": {
       "attractions": [
         {
-          "description": "法國首都及最大都市",
+          "description": "法国首都",
           "name": "巴黎",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%B7%B4%E9%BB%8E"
         },
@@ -4773,7 +4773,7 @@
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%87%A1%E5%B0%94%E8%B5%9B%E5%AE%AB"
         },
         {
-          "description": "法国滨海阿尔卑斯省市镇与省会",
+          "description": "法国市镇",
           "name": "尼斯",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%B0%BC%E6%96%AF"
         },
@@ -4830,22 +4830,22 @@
       "attractions": [
         {
           "description": "national park in Gabon",
-          "name": "阿肯達國家公園",
+          "name": "阿肯达国家公园",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E9%98%BF%E8%82%AF%E9%81%94%E5%9C%8B%E5%AE%B6%E5%85%AC%E5%9C%92"
         },
         {
           "description": "national Park in Gabon",
-          "name": "巴泰凱高原國家公園",
+          "name": "巴泰凯高原国家公园",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%B7%B4%E6%B3%B0%E5%87%B1%E9%AB%98%E5%8E%9F%E5%9C%8B%E5%AE%B6%E5%85%AC%E5%9C%92"
         },
         {
           "description": "national Park in Gabon",
-          "name": "水晶山國家公園",
+          "name": "水晶山国家公园",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%B0%B4%E6%99%B6%E5%B1%B1%E5%9C%8B%E5%AE%B6%E5%85%AC%E5%9C%92"
         },
         {
           "description": "national park in Gabon",
-          "name": "伊溫多國家公園",
+          "name": "伊温多国家公园",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E4%BC%8A%E6%BA%AB%E5%A4%9A%E5%9C%8B%E5%AE%B6%E5%85%AC%E5%9C%92"
         }
       ],
@@ -4895,12 +4895,12 @@
     "gb": {
       "attractions": [
         {
-          "description": "英國的首都與最大城市",
-          "name": "倫敦",
+          "description": "英国首都",
+          "name": "伦敦",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E4%BC%A6%E6%95%A6"
         },
         {
-          "description": "英国的一个世界遗产",
+          "description": "英国石器时期遗迹",
           "name": "巨石阵",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%B7%A8%E7%9F%B3%E9%98%B5"
         },
@@ -4964,11 +4964,6 @@
           "description": "格林纳达的首都",
           "name": "圣乔治",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%9C%A3%E4%B9%94%E6%B2%BB_(%E6%A0%BC%E6%9E%97%E7%BA%B3%E8%BE%BE)"
-        },
-        {
-          "description": "维基媒体消歧义页",
-          "name": "圣乔治",
-          "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%9C%A3%E4%B9%94%E6%B2%BB_(%E6%B6%88%E6%AD%A7%E4%B9%89)"
         }
       ],
       "images": [
@@ -5093,14 +5088,14 @@
           "sourceUrl": "https://en.wikipedia.org/wiki/Jardin_botanique_de_Cayenne"
         },
         {
-          "description": "archipelago in French Guiana",
-          "name": "萨吕群岛",
-          "sourceUrl": "https://zh.wikipedia.org/wiki/%E8%90%A8%E5%90%95%E7%BE%A4%E5%B2%9B"
-        },
-        {
           "description": "national park of France",
           "name": "圭亚那亚马孙森林公园",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%9C%AD%E4%BA%9A%E9%82%A3%E4%BA%9A%E9%A9%AC%E5%AD%99%E6%A3%AE%E6%9E%97%E5%85%AC%E5%9B%AD"
+        },
+        {
+          "description": "法国市镇",
+          "name": "库鲁",
+          "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%BA%93%E9%B2%81"
         }
       ],
       "images": [
@@ -5281,8 +5276,8 @@
     "gi": {
       "attractions": [
         {
-          "description": "英國海外領地",
-          "name": "直布羅陀",
+          "description": "英国的海外属地之一",
+          "name": "直布罗陀",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E7%9B%B4%E5%B8%83%E7%BD%97%E9%99%80"
         }
       ],
@@ -5332,7 +5327,7 @@
     "gl": {
       "attractions": [
         {
-          "description": "格陵蘭首府",
+          "description": "格陵兰的首府",
           "name": "努克",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%8A%AA%E5%85%8B"
         },
@@ -5403,7 +5398,7 @@
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E7%A7%91%E6%B4%9B%E9%87%8C"
         },
         {
-          "description": "甘比亞的首都",
+          "description": "冈比亚首都",
           "name": "班珠尔",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E7%8F%AD%E7%AB%B9"
         },
@@ -5414,7 +5409,7 @@
         },
         {
           "description": "冈比亚的国家公园",
-          "name": "西康國家公園",
+          "name": "西康国家公园",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E8%A5%BF%E5%BA%B7%E5%9C%8B%E5%AE%B6%E5%85%AC%E5%9C%92"
         }
       ],
@@ -5465,17 +5460,17 @@
       "attractions": [
         {
           "description": "region in the Republic of Guinea, West Africa",
-          "name": "富塔賈隆",
+          "name": "富塔贾隆",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%AF%8C%E5%A1%94%E8%B3%88%E9%9A%86"
         },
         {
           "description": "Archipelago off the coast of Guinea",
-          "name": "Loos Islands",
+          "name": "Îles de Los",
           "sourceUrl": "https://en.wikipedia.org/wiki/%C3%8Eles_de_Los"
         },
         {
-          "description": "protected area in Guinea",
-          "name": "巴迪亞爾國家公園",
+          "description": "几内亚的国家公园",
+          "name": "巴迪亚尔国家公园",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%B7%B4%E8%BF%AA%E4%BA%9E%E7%88%BE%E5%9C%8B%E5%AE%B6%E5%85%AC%E5%9C%92"
         },
         {
@@ -5530,24 +5525,24 @@
     "gp": {
       "attractions": [
         {
-          "description": "代表性目的地",
-          "name": "Pointe des Châteaux",
+          "description": "瓜德罗普人口最多的城市与交通中心",
+          "name": "皮特尔角城",
+          "sourceUrl": "https://zh.wikipedia.org/wiki/%E7%9A%AE%E7%89%B9%E5%B0%94%E8%A7%92%E5%9F%8E"
+        },
+        {
+          "description": "瓜德罗普的行政首府",
+          "name": "巴斯特尔",
+          "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%B7%B4%E6%96%AF%E7%89%B9%E5%B0%94_(%E7%93%9C%E5%BE%B7%E7%BD%97%E6%99%AE)"
+        },
+        {
+          "description": "保护热带雨林、瀑布与火山景观的国家公园",
+          "name": "瓜德罗普国家公园",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Guadeloupe_National_Park"
+        },
+        {
+          "description": "格朗德特尔岛东端的海岸岬角",
+          "name": "城堡角",
           "sourceUrl": "https://en.wikipedia.org/wiki/Pointe_des_Ch%C3%A2teaux"
-        },
-        {
-          "description": "圣巴泰勒米的首府",
-          "name": "古斯塔维亚",
-          "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%B1%85%E6%96%AF%E5%A1%94%E7%BB%B4%E4%BA%9A"
-        },
-        {
-          "description": "法国海外省瓜德罗普的市镇",
-          "name": "特尔德欧",
-          "sourceUrl": "https://zh.wikipedia.org/wiki/%E7%89%B9%E5%B0%94%E5%BE%B7%E6%AC%A7"
-        },
-        {
-          "description": "法國海外省瓜地洛普的市鎮",
-          "name": "勒戈西耶",
-          "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%8B%92%E6%88%88%E8%A5%BF%E8%80%B6"
         }
       ],
       "images": [
@@ -5596,24 +5591,24 @@
     "gq": {
       "attractions": [
         {
-          "description": "赤道幾內亞的首都",
-          "name": "馬拉博",
+          "description": "赤道几内亚首都",
+          "name": "马拉博",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E9%A6%AC%E6%8B%89%E5%8D%9A"
         },
         {
           "description": "a park in Equatorial Guinea",
-          "name": "阿倫山國家公園",
+          "name": "阿伦山国家公园",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E9%98%BF%E5%80%AB%E5%B1%B1%E5%9C%8B%E5%AE%B6%E5%85%AC%E5%9C%92"
-        },
-        {
-          "description": "island of Equatorial Guinea",
-          "name": "安诺本岛",
-          "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%AE%89%E8%AF%BA%E6%9C%AC%E5%B2%9B"
         },
         {
           "description": "place in Litoral, Equatorial Guinea",
           "name": "阿卡拉永",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E9%98%BF%E5%8D%A1%E6%8B%89%E6%B0%B8"
+        },
+        {
+          "description": "赤道几内亚城市",
+          "name": "巴塔",
+          "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%B7%B4%E5%A1%94_(%E8%B5%A4%E9%81%93%E5%87%A0%E5%86%85%E4%BA%9A)"
         }
       ],
       "images": [
@@ -5662,7 +5657,7 @@
     "gr": {
       "attractions": [
         {
-          "description": "希臘首都",
+          "description": "希腊首都",
           "name": "雅典",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E9%9B%85%E5%85%B8"
         },
@@ -5729,12 +5724,12 @@
       "attractions": [
         {
           "description": "abandoned whaling station; settlement on the island of South Georg…",
-          "name": "古利德維肯",
+          "name": "古利德维肯",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%8F%A4%E5%88%A9%E5%BE%B7%E7%B6%AD%E8%82%AF"
         },
         {
           "description": "南乔治亚和南桑德威奇群岛的首都",
-          "name": "愛德華七世角",
+          "name": "爱德华七世角",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E7%88%B1%E5%BE%B7%E5%8D%8E%E5%9B%BD%E7%8E%8B%E8%A7%92"
         }
       ],
@@ -5785,7 +5780,7 @@
       "attractions": [
         {
           "description": "危地马拉萨卡特佩克斯省首府",
-          "name": "安地瓜",
+          "name": "安提瓜危地马拉",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%AE%89%E5%9C%B0%E7%93%9C"
         },
         {
@@ -5795,12 +5790,12 @@
         },
         {
           "description": "municipality of Sololá Department, Guatemala",
-          "name": "帕納哈切爾",
+          "name": "帕纳哈切尔",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%B8%95%E7%B4%8D%E5%93%88%E5%88%87%E7%88%BE"
         },
         {
           "description": "archaeological site",
-          "name": "迦迷難乎酉",
+          "name": "迦迷难乎酉",
           "sourceUrl": "https://en.wikipedia.org/wiki/Kaminaljuyu"
         }
       ],
@@ -5849,11 +5844,6 @@
     },
     "gu": {
       "attractions": [
-        {
-          "description": "protected area in Guam",
-          "name": "War in the Pacific National Historical Park",
-          "sourceUrl": "https://en.wikipedia.org/wiki/War_in_the_Pacific_National_Historical_Park"
-        },
         {
           "description": "wildlife conservation area in Guam",
           "name": "Guam National Wildlife Refuge",
@@ -5916,13 +5906,13 @@
     "gw": {
       "attractions": [
         {
-          "description": "几内亚比绍共和国的首都",
+          "description": "几内亚比绍首都",
           "name": "比绍",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%AF%94%E7%BB%8D"
         },
         {
           "description": "archipelago in Guinea-Bissau",
-          "name": "比熱戈斯群島",
+          "name": "比热戈斯群岛",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%AF%94%E7%86%B1%E6%88%88%E6%96%AF%E7%BE%A4%E5%B3%B6"
         },
         {
@@ -5932,7 +5922,7 @@
         },
         {
           "description": "protected area in Guinea-Bissau",
-          "name": "Lagoas de Cufada Natural Park",
+          "name": "Lagoas Cufada Natural Park",
           "sourceUrl": "https://en.wikipedia.org/wiki/Lagoas_Cufada_Natural_Park"
         }
       ],
@@ -5983,12 +5973,12 @@
       "attractions": [
         {
           "description": "region of Guyana",
-          "name": "埃塞奎博群島-西德梅拉拉區",
+          "name": "埃塞奎博群岛-西德梅拉拉区",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%9F%83%E5%A1%9E%E5%A5%8E%E5%8D%9A%E7%BE%A4%E5%B3%B6-%E8%A5%BF%E5%BE%B7%E6%A2%85%E6%8B%89%E6%8B%89%E5%8D%80"
         },
         {
           "description": "national park in Guyana",
-          "name": "凱厄圖爾國家公園",
+          "name": "凯厄图尔国家公园",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%87%B1%E5%8E%84%E5%9C%96%E7%88%BE%E5%9C%8B%E5%AE%B6%E5%85%AC%E5%9C%92"
         },
         {
@@ -5998,7 +5988,7 @@
         },
         {
           "description": "ruined 17th century Dutch fort in Guyana",
-          "name": "Kyk-Over-Al Fort",
+          "name": "Fort Kyk-Over-Al",
           "sourceUrl": "https://en.wikipedia.org/wiki/Fort_Kyk-Over-Al"
         }
       ],
@@ -6049,7 +6039,7 @@
       "attractions": [
         {
           "description": "香港的主要地域",
-          "name": "九龍",
+          "name": "九龙",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E4%B9%9D%E9%BE%8D"
         },
         {
@@ -6125,7 +6115,7 @@
         },
         {
           "description": "subantarctic volcanic peak territories near Heard Island",
-          "name": "麥克唐納群島",
+          "name": "麦克唐纳群岛",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E9%BA%A5%E5%85%8B%E5%94%90%E7%B4%8D%E7%BE%A4%E5%B3%B6"
         }
       ],
@@ -6242,17 +6232,17 @@
       "attractions": [
         {
           "description": "town and settlement in Istria County, Croatia",
-          "name": "羅維尼",
+          "name": "罗维尼",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E7%BE%85%E7%B6%AD%E5%B0%BC"
         },
         {
-          "description": "克羅地亞城市",
+          "description": "克罗地亚城市",
           "name": "斯普利特",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%96%AF%E6%99%AE%E5%88%A9%E7%89%B9"
         },
         {
-          "description": "克羅地亞扎達爾縣的縣城市",
-          "name": "扎達爾",
+          "description": "克罗地亚城镇",
+          "name": "扎达尔",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%89%8E%E9%81%94%E7%88%BE"
         },
         {
@@ -6317,14 +6307,14 @@
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%A4%AA%E5%AD%90%E6%B8%AF"
         },
         {
-          "description": "village in Haiti",
-          "name": "Labadie",
-          "sourceUrl": "https://en.wikipedia.org/wiki/Labadee"
-        },
-        {
           "description": "city in Haiti",
           "name": "海地角",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%B5%B7%E5%9C%B0%E8%A7%92"
+        },
+        {
+          "description": "海地阿蒂博尼特省省会",
+          "name": "戈纳伊夫",
+          "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%88%88%E7%BA%B3%E4%BC%8A%E5%A4%AB"
         }
       ],
       "images": [
@@ -6439,11 +6429,6 @@
     "id": {
       "attractions": [
         {
-          "description": "维基媒体消歧义页",
-          "name": "库塔",
-          "sourceUrl": "https://en.wikipedia.org/wiki/Kuta"
-        },
-        {
           "description": "印度尼西亚巴厘岛吉安雅县的城镇",
           "name": "乌布",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E7%83%8F%E5%B8%83"
@@ -6454,9 +6439,14 @@
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E9%9B%85%E5%8A%A0%E9%81%94%E9%83%BD%E6%9C%83%E5%8D%80"
         },
         {
-          "description": "印度尼西亚城市",
+          "description": "印尼城市",
           "name": "日惹",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%97%A5%E6%83%B9"
+        },
+        {
+          "description": "hotel in Indonesia",
+          "name": "Amanjiwo",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Amanjiwo"
         }
       ],
       "images": [
@@ -6505,12 +6495,12 @@
     "ie": {
       "attractions": [
         {
-          "description": "愛爾蘭首都",
+          "description": "爱尔兰首都,有”欧洲的硅谷”之称",
           "name": "都柏林",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E9%83%BD%E6%9F%8F%E6%9E%97"
         },
         {
-          "description": "爱尔兰西部城市",
+          "description": "爱尔兰西部港口城市",
           "name": "戈尔韦",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%88%88%E5%B0%94%E9%9F%A6"
         },
@@ -6637,14 +6627,9 @@
     "im": {
       "attractions": [
         {
-          "description": "曼島城鎮皮爾的城堡",
-          "name": "皮爾城堡",
+          "description": "曼岛城镇皮尔的城堡",
+          "name": "皮尔城堡",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E7%9A%AE%E7%88%BE%E5%9F%8E%E5%A0%A1"
-        },
-        {
-          "description": "motorcycle race held in the Isle of Man, an autonomous entity with…",
-          "name": "曼島TT摩托車大賽",
-          "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%9B%BC%E5%B3%B6TT%E8%B3%BD"
         },
         {
           "description": "town",
@@ -6655,6 +6640,11 @@
           "description": "world's largest waterwheel",
           "name": "Laxey Wheel",
           "sourceUrl": "https://en.wikipedia.org/wiki/Laxey_Wheel"
+        },
+        {
+          "description": "马恩岛城镇",
+          "name": "拉姆齐",
+          "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%8B%89%E5%A7%86%E9%BD%8A_(%E6%9B%BC%E5%B3%B6)"
         }
       ],
       "images": [
@@ -6708,8 +6698,8 @@
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%B3%B0%E5%A7%AC%E9%99%B5"
         },
         {
-          "description": "印度拉賈斯坦邦的首府",
-          "name": "齋浦爾",
+          "description": "印度拉贾斯坦邦的首府",
+          "name": "斋浦尔",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E9%BD%8B%E6%B5%A6%E7%88%BE"
         },
         {
@@ -6718,9 +6708,9 @@
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%BE%B7%E9%87%8C%E7%BA%A2%E5%A0%A1"
         },
         {
-          "description": "連環恐怖襲擊",
-          "name": "2008年孟買連環恐怖襲擊",
-          "sourceUrl": "https://zh.wikipedia.org/wiki/2008%E5%B9%B4%E5%AD%9F%E8%B2%B7%E9%80%A3%E7%92%B0%E6%81%90%E6%80%96%E8%A5%B2%E6%93%8A"
+          "description": "位于印度阿姆利则的锡克教朝拜场所",
+          "name": "哈曼迪尔寺",
+          "sourceUrl": "https://zh.wikipedia.org/wiki/%E9%98%BF%E5%A7%86%E5%88%A9%E5%88%99%E9%87%91%E5%BA%99"
         }
       ],
       "images": [
@@ -6810,17 +6800,17 @@
       "attractions": [
         {
           "description": "伊拉克城市",
-          "name": "卡爾巴拉",
+          "name": "卡尔巴拉",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%8D%A1%E7%88%BE%E5%B7%B4%E6%8B%89"
         },
         {
           "description": "area in Baghdad, Iraq",
-          "name": "綠區",
+          "name": "巴格达国际区",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E7%B6%A0%E5%8D%80_(%E5%B7%B4%E6%A0%BC%E9%81%94)"
         },
         {
           "description": "city in Iraq",
-          "name": "蘇萊曼尼亞",
+          "name": "苏莱曼尼亚",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E8%98%87%E8%90%8A%E6%9B%BC%E5%B0%BC%E4%BA%9E"
         },
         {
@@ -6890,7 +6880,7 @@
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E4%BC%8A%E7%8E%9B%E7%9B%AE%E7%A4%BC%E8%90%A8%E5%9C%A3%E9%99%B5"
         },
         {
-          "description": "ancient city in Marvdasht County, Iranian national heritage site a…",
+          "description": "历史古迹，阿契美尼德宫，伊朗国家遗产，联合国教科文组织世界遗产",
           "name": "波斯波利斯",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%B3%A2%E6%96%AF%E6%B3%A2%E5%88%A9%E6%96%AF"
         }
@@ -7012,12 +7002,12 @@
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E7%BD%97%E9%A9%AC"
         },
         {
-          "description": "意大利東北部城市",
+          "description": "意大利东北部城市",
           "name": "威尼斯",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%A8%81%E5%B0%BC%E6%96%AF"
         },
         {
-          "description": "意大利市鎮",
+          "description": "意大利城市，托斯卡纳大区首府",
           "name": "佛罗伦萨",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E4%BD%9B%E7%BD%97%E4%BC%A6%E8%90%A8"
         },
@@ -7139,24 +7129,24 @@
     "jm": {
       "attractions": [
         {
-          "description": "Adults-only resort chain; now only one resort, Hedonism II",
-          "name": "Hedonism Resorts",
-          "sourceUrl": "https://en.wikipedia.org/wiki/Hedonism_Resorts"
-        },
-        {
           "description": "town in Saint Ann Parish, Jamaica",
-          "name": "奧喬里奧斯",
+          "name": "欧丘里欧",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%A5%A7%E5%96%AC%E9%87%8C%E5%A5%A7%E6%96%AF"
         },
         {
           "description": "牙买加城镇",
-          "name": "蒙特哥貝",
+          "name": "蒙特哥贝",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E8%92%99%E7%89%B9%E5%93%A5%E8%B2%9D"
         },
         {
           "description": "town in Jamaica",
-          "name": "拉納韋貝",
+          "name": "拉纳韦贝",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%8B%89%E7%B4%8D%E9%9F%8B%E8%B2%9D_(%E7%89%99%E8%B2%B7%E5%8A%A0)"
+        },
+        {
+          "description": "town of the parish of Portland, Jamaica",
+          "name": "安东尼奥港",
+          "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%AE%89%E6%9D%B1%E5%B0%BC%E5%A5%A7%E6%B8%AF"
         }
       ],
       "images": [
@@ -7210,13 +7200,13 @@
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%8D%A1%E5%85%B9%E5%B0%BC%E7%A5%9E%E6%AE%BF"
         },
         {
-          "description": "約旦首都",
+          "description": "约旦首都",
           "name": "安曼",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%AE%89%E6%9B%BC"
         },
         {
           "description": "city in Jordan",
-          "name": "傑拉什",
+          "name": "杰拉什",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%82%91%E6%8B%89%E4%BB%80"
         },
         {
@@ -7271,23 +7261,23 @@
     "jp": {
       "attractions": [
         {
-          "description": "日本一級行政區及中央政府所在地",
-          "name": "東京都",
+          "description": "日本一级行政区及中央政府所在地",
+          "name": "东京都",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%9D%B1%E4%BA%AC%E9%83%BD"
         },
         {
-          "description": "位於日本西部近畿地方京都府南部的城市",
+          "description": "位于日本西部近畿地方京都府南部的城市",
           "name": "京都市",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E4%BA%AC%E9%83%BD%E5%B8%82"
         },
         {
-          "description": "日本神奈川縣縣治、政令指定都市之一",
-          "name": "橫濱市",
+          "description": "日本神奈川县首府、政令指定都市之一",
+          "name": "横滨市",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%A8%AA%E6%BB%A8%E5%B8%82"
         },
         {
-          "description": "日本東京都區域",
-          "name": "御台場",
+          "description": "日本东京都区域",
+          "name": "御台场",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%BE%A1%E5%8F%B0%E5%A0%B4"
         }
       ],
@@ -7338,7 +7328,7 @@
       "attractions": [
         {
           "description": "肯尼亚首都",
-          "name": "奈洛比",
+          "name": "内罗毕",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%A5%88%E6%B4%9B%E6%AF%94"
         },
         {
@@ -7403,22 +7393,22 @@
     "kg": {
       "attractions": [
         {
-          "description": "吉爾吉斯斯坦的首都",
+          "description": "吉尔吉斯斯坦的首都",
           "name": "比什凯克",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%AF%94%E4%BB%80%E5%87%AF%E5%85%8B"
         },
         {
           "description": "吉尔吉斯斯坦城镇",
-          "name": "喬爾蓬阿塔",
+          "name": "乔尔蓬阿塔",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%96%AC%E7%88%BE%E8%93%AC%E9%98%BF%E5%A1%94"
         },
         {
           "description": "吉尔吉斯斯坦第二大城市",
-          "name": "奧什",
+          "name": "奥什",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%A5%A7%E4%BB%80"
         },
         {
-          "description": "lake in Kyrgyzstan",
+          "description": "高山湖泊",
           "name": "伊塞克湖",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E4%BC%8A%E5%A1%9E%E5%85%8B%E6%B9%96"
         }
@@ -7469,7 +7459,7 @@
     "kh": {
       "attractions": [
         {
-          "description": "世界遺產",
+          "description": "世界遗产",
           "name": "吴哥窟",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%90%B4%E5%93%A5%E7%AA%9F"
         },
@@ -7480,7 +7470,7 @@
         },
         {
           "description": "柬埔寨城市",
-          "name": "暹粒市",
+          "name": "暹粒",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%9A%B9%E7%B2%92"
         },
         {
@@ -7535,12 +7525,12 @@
     "ki": {
       "attractions": [
         {
-          "description": "吉尔伯特群岛的一个岛屿",
+          "description": "基里巴斯的一组环礁",
           "name": "塔拉瓦环礁",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%A1%94%E6%8B%89%E7%93%A6%E7%8E%AF%E7%A4%81"
         },
         {
-          "description": "吉里巴斯的首都",
+          "description": "基里巴斯的首都",
           "name": "南塔拉瓦",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%8D%97%E5%A1%94%E6%8B%89%E7%93%A6"
         }
@@ -7592,13 +7582,8 @@
       "attractions": [
         {
           "description": "Volcano in Comores",
-          "name": "蘇蘇瓦山",
+          "name": "苏苏瓦山",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%8D%A1%E5%B0%94%E5%A1%94%E6%8B%89%E7%81%AB%E5%B1%B1"
-        },
-        {
-          "description": "科摩罗的首都",
-          "name": "莫洛尼",
-          "sourceUrl": "https://zh.wikipedia.org/wiki/%E8%8E%AB%E6%B4%9B%E5%B0%BC"
         },
         {
           "description": "place in Anjouan, Comoros",
@@ -7607,8 +7592,13 @@
         },
         {
           "description": "Capital of Mohéli",
-          "name": "豐博尼",
+          "name": "丰博尼",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E8%B1%90%E5%8D%9A%E5%B0%BC"
+        },
+        {
+          "description": "city on the island of Moheli, Comoros",
+          "name": "Nyumashiwa",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Nioumachoua"
         }
       ],
       "images": [
@@ -7657,7 +7647,7 @@
     "kn": {
       "attractions": [
         {
-          "description": "聖克里斯多福及尼維斯首都",
+          "description": "圣基茨和尼维斯首都",
           "name": "巴斯特尔",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%B7%B4%E6%96%AF%E7%89%B9%E5%B0%94_(%E5%9C%A3%E5%9F%BA%E8%8C%A8%E5%92%8C%E5%B0%BC%E7%BB%B4%E6%96%AF)"
         },
@@ -7672,7 +7662,7 @@
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%8D%A1%E6%B0%B8"
         },
         {
-          "description": "聖克里斯多福及尼維斯的構成島",
+          "description": "圣基茨和尼维斯的构成岛",
           "name": "尼维斯",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%B0%BC%E7%BB%B4%E6%96%AF%E5%B2%9B"
         }
@@ -7723,12 +7713,7 @@
     "kp": {
       "attractions": [
         {
-          "description": "military settlement between North and South Korea",
-          "name": "板門店",
-          "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%9D%BF%E9%96%80%E5%BA%97"
-        },
-        {
-          "description": "朝鮮首都",
+          "description": "朝鲜首都",
           "name": "平壤",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%B9%B3%E5%A3%A4%E5%B8%82"
         },
@@ -7739,8 +7724,13 @@
         },
         {
           "description": "mountain range in North Korea",
-          "name": "金剛山",
+          "name": "金刚山",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E9%87%91%E5%89%9B%E5%B1%B1"
+        },
+        {
+          "description": "朝鲜登山观光胜地",
+          "name": "妙香山",
+          "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%A6%99%E9%A6%99%E5%B1%B1"
         }
       ],
       "images": [
@@ -7789,8 +7779,8 @@
     "kr": {
       "attractions": [
         {
-          "description": "大韓民國首都",
-          "name": "首爾",
+          "description": "韩国首都",
+          "name": "首尔",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E9%A6%96%E7%88%BE%E7%89%B9%E5%88%A5%E5%B8%82"
         },
         {
@@ -7800,11 +7790,11 @@
         },
         {
           "description": "skyscraper",
-          "name": "釜山樂天塔",
+          "name": "釜山乐天塔",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E9%87%9C%E5%B1%B1%E6%A8%82%E5%A4%A9%E5%A1%94"
         },
         {
-          "description": "韓國京畿道城市",
+          "description": "韩国京畿道城市",
           "name": "水原市",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%B0%B4%E5%8E%9F%E5%B8%82"
         }
@@ -7922,23 +7912,13 @@
       "attractions": [
         {
           "description": "开曼群岛的首都",
-          "name": "喬治敦",
-          "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%96%AC%E6%B2%BB%E6%95%A6_(%E9%96%8B%E6%9B%BC%E7%BE%A4%E5%B3%B6)"
-        },
-        {
-          "description": "島嶼",
-          "name": "大開曼",
-          "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%A4%A7%E9%96%8B%E6%9B%BC"
-        },
-        {
-          "description": "开曼群岛的首都",
-          "name": "喬治敦",
-          "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%96%AC%E6%B2%BB%E6%95%A6_(%E9%96%8B%E6%9B%BC%E7%BE%A4%E5%B3%B6)"
-        },
-        {
-          "description": "維基媒體消歧義頁",
           "name": "乔治敦",
-          "sourceUrl": "https://zh.wikipedia.org/wiki/%E4%B9%94%E6%B2%BB%E6%95%A6"
+          "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%96%AC%E6%B2%BB%E6%95%A6_(%E9%96%8B%E6%9B%BC%E7%BE%A4%E5%B3%B6)"
+        },
+        {
+          "description": "岛屿",
+          "name": "大开曼",
+          "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%A4%A7%E9%96%8B%E6%9B%BC"
         }
       ],
       "images": [
@@ -7993,7 +7973,7 @@
         },
         {
           "description": "outdoor speed skating and bandy rink",
-          "name": "麥迪奧",
+          "name": "麦迪奥",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E9%BA%A5%E8%BF%AA%E5%A5%A7"
         },
         {
@@ -8053,24 +8033,24 @@
     "la": {
       "attractions": [
         {
-          "description": "寮國首都",
-          "name": "永珍",
-          "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%B0%B8%E7%8F%8D"
+          "description": "老挝首都与湄公河沿岸城市",
+          "name": "万象",
+          "sourceUrl": "https://zh.wikipedia.org/wiki/%E4%B8%87%E8%B1%A1"
         },
         {
-          "description": "town in Laos",
-          "name": "旺陽",
-          "sourceUrl": "https://zh.wikipedia.org/wiki/%E8%90%AC%E6%A6%AE%E5%B8%82"
+          "description": "保留寺庙与法式建筑的世界文化遗产城市",
+          "name": "琅勃拉邦",
+          "sourceUrl": "https://zh.wikipedia.org/wiki/%E7%90%85%E5%8B%83%E6%8B%89%E9%82%A6"
         },
         {
-          "description": "東南亞跨國河流",
-          "name": "湄公河",
-          "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%B9%84%E5%85%AC%E6%B2%B3"
+          "description": "喀斯特山地与南松河环绕的小城",
+          "name": "万荣",
+          "sourceUrl": "https://zh.wikipedia.org/wiki/%E4%B8%87%E8%8D%A3"
         },
         {
-          "description": "泰国Thailand的县",
-          "name": "廊開府",
-          "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%BB%8A%E9%96%8B%E5%BA%9C"
+          "description": "琅勃拉邦附近的多层瀑布",
+          "name": "光西瀑布",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Kuang_Si_Falls"
         }
       ],
       "images": [
@@ -8135,7 +8115,7 @@
         },
         {
           "description": "human settlement in Lebanon",
-          "name": "Harissa, Lebanon",
+          "name": "Harissa",
           "sourceUrl": "https://en.wikipedia.org/wiki/Harissa-Daraoun"
         }
       ],
@@ -8191,7 +8171,7 @@
         },
         {
           "description": "town in Saint Lucia",
-          "name": "蘇弗里耶爾",
+          "name": "苏弗里耶尔",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E8%98%87%E5%BC%97%E9%87%8C%E8%80%B6%E7%88%BE"
         },
         {
@@ -8200,9 +8180,9 @@
           "sourceUrl": "https://en.wikipedia.org/wiki/Cap_Point"
         },
         {
-          "description": "聯合國教科文組織認定的有特殊物質或文化意義的地點",
-          "name": "世界遺產",
-          "sourceUrl": "https://zh.wikipedia.org/wiki/%E4%B8%96%E7%95%8C%E9%81%97%E4%BA%A7"
+          "description": "town in Saint Lucia",
+          "name": "格罗斯岛",
+          "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%A0%BC%E7%BD%97%E8%89%BE%E5%8B%92%E7%89%B9"
         }
       ],
       "images": [
@@ -8317,7 +8297,7 @@
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E9%94%A1%E5%90%89%E9%87%8C%E8%80%B6"
         },
         {
-          "description": "斯里蘭卡城市",
+          "description": "斯里兰卡城市",
           "name": "科伦坡",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%8F%AF%E5%80%AB%E5%9D%A1"
         },
@@ -8373,13 +8353,13 @@
     "lr": {
       "attractions": [
         {
-          "description": "賴比瑞亞首都",
-          "name": "蒙羅維亞",
+          "description": "利比里亚首都",
+          "name": "蒙罗维亚",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E8%92%99%E7%BE%85%E7%B6%AD%E4%BA%9E"
         },
         {
           "description": "national park in Liberia",
-          "name": "薩波國家公園",
+          "name": "萨波国家公园",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E8%96%A9%E6%B3%A2%E5%9C%8B%E5%AE%B6%E5%85%AC%E5%9C%92"
         },
         {
@@ -8389,7 +8369,7 @@
         },
         {
           "description": "human settlement",
-          "name": "羅伯茨港",
+          "name": "罗伯茨港",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E7%BE%85%E4%BC%AF%E8%8C%A8%E6%B8%AF"
         }
       ],
@@ -8439,24 +8419,24 @@
     "ls": {
       "attractions": [
         {
-          "description": "ski resort",
-          "name": "[[Oxbow (Lesotho)",
-          "sourceUrl": "https://en.wikipedia.org/wiki/Afriski"
-        },
-        {
           "description": "mountain pass",
           "name": "撒尼山口",
           "sourceUrl": "https://en.wikipedia.org/wiki/Sani_Pass"
         },
         {
           "description": "national park of Lesotho",
-          "name": "塞赫拉巴泰貝國家公園",
+          "name": "塞赫拉巴泰贝国家公园",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%A1%9E%E8%B5%AB%E6%8B%89%E5%B7%B4%E6%B3%B0%E8%B2%9D%E5%9C%8B%E5%AE%B6%E5%85%AC%E5%9C%92"
         },
         {
           "description": "national park in Lesotho",
-          "name": "澤蘭雅內國家公園",
+          "name": "泽兰雅内国家公园",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%BE%A4%E8%98%AD%E9%9B%85%E5%85%A7%E5%9C%8B%E5%AE%B6%E5%85%AC%E5%9C%92"
+        },
+        {
+          "description": "代表性目的地",
+          "name": "Khatse",
+          "sourceUrl": "https://www.wikidata.org/wiki/Q14220716"
         }
       ],
       "images": [
@@ -8505,7 +8485,7 @@
     "lt": {
       "attractions": [
         {
-          "description": "立陶宛首都",
+          "description": "立陶宛的首都",
           "name": "维尔纽斯",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E7%BB%B4%E5%B0%94%E7%BA%BD%E6%96%AF"
         },
@@ -8516,12 +8496,12 @@
         },
         {
           "description": "立陶宛城市",
-          "name": "特拉凱",
+          "name": "特拉凯",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E7%89%B9%E6%8B%89%E5%87%B1"
         },
         {
           "description": "resort town in Lithuania",
-          "name": "尼達",
+          "name": "尼达",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%B0%BC%E9%81%94_(%E7%AB%8B%E9%99%B6%E5%AE%9B)"
         }
       ],
@@ -8571,24 +8551,24 @@
     "lu": {
       "attractions": [
         {
-          "description": "highest judicial authority in the European Union, consisting of th…",
-          "name": "歐洲聯盟法院",
-          "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%AD%90%E6%B4%B2%E8%81%AF%E7%9B%9F%E6%B3%95%E9%99%A2"
-        },
-        {
           "description": "commune in the canton of Echternach, Luxembourg",
           "name": "博福尔 (卢森堡)",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%8D%9A%E7%A6%8F%E5%B0%94_(%E5%8D%A2%E6%A3%AE%E5%A0%A1)"
         },
         {
-          "description": "photography exhibition curated by Edward Steichen",
-          "name": "The Family of Man",
-          "sourceUrl": "https://en.wikipedia.org/wiki/The_Family_of_Man"
-        },
-        {
           "description": "卢森堡梅尔施县市镇",
           "name": "拉罗谢特",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%8B%89%E7%BD%97%E8%B0%A2%E7%89%B9"
+        },
+        {
+          "description": "commune in the canton of Wiltz, Luxembourg",
+          "name": "叙尔河畔埃施",
+          "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%8F%99%E5%B0%94%E6%B2%B3%E7%95%94%E5%9F%83%E6%96%BD"
+        },
+        {
+          "description": "castle",
+          "name": "布尔沙伊德城堡",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Bourscheid_Castle"
         }
       ],
       "images": [
@@ -8648,7 +8628,7 @@
         },
         {
           "description": "拉脱维亚锡古尔达市镇内的城市",
-          "name": "錫古爾達",
+          "name": "锡古尔达",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E9%8C%AB%E5%8F%A4%E7%88%BE%E9%81%94"
         },
         {
@@ -8703,11 +8683,6 @@
     "ly": {
       "attractions": [
         {
-          "description": "維基媒體消歧義頁",
-          "name": "的黎波里",
-          "sourceUrl": "https://zh.wikipedia.org/wiki/%E7%9A%84%E9%BB%8E%E6%B3%A2%E9%87%8C_(%E6%B6%88%E6%AD%A7%E4%B9%89)"
-        },
-        {
           "description": "ancient city in modern Libya",
           "name": "大莱普提斯",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%A4%A7%E8%8E%B1%E6%99%AE%E6%8F%90%E6%96%AF"
@@ -8718,9 +8693,14 @@
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%A1%9E%E5%8D%9C%E6%8B%89%E6%B3%B0"
         },
         {
-          "description": "利比亞第二大城市",
+          "description": "利比亚第二大城市",
           "name": "班加西",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E7%8F%AD%E5%8A%A0%E8%A5%BF"
+        },
+        {
+          "description": "利比亚城镇",
+          "name": "古达米斯",
+          "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%8F%A4%E8%BE%BE%E7%B1%B3%E6%96%AF"
         }
       ],
       "images": [
@@ -8840,8 +8820,8 @@
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E8%92%99%E7%89%B9%E5%8D%A1%E6%B4%9B"
         },
         {
-          "description": "國家",
-          "name": "摩納哥",
+          "description": "位于欧洲的城邦国家",
+          "name": "摩纳哥",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%91%A9%E7%BA%B3%E5%93%A5"
         }
       ],
@@ -8891,24 +8871,24 @@
     "md": {
       "attractions": [
         {
-          "description": "protests",
-          "name": "葡萄革命",
-          "sourceUrl": "https://zh.wikipedia.org/wiki/2009%E5%B9%B4%E6%91%A9%E7%88%BE%E5%A4%9A%E7%93%A6%E6%8A%97%E8%AD%B0%E6%B4%BB%E5%8B%95"
-        },
-        {
-          "description": "摩爾多瓦城市，不獲國際承認國家聶斯特河沿岸共和國首都",
+          "description": "摩尔多瓦城市，不获国际承认国家德涅斯特河沿岸共和国首都",
           "name": "蒂拉斯波尔",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E8%92%82%E6%8B%89%E6%96%AF%E6%B3%A2%E5%B0%94"
         },
         {
           "description": "historical and archaeological complex in Moldova",
-          "name": "老奧爾黑",
+          "name": "老奥尔黑",
           "sourceUrl": "https://en.wikipedia.org/wiki/Old_Orhei"
         },
         {
           "description": "摩尔多瓦的市镇",
           "name": "伯尔齐",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E4%BC%AF%E7%88%BE%E9%BD%8A"
+        },
+        {
+          "description": "village in Bender Municipality, Moldova",
+          "name": "Protiagaylovka",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Proteagailovca"
         }
       ],
       "images": [
@@ -8963,12 +8943,12 @@
         },
         {
           "description": "黑山科托尔市镇内的城市",
-          "name": "科托爾",
+          "name": "科托尔",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E7%A7%91%E6%89%98%E7%88%BE"
         },
         {
           "description": "island in the Adriatic Sea",
-          "name": "Sveta Neđelja",
+          "name": "Katič",
           "sourceUrl": "https://en.wikipedia.org/wiki/Kati%C4%8D_and_Sveta_Ne%C4%91elja_Islets"
         },
         {
@@ -9028,19 +9008,9 @@
           "sourceUrl": "https://en.wikipedia.org/wiki/Grand_Case"
         },
         {
-          "description": "法属圣马丁的首府",
-          "name": "马里戈特",
-          "sourceUrl": "https://zh.wikipedia.org/wiki/%E9%A9%AC%E9%87%8C%E6%88%88"
-        },
-        {
           "description": "荷属圣马丁的首都",
           "name": "菲利普斯堡",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E8%8F%B2%E5%88%A9%E6%99%AE%E6%96%AF%E5%A0%A1"
-        },
-        {
-          "description": "维基媒体消歧义页",
-          "name": "Marigot",
-          "sourceUrl": "https://en.wikipedia.org/wiki/Marigot"
         }
       ],
       "images": [
@@ -9155,13 +9125,13 @@
     "mh": {
       "attractions": [
         {
-          "description": "馬紹爾群島的首都",
-          "name": "馬久羅",
+          "description": "马绍尔群岛的首都",
+          "name": "马朱罗",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E9%A6%AC%E4%B9%85%E7%BE%85"
         },
         {
-          "description": "太平洋馬紹爾群島的一部分",
-          "name": "瓜加林環礁",
+          "description": "太平洋马绍尔群岛的一部分",
+          "name": "夸贾林环礁",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E7%93%9C%E5%8A%A0%E6%9E%97%E7%92%B0%E7%A4%81"
         },
         {
@@ -9216,7 +9186,7 @@
     "mk": {
       "attractions": [
         {
-          "description": "北馬其頓首都",
+          "description": "北马其顿共和国的首都",
           "name": "斯科普里",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%96%AF%E7%A7%91%E6%99%AE%E9%87%8C"
         },
@@ -9227,7 +9197,7 @@
         },
         {
           "description": "monastery",
-          "name": "聖瑙姆修道院",
+          "name": "圣瑙姆修道院",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E8%81%96%E7%91%99%E5%A7%86%E4%BF%AE%E9%81%93%E9%99%A2"
         },
         {
@@ -9292,8 +9262,8 @@
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E8%8E%AB%E6%99%AE%E6%8F%90"
         },
         {
-          "description": "马里共和国的首都",
-          "name": "巴馬科",
+          "description": "马里共和国首都",
+          "name": "巴马科",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%B7%B4%E9%A6%AC%E7%A7%91"
         },
         {
@@ -9348,7 +9318,7 @@
     "mm": {
       "attractions": [
         {
-          "description": "緬甸最大都市",
+          "description": "缅甸最大都市",
           "name": "仰光",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E4%BB%B0%E5%85%89"
         },
@@ -9364,7 +9334,7 @@
         },
         {
           "description": "town in Mandalay, Myanmar",
-          "name": "阿摩羅補羅",
+          "name": "阿马拉布拉",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E9%98%BF%E7%8E%9B%E6%8B%89%E6%99%AE%E6%8B%89"
         }
       ],
@@ -9425,12 +9395,12 @@
         },
         {
           "description": "National Park of Mongolia",
-          "name": "霍格諾汗國家公園",
+          "name": "霍格诺汗国家公园",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E9%9C%8D%E6%A0%BC%E8%AB%BE%E6%B1%97%E5%9C%8B%E5%AE%B6%E5%85%AC%E5%9C%92"
         },
         {
           "description": "national park of Mongolia",
-          "name": "阿勒泰塔彎柏格多國家公園",
+          "name": "阿勒泰塔弯柏格多国家公园",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E9%98%BF%E5%8B%92%E6%B3%B0%E5%A1%94%E5%BD%8E%E6%9F%8F%E6%A0%BC%E5%A4%9A%E5%9C%8B%E5%AE%B6%E5%85%AC%E5%9C%92"
         }
       ],
@@ -9481,12 +9451,12 @@
       "attractions": [
         {
           "description": "observation tower in Macau",
-          "name": "澳門旅遊塔會展娛樂中心",
+          "name": "澳门旅游塔会展娱乐中心",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%BE%B3%E9%96%80%E6%97%85%E9%81%8A%E5%A1%94%E6%9C%83%E5%B1%95%E5%A8%9B%E6%A8%82%E4%B8%AD%E5%BF%83"
         },
         {
           "description": "澳门岛屿",
-          "name": "路環",
+          "name": "路环",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E8%B7%AF%E7%92%B0"
         }
       ],
@@ -9597,12 +9567,12 @@
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%9C%A3%E7%9A%AE%E5%9F%83%E5%B0%94_(%E9%A9%AC%E6%8F%90%E5%B0%BC%E5%85%8B)"
         },
         {
-          "description": "法国海外省马提尼克的首府",
+          "description": "法国市镇",
           "name": "法兰西堡",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%B3%95%E5%85%B0%E8%A5%BF%E5%A0%A1"
         },
         {
-          "description": "法国海外省马提尼克的市镇",
+          "description": "法国市镇",
           "name": "莱桑斯达莱",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E8%8E%B1%E6%A1%91%E6%96%AF%E8%BE%BE%E8%8E%B1"
         }
@@ -9654,23 +9624,23 @@
       "attractions": [
         {
           "description": "human settlement in Mauritania",
-          "name": "欣蓋提",
+          "name": "欣盖提",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%AC%A3%E8%93%8B%E6%8F%90"
         },
         {
-          "description": "central bank of Mauritania, in northwest Africa",
-          "name": "毛利塔利亚中央银行",
-          "sourceUrl": "https://en.wikipedia.org/wiki/Central_Bank_of_Mauritania"
-        },
-        {
           "description": "毛里塔尼亚国家公园",
-          "name": "阿爾金岩石礁國家公園",
+          "name": "阿尔金岩石礁国家公园",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E9%98%BF%E7%88%BE%E9%87%91%E5%B2%A9%E7%9F%B3%E7%A4%81%E5%9C%8B%E5%AE%B6%E5%85%AC%E5%9C%92"
         },
         {
-          "description": "茅利塔尼亞首都",
+          "description": "毛里塔尼亚首都",
           "name": "努瓦克肖特",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%8A%AA%E7%93%A6%E5%85%8B%E8%82%96%E7%89%B9"
+        },
+        {
+          "description": "毛里塔尼亚阿德拉尔省首府",
+          "name": "阿塔尔",
+          "sourceUrl": "https://zh.wikipedia.org/wiki/%E9%98%BF%E5%A1%94%E7%88%BE"
         }
       ],
       "images": [
@@ -9781,7 +9751,7 @@
         },
         {
           "description": "megalithic temple complex in Malta",
-          "name": "姆那拉",
+          "name": "姆纳德拉石庙",
           "sourceUrl": "https://en.wikipedia.org/wiki/Mnajdra"
         },
         {
@@ -9836,13 +9806,13 @@
     "mu": {
       "attractions": [
         {
-          "description": "模里西斯首都",
+          "description": "毛里求斯首都",
           "name": "路易港",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E8%B7%AF%E6%98%93%E6%B8%AF"
         },
         {
           "description": "毛里求斯的小岛",
-          "name": "塞爾夫島",
+          "name": "塞尔夫岛",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%A1%9E%E7%88%BE%E5%A4%AB%E5%B3%B6_(%E6%AF%9B%E9%87%8C%E8%A3%98%E6%96%AF)"
         },
         {
@@ -9852,7 +9822,7 @@
         },
         {
           "description": "毛里求斯朗帕河区的村庄",
-          "name": "馬勒勒角",
+          "name": "马勒勒角",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E9%A6%AC%E5%8B%92%E5%8B%92%E8%A7%92"
         }
       ],
@@ -9907,19 +9877,19 @@
           "sourceUrl": "https://en.wikipedia.org/wiki/Atolls_of_the_Maldives"
         },
         {
-          "description": "代表性目的地",
-          "name": "Sun Island Resort And Spa Ari Atoll",
-          "sourceUrl": "https://en.wikipedia.org/wiki/Sun_Island_Resort_And_Spa_Ari_Atoll"
-        },
-        {
           "description": "island in Alif Alif Atoll, Maldives",
           "name": "Rasdhoo",
           "sourceUrl": "https://en.wikipedia.org/wiki/Rasdhoo"
         },
         {
           "description": "代表性目的地",
-          "name": "Kuredu Island Resort",
-          "sourceUrl": "https://en.wikipedia.org/wiki/Kuredu_Island_Resort"
+          "name": "Meeru Whale Skeleton",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Meeru_Whale_Skeleton"
+        },
+        {
+          "description": "island in Kaafu Atoll, Maldives",
+          "name": "Thulusdhoo",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Thulusdhoo"
         }
       ],
       "images": [
@@ -9973,11 +9943,6 @@
           "sourceUrl": "https://en.wikipedia.org/wiki/Cape_Maclear"
         },
         {
-          "description": "island in Malawi",
-          "name": "利科馬島",
-          "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%88%A9%E7%A7%91%E9%A6%AC%E5%B3%B6"
-        },
-        {
           "description": "human settlement in Malawi",
           "name": "Mua",
           "sourceUrl": "https://en.wikipedia.org/wiki/Mua%2C_Malawi"
@@ -9986,6 +9951,11 @@
           "description": "非洲城市",
           "name": "松巴",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%9D%BE%E5%B7%B4"
+        },
+        {
+          "description": "human settlement in Malawi",
+          "name": "猴子湾",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Monkey_Bay"
         }
       ],
       "images": [
@@ -10034,13 +10004,13 @@
     "mx": {
       "attractions": [
         {
-          "description": "墨西哥合众国的首都",
+          "description": "墨西哥首都",
           "name": "墨西哥城",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%A2%A8%E8%A5%BF%E5%93%A5%E5%9F%8E"
         },
         {
           "description": "protected area in Quintana Roo, Mexico",
-          "name": "圖隆",
+          "name": "图隆",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%9B%BE%E5%8D%A2%E5%A7%86"
         },
         {
@@ -10110,13 +10080,13 @@
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E4%B9%94%E6%B2%BB%E5%B8%82"
         },
         {
-          "description": "马来西亚州属",
+          "description": "马来西亚州",
           "name": "马六甲",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E9%A9%AC%E5%85%AD%E7%94%B2"
         },
         {
           "description": "马来西亚沙巴州首府",
-          "name": "亚庇",
+          "name": "哥打基纳巴卢",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E4%BA%9E%E5%BA%87"
         }
       ],
@@ -10177,11 +10147,11 @@
         },
         {
           "description": "莫桑比克城市",
-          "name": "伊尼揚巴內",
+          "name": "伊尼扬巴内",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E4%BC%8A%E5%B0%BC%E6%8F%9A%E5%B7%B4%E5%85%A7"
         },
         {
-          "description": "莫桑比克城市",
+          "description": "莫桑比克索法拉省首府",
           "name": "贝拉",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E8%B4%9D%E6%8B%89"
         }
@@ -10248,7 +10218,7 @@
         },
         {
           "description": "dune in the Namib Desert, Namibie",
-          "name": "45號沙丘",
+          "name": "45号沙丘",
           "sourceUrl": "https://en.wikipedia.org/wiki/Dune_45"
         }
       ],
@@ -10298,24 +10268,24 @@
     "nc": {
       "attractions": [
         {
-          "description": "法国特殊集体新喀里多尼亚首府，南部省省会",
+          "description": "法国市镇",
           "name": "努美阿",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%8A%AA%E7%BE%8E%E9%98%BF"
-        },
-        {
-          "description": "代表性目的地",
-          "name": "Oure Hotel Ile des Pins",
-          "sourceUrl": "https://en.wikipedia.org/wiki/Oure_Hotel_Ile_des_Pins"
-        },
-        {
-          "description": "代表性目的地",
-          "name": "Le Meridien Hotel Ile Des Pins",
-          "sourceUrl": "https://en.wikipedia.org/wiki/Le_Meridien_Hotel_Ile_Des_Pins"
         },
         {
           "description": "bay in southwestern New Caledonia",
           "name": "Gouaro Bay",
           "sourceUrl": "https://en.wikipedia.org/wiki/Gouaro_Bay"
+        },
+        {
+          "description": "lighthouse on Amédée Island in Nouméa lagoon, New Caledonia, built…",
+          "name": "阿梅代灯塔",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Am%C3%A9d%C3%A9e_Lighthouse"
+        },
+        {
+          "description": "nature reserve in New Caledonia",
+          "name": "Blue River Provincial Park",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Blue_River_Provincial_Park"
         }
       ],
       "images": [
@@ -10380,7 +10350,7 @@
         },
         {
           "description": "rural commune in Niger",
-          "name": "阿約魯",
+          "name": "阿约鲁",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E9%98%BF%E7%B4%84%E9%AD%AF"
         }
       ],
@@ -10430,14 +10400,9 @@
     "nf": {
       "attractions": [
         {
-          "description": "维基媒体消歧义页",
-          "name": "Flagstaff Hill",
-          "sourceUrl": "https://en.wikipedia.org/wiki/Flagstaff_Hill"
-        },
-        {
-          "description": "消歧义页面",
-          "name": "金斯顿",
-          "sourceUrl": "https://zh.wikipedia.org/wiki/%E9%87%91%E6%96%AF%E9%A1%BF"
+          "description": "南太平洋的澳大利亚外部领土",
+          "name": "诺福克岛",
+          "sourceUrl": "https://zh.wikipedia.org/wiki/%E8%AF%BA%E7%A6%8F%E5%85%8B%E5%B2%9B"
         }
       ],
       "images": [
@@ -10475,11 +10440,6 @@
     "ng": {
       "attractions": [
         {
-          "description": "building in Nigeria",
-          "name": "Palms Shopping Mall",
-          "sourceUrl": "https://en.wikipedia.org/wiki/Palms_Shopping_Mall"
-        },
-        {
           "description": "尼日利亚首都",
           "name": "阿布贾",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E9%98%BF%E5%B8%83%E8%B4%BE"
@@ -10491,8 +10451,13 @@
         },
         {
           "description": "national park in Nigeria",
-          "name": "乍得盆地國家公園",
+          "name": "乍得盆地国家公园",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E4%B9%8D%E5%BE%97%E7%9B%86%E5%9C%B0%E5%9C%8B%E5%AE%B6%E5%85%AC%E5%9C%92"
+        },
+        {
+          "description": "尼日利亚国家公园",
+          "name": "克里斯河国家公园",
+          "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%85%8B%E7%BE%85%E6%96%AF%E6%B2%B3%E5%9C%8B%E5%AE%B6%E5%85%AC%E5%9C%92"
         }
       ],
       "images": [
@@ -10547,7 +10512,7 @@
         },
         {
           "description": "尼加拉瓜市镇",
-          "name": "南聖胡安",
+          "name": "南圣胡安",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%8D%97%E8%81%96%E8%83%A1%E5%AE%89"
         },
         {
@@ -10557,7 +10522,7 @@
         },
         {
           "description": "Catholic church building in Managua, Nicaragua",
-          "name": "舊馬那瓜天主堂",
+          "name": "旧马那瓜天主堂",
           "sourceUrl": "https://en.wikipedia.org/wiki/Old_Cathedral_of_Managua"
         }
       ],
@@ -10607,7 +10572,7 @@
     "nl": {
       "attractions": [
         {
-          "description": "荷蘭首都及最大人口城市",
+          "description": "荷兰首都及最大城市",
           "name": "阿姆斯特丹",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E9%98%BF%E5%A7%86%E6%96%AF%E7%89%B9%E4%B8%B9"
         },
@@ -10617,7 +10582,7 @@
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E9%B9%BF%E7%89%B9%E4%B8%B9"
         },
         {
-          "description": "荷蘭南荷蘭省城市",
+          "description": "荷兰城市",
           "name": "海牙",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%B5%B7%E7%89%99"
         },
@@ -10673,13 +10638,13 @@
     "no": {
       "attractions": [
         {
-          "description": "挪威的首都",
+          "description": "挪威首都",
           "name": "奥斯陆",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%A5%A5%E6%96%AF%E9%99%86"
         },
         {
           "description": "挪威城市",
-          "name": "卑爾根",
+          "name": "卑尔根",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%8D%91%E7%88%BE%E6%A0%B9"
         },
         {
@@ -10688,7 +10653,7 @@
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E7%89%B9%E9%9A%86%E8%B5%AB%E5%A7%86"
         },
         {
-          "description": "cape on the island of Magerøya in Northern Norway",
+          "description": "挪威地点",
           "name": "北角",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%8C%97%E8%A7%92_(%E6%8C%AA%E5%A8%81)"
         }
@@ -10739,13 +10704,13 @@
     "np": {
       "attractions": [
         {
-          "description": "尼泊爾首都",
-          "name": "加德滿都",
+          "description": "尼泊尔首都",
+          "name": "加德满都",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%8A%A0%E5%BE%B7%E6%BB%BF%E9%83%BD"
         },
         {
           "description": "municipality in Bhaktapur District, Nepal",
-          "name": "巴克塔普爾",
+          "name": "巴克塔普尔",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%B7%B4%E5%85%8B%E5%A1%94%E6%99%AE%E7%88%BE"
         },
         {
@@ -10806,7 +10771,7 @@
       "attractions": [
         {
           "description": "瑙鲁的一个区",
-          "name": "亞倫區",
+          "name": "亚伦区",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E4%BA%9E%E5%80%AB%E5%8D%80"
         }
       ],
@@ -10907,8 +10872,8 @@
     "nz": {
       "attractions": [
         {
-          "description": "新西蘭城市",
-          "name": "奧克蘭",
+          "description": "新西兰城市",
+          "name": "奥克兰都会区",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%A5%A7%E5%85%8B%E8%98%AD"
         },
         {
@@ -10917,12 +10882,12 @@
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E7%9A%87%E5%90%8E%E9%95%87_(%E6%96%B0%E8%A5%BF%E5%85%B0)"
         },
         {
-          "description": "新西兰城市",
-          "name": "基督城",
+          "description": "新西兰第三大城市",
+          "name": "克赖斯特彻奇",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%9F%BA%E7%9D%A3%E5%9F%8E"
         },
         {
-          "description": "紐西蘭首都",
+          "description": "新西兰首都",
           "name": "惠灵顿",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%83%A0%E7%81%B5%E9%A1%BF"
         }
@@ -11040,7 +11005,7 @@
       "attractions": [
         {
           "description": "巴拿马城市",
-          "name": "巴波亞",
+          "name": "巴尔博亚",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%B7%B4%E5%B0%94%E5%8D%9A%E4%BA%9A_(%E5%B7%B4%E6%8B%BF%E9%A9%AC)"
         },
         {
@@ -11049,7 +11014,7 @@
           "sourceUrl": "https://en.wikipedia.org/wiki/Gatun_Dam"
         },
         {
-          "description": "human settlement in Panama",
+          "description": "巴拿马的一个城市",
           "name": "博卡斯德尔托罗",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%8D%9A%E5%8D%A1%E6%96%AF%E9%95%87_(%E5%8D%9A%E5%8D%A1%E6%96%AF%E5%BE%B7%E5%B0%94%E6%89%98%E7%BD%97)"
         },
@@ -11106,17 +11071,17 @@
       "attractions": [
         {
           "description": "秘鲁的城市",
-          "name": "庫斯科",
+          "name": "库斯科",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%BA%AB%E6%96%AF%E7%A7%91"
         },
         {
-          "description": "秘鲁世界遺產",
-          "name": "馬丘比丘",
+          "description": "秘鲁世界遗产",
+          "name": "马丘比丘",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E9%A9%AC%E4%B8%98%E6%AF%94%E4%B8%98"
         },
         {
-          "description": "秘魯首都",
-          "name": "利馬",
+          "description": "秘鲁首都",
+          "name": "利马",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%88%A9%E9%A6%AC"
         },
         {
@@ -11176,19 +11141,19 @@
           "sourceUrl": "https://en.wikipedia.org/wiki/Sofitel_Bora_Bora_Marara_Beach_and_Private_Island"
         },
         {
-          "description": "法属波利尼西亚的首府",
+          "description": "法国市镇",
           "name": "帕皮提",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%B8%95%E7%9A%AE%E6%8F%90"
         },
         {
-          "description": "代表性目的地",
-          "name": "Le Taha'a Private Island And Resort Spa",
-          "sourceUrl": "https://en.wikipedia.org/wiki/Le_Taha%27a_Private_Island_And_Resort_Spa"
+          "description": "French atoll in the Pacific Ocean",
+          "name": "克利珀顿岛",
+          "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%85%8B%E5%88%A9%E7%8F%80%E9%A0%93%E5%B3%B6"
         },
         {
-          "description": "French atoll in the Pacific Ocean",
-          "name": "克利珀頓島",
-          "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%85%8B%E5%88%A9%E7%8F%80%E9%A0%93%E5%B3%B6"
+          "description": "island of the Bass Islands in French Polynesia",
+          "name": "小拉帕岛",
+          "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%8B%89%E5%B8%95%E5%B2%9B"
         }
       ],
       "images": [
@@ -11237,24 +11202,24 @@
     "pg": {
       "attractions": [
         {
-          "description": "trail in Papua New Guinea, WW2 battlefield",
-          "name": "科科达小径",
-          "sourceUrl": "https://en.wikipedia.org/wiki/Kokoda_Track"
-        },
-        {
           "description": "archipelago of Papua New Guinea",
-          "name": "路易西亞德群島",
+          "name": "路易西亚德群岛",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E8%B7%AF%E6%98%93%E8%A5%BF%E4%BA%9E%E5%BE%B7%E7%BE%A4%E5%B3%B6"
         },
         {
           "description": "island group of Papua New Guinea",
-          "name": "特羅布里恩群島",
+          "name": "特罗布里恩群岛",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E7%89%B9%E7%BE%85%E5%B8%83%E9%87%8C%E6%81%A9%E7%BE%A4%E5%B3%B6"
         },
         {
           "description": "town in Papua New Guinea",
           "name": "Tufi",
           "sourceUrl": "https://en.wikipedia.org/wiki/Tufi"
+        },
+        {
+          "description": "human settlement in Papua New Guinea",
+          "name": "马当",
+          "sourceUrl": "https://zh.wikipedia.org/wiki/%E9%A9%AC%E5%BD%93"
         }
       ],
       "images": [
@@ -11304,7 +11269,7 @@
       "attractions": [
         {
           "description": "菲律宾首都城市",
-          "name": "马尼拉市",
+          "name": "马尼拉",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E9%A9%AC%E5%B0%BC%E6%8B%89"
         },
         {
@@ -11314,12 +11279,12 @@
         },
         {
           "description": "stone kiosk in Cebu City",
-          "name": "Magellan's Cross",
+          "name": "Magellan’s Cross Pavilion",
           "sourceUrl": "https://en.wikipedia.org/wiki/Magellan's_Cross_Pavilion"
         },
         {
           "description": "菲律宾城市",
-          "name": "碧瑶市",
+          "name": "碧瑶",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E7%A2%A7%E7%91%B6%E5%B8%82"
         }
       ],
@@ -11374,7 +11339,7 @@
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%8B%89%E5%90%88%E5%B0%94%E5%A0%A1"
         },
         {
-          "description": "巴基斯坦首都",
+          "description": "巴基斯坦的首都",
           "name": "伊斯兰堡",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E4%BC%8A%E6%96%AF%E5%85%B0%E5%A0%A1"
         },
@@ -11435,24 +11400,24 @@
     "pl": {
       "attractions": [
         {
-          "description": "波蘭第二大城、小波蘭省首府",
+          "description": "波兰第二大城、小波兰省首府",
           "name": "克拉科夫",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%85%8B%E6%8B%89%E7%A7%91%E5%A4%AB"
         },
         {
-          "description": "波蘭首都暨第一大城",
+          "description": "波兰的首都城市",
           "name": "华沙",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%8D%8E%E6%B2%99"
         },
         {
-          "description": "波蘭西南部城市，下西里西亞省首府",
+          "description": "波兰西南部城市，下西里西亚省首府",
           "name": "弗罗茨瓦夫",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%BC%97%E7%BD%97%E8%8C%A8%E7%93%A6%E5%A4%AB"
         },
         {
-          "description": "1936 Grom-class destroyer",
-          "name": "閃電號驅逐艦",
-          "sourceUrl": "https://en.wikipedia.org/wiki/ORP_B%C5%82yskawica"
+          "description": "波兰南端的一个小镇",
+          "name": "札科帕内",
+          "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%89%8E%E7%A7%91%E5%B8%95%E5%85%A7"
         }
       ],
       "images": [
@@ -11501,9 +11466,9 @@
     "pm": {
       "attractions": [
         {
-          "description": "维基媒体消歧义页",
-          "name": "圣皮埃尔",
-          "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%9C%A3%E7%9A%AE%E5%9F%83%E5%B0%94"
+          "description": "法国海外集体",
+          "name": "圣皮埃尔和密克隆",
+          "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%9C%A3%E7%9A%AE%E5%9F%83%E5%B0%94%E5%92%8C%E5%AF%86%E5%85%8B%E9%9A%86"
         }
       ],
       "images": [
@@ -11552,14 +11517,9 @@
     "pn": {
       "attractions": [
         {
-          "description": "聯合國教科文組織認定的有特殊物質或文化意義的地點",
-          "name": "世界遺產",
-          "sourceUrl": "https://zh.wikipedia.org/wiki/%E4%B8%96%E7%95%8C%E9%81%97%E4%BA%A7"
-        },
-        {
-          "description": "维基媒体消歧义页",
-          "name": "亚当斯敦",
-          "sourceUrl": "https://zh.wikipedia.org/wiki/%E4%BA%9A%E5%BD%93%E6%96%AF%E6%95%A6"
+          "description": "太平洋唯一的英国海外领地",
+          "name": "皮特凯恩群岛",
+          "sourceUrl": "https://zh.wikipedia.org/wiki/%E7%9A%AE%E7%89%B9%E5%87%AF%E6%81%A9%E7%BE%A4%E5%B2%9B"
         }
       ],
       "images": [
@@ -11609,7 +11569,7 @@
       "attractions": [
         {
           "description": "colossal fortress in San Juan, Puerto Rico",
-          "name": "聖費利佩海角城堡",
+          "name": "圣费利佩海角城堡",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E8%81%96%E8%B2%BB%E5%88%A9%E4%BD%A9%E6%B5%B7%E8%A7%92%E5%9F%8E%E5%A0%A1"
         },
         {
@@ -11624,7 +11584,7 @@
         },
         {
           "description": "barrio in Cabo Rojo, Puerto Rico",
-          "name": "Boquerón, Puerto Rico",
+          "name": "Boquerón",
           "sourceUrl": "https://en.wikipedia.org/wiki/Boquer%C3%B3n%2C_Cabo_Rojo%2C_Puerto_Rico"
         }
       ],
@@ -11674,24 +11634,24 @@
     "ps": {
       "attractions": [
         {
-          "description": "圣城",
-          "name": "耶路撒冷",
-          "sourceUrl": "https://zh.wikipedia.org/wiki/%E8%80%B6%E8%B7%AF%E6%92%92%E5%86%B7"
+          "description": "约旦河西岸的重要历史城市",
+          "name": "伯利恒",
+          "sourceUrl": "https://zh.wikipedia.org/wiki/%E4%BC%AF%E5%88%A9%E6%81%92"
         },
         {
-          "description": "伯利恆的大教堂",
-          "name": "聖誕教堂",
-          "sourceUrl": "https://zh.wikipedia.org/wiki/%E8%81%96%E8%AA%95%E6%95%99%E5%A0%82"
+          "description": "伯利恒老城的重要宗教建筑",
+          "name": "圣诞教堂",
+          "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%9C%A3%E8%AF%9E%E6%95%99%E5%A0%82"
         },
         {
-          "description": "出土於死海附近的古代希伯來聖經抄本",
-          "name": "死海古卷",
-          "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%AD%BB%E6%B5%B7%E5%8F%A4%E5%8D%B7"
+          "description": "约旦河谷中的古老城市",
+          "name": "杰里科",
+          "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%9D%B0%E9%87%8C%E7%A7%91"
         },
         {
-          "description": "archaeological site",
-          "name": "施洗之地",
-          "sourceUrl": "https://en.wikipedia.org/wiki/Al-Maghtas"
+          "description": "杰里科附近的早期伊斯兰建筑遗址",
+          "name": "希沙姆宫",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Hisham%27s_Palace"
         }
       ],
       "images": [
@@ -11740,13 +11700,13 @@
     "pt": {
       "attractions": [
         {
-          "description": "葡萄牙首都",
+          "description": "葡萄牙共和国的首都和最大都市",
           "name": "里斯本",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E9%87%8C%E6%96%AF%E6%9C%AC"
         },
         {
           "description": "葡萄牙北部的市镇和城市",
-          "name": "波爾圖",
+          "name": "波尔图",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%B3%A2%E7%88%BE%E5%9C%96"
         },
         {
@@ -11807,17 +11767,17 @@
       "attractions": [
         {
           "description": "太平洋岛国帕劳岛屿",
-          "name": "馬拉卡爾島",
+          "name": "马拉卡尔岛",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E9%A6%AC%E6%8B%89%E5%8D%A1%E7%88%BE%E5%B3%B6"
         },
         {
-          "description": "帕勞城市",
-          "name": "梅萊凱奧克",
+          "description": "帕劳城市",
+          "name": "梅莱凯奥克",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%A2%85%E8%90%8A%E5%87%B1%E5%A5%A7%E5%85%8B"
         },
         {
-          "description": "太平洋島國帕勞的最大城市",
-          "name": "科羅爾",
+          "description": "太平洋岛国帕劳的最大城市",
+          "name": "科罗尔",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E7%A7%91%E7%BE%85%E7%88%BE"
         },
         {
@@ -11877,7 +11837,7 @@
         },
         {
           "description": "historic Jesuit mission in Itapúa Department, Paraguay",
-          "name": "La Santísima Trinidad de Paraná",
+          "name": "La Santísima Trinidad del Paraná",
           "sourceUrl": "https://en.wikipedia.org/wiki/La_Sant%C3%ADsima_Trinidad_de_Paran%C3%A1"
         }
       ],
@@ -11927,13 +11887,13 @@
     "qa": {
       "attractions": [
         {
-          "description": "卡塔尔国的首都",
+          "description": "卡塔尔的首都",
           "name": "多哈",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%A4%9A%E5%93%88"
         },
         {
           "description": "人工岛",
-          "name": "卡達之珠",
+          "name": "卡达之珠",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%8D%A1%E9%81%94%E4%B9%8B%E7%8F%A0"
         },
         {
@@ -12059,7 +12019,7 @@
     "ro": {
       "attractions": [
         {
-          "description": "羅馬尼亞首都",
+          "description": "罗马尼亚首都",
           "name": "布加勒斯特",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%B8%83%E5%8A%A0%E5%8B%92%E6%96%AF%E7%89%B9"
         },
@@ -12069,13 +12029,13 @@
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E9%BB%91%E6%95%99%E5%A0%82_(%E5%B8%83%E6%8B%89%E7%B4%A2%E5%A4%AB)"
         },
         {
-          "description": "羅馬尼亞公路",
-          "name": "川斯發格拉山公路",
+          "description": "罗马尼亚公路",
+          "name": "川斯发格拉山公路",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%B7%9D%E6%96%AF%E7%99%BC%E6%A0%BC%E6%8B%89%E5%B1%B1%E5%85%AC%E8%B7%AF"
         },
         {
           "description": "罗马尼亚城市",
-          "name": "錫比烏",
+          "name": "锡比乌",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E9%8C%AB%E6%AF%94%E7%83%8F"
         }
       ],
@@ -12125,24 +12085,24 @@
     "rs": {
       "attractions": [
         {
-          "description": "塞爾維亞首都",
+          "description": "塞尔维亚首都与多瑙河沿岸城市",
           "name": "贝尔格莱德",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E8%B4%9D%E5%B0%94%E6%A0%BC%E8%8E%B1%E5%BE%B7"
         },
         {
-          "description": "塞尔维亚伏伊伏丁那自治省的首府",
+          "description": "伏伊伏丁那自治省首府",
           "name": "诺维萨德",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E8%AF%BA%E7%BB%B4%E8%90%A8%E5%BE%B7"
         },
         {
-          "description": "塞尔维亚城市",
+          "description": "塞尔维亚南部的历史城市",
           "name": "尼什",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%B0%BC%E4%BB%80"
         },
         {
-          "description": "科索沃首都",
-          "name": "普里什蒂纳",
-          "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%99%AE%E9%87%8C%E4%BB%80%E8%92%82%E7%BA%B3"
+          "description": "塞尔维亚西部以山林和峡谷著称的国家公园",
+          "name": "塔拉国家公园",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Tara_(mountain)"
         }
       ],
       "images": [
@@ -12191,22 +12151,22 @@
     "ru": {
       "attractions": [
         {
-          "description": "俄羅斯聯邦直轄市",
-          "name": "聖彼得堡",
+          "description": "俄罗斯的联邦直辖市，列宁格勒州的首府",
+          "name": "圣彼得堡",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%9C%A3%E5%BD%BC%E5%BE%97%E5%A0%A1"
         },
         {
-          "description": "俄羅斯聯邦的首都",
+          "description": "俄罗斯联邦和莫斯科州的首都",
           "name": "莫斯科",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E8%8E%AB%E6%96%AF%E7%A7%91"
         },
         {
           "description": "俄罗斯莫斯科的电视塔",
-          "name": "奧斯坦金諾電視塔",
+          "name": "奥斯坦金诺电视塔",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%A5%A7%E6%96%AF%E5%9D%A6%E9%87%91%E8%AB%BE%E9%9B%BB%E8%A6%96%E5%A1%94"
         },
         {
-          "description": "administrative okrug of Moscow",
+          "description": "俄罗斯首都莫斯科的行政区",
           "name": "南行政区",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%8D%97%E8%A1%8C%E6%94%BF%E5%8C%BA"
         }
@@ -12258,17 +12218,17 @@
       "attractions": [
         {
           "description": "卢旺达共和国的首都",
-          "name": "吉佳利",
+          "name": "基加利",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%90%89%E4%BD%B3%E5%88%A9"
         },
         {
           "description": "A place where they do tourisme",
-          "name": "阿卡蓋拉國家公園",
+          "name": "阿卡盖拉国家公园",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E9%98%BF%E5%8D%A1%E8%93%8B%E6%8B%89%E5%9C%8B%E5%AE%B6%E5%85%AC%E5%9C%92"
         },
         {
           "description": "national park in Rwanda",
-          "name": "盧旺達火山國家公園",
+          "name": "卢旺达火山国家公园",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E7%9B%A7%E6%97%BA%E9%81%94%E7%81%AB%E5%B1%B1%E5%9C%8B%E5%AE%B6%E5%85%AC%E5%9C%92"
         },
         {
@@ -12324,7 +12284,7 @@
       "attractions": [
         {
           "description": "沙特阿拉伯城市",
-          "name": "麥加",
+          "name": "麦加",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E9%BA%A5%E5%8A%A0"
         },
         {
@@ -12334,7 +12294,7 @@
         },
         {
           "description": "Skyscraper in Riyadh, Saudi Arabia",
-          "name": "王國中心",
+          "name": "王国中心",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E7%8E%8B%E5%9C%8B%E4%B8%AD%E5%BF%83"
         },
         {
@@ -12389,7 +12349,7 @@
     "sb": {
       "attractions": [
         {
-          "description": "索羅門群島的首都",
+          "description": "所罗门群岛的首都",
           "name": "霍尼亚拉",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E9%9C%8D%E5%B0%BC%E4%BA%9A%E6%8B%89"
         }
@@ -12450,13 +12410,13 @@
           "sourceUrl": "https://en.wikipedia.org/wiki/Anse_Lazio"
         },
         {
-          "description": "塞席爾的首都",
-          "name": "維多利亞",
+          "description": "塞舌尔的首都",
+          "name": "维多利亚",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E7%BB%B4%E5%A4%9A%E5%88%A9%E4%BA%9A_(%E5%A1%9E%E8%88%8C%E5%B0%94)"
         },
         {
           "description": "塞舌尔行政区",
-          "name": "塔卡瑪卡區",
+          "name": "塔卡玛卡区",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%A1%94%E5%8D%A1%E9%A9%AC%E5%8D%A1%E5%8C%BA"
         }
       ],
@@ -12506,11 +12466,6 @@
     "sd": {
       "attractions": [
         {
-          "description": "architectural structure",
-          "name": "科林西亞酒店",
-          "sourceUrl": "https://en.wikipedia.org/wiki/Corinthia_Hotel_Khartoum"
-        },
-        {
           "description": "苏丹红海州首府",
           "name": "苏丹港",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E8%8B%8F%E4%B8%B9%E6%B8%AF_(%E5%9F%8E%E5%B8%82)"
@@ -12522,8 +12477,13 @@
         },
         {
           "description": "mountain",
-          "name": "博爾戈爾山",
+          "name": "博尔戈尔山",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%8D%9A%E7%88%BE%E6%88%88%E7%88%BE%E5%B1%B1"
+        },
+        {
+          "description": "苏丹共和国的首都",
+          "name": "喀土穆",
+          "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%96%80%E5%9C%9F%E7%A9%86"
         }
       ],
       "images": [
@@ -12587,7 +12547,7 @@
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%93%A5%E5%BE%B7%E5%A0%A1"
         },
         {
-          "description": "瑞典東部城市",
+          "description": "瑞典东部城市",
           "name": "乌普萨拉",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E4%B9%8C%E6%99%AE%E8%90%A8%E6%8B%89"
         }
@@ -12638,7 +12598,7 @@
     "sg": {
       "attractions": [
         {
-          "description": "東南亞島國及城邦",
+          "description": "东南亚岛国及城市国家",
           "name": "新加坡",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%96%B0%E5%8A%A0%E5%9D%A1"
         },
@@ -12704,9 +12664,24 @@
     "sh": {
       "attractions": [
         {
-          "description": "在弗吉尼亞的殖民地定居",
-          "name": "詹姆斯鎮",
-          "sourceUrl": "https://zh.wikipedia.org/wiki/%E8%A9%B9%E5%A7%86%E6%96%AF%E6%95%A6_(%E7%B6%AD%E5%90%89%E5%B0%BC%E4%BA%9E%E5%B7%9E)"
+          "description": "圣赫勒拿的首府与主要港口",
+          "name": "詹姆斯敦",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Jamestown,_Saint_Helena"
+        },
+        {
+          "description": "保护圣赫勒拿云雾林生态的国家公园",
+          "name": "黛安娜峰国家公园",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Diana%27s_Peak_National_Park"
+        },
+        {
+          "description": "位于朗伍德地区的历史建筑",
+          "name": "长木屋",
+          "sourceUrl": "https://zh.wikipedia.org/wiki/%E9%95%BF%E6%9C%A8%E5%B1%8B"
+        },
+        {
+          "description": "连接詹姆斯敦与山坡高地的长阶梯",
+          "name": "雅各布天梯",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Jacob%27s_Ladder_(Saint_Helena)"
         }
       ],
       "images": [
@@ -12770,7 +12745,7 @@
           "sourceUrl": "https://en.wikipedia.org/wiki/Rib%C4%8Dev_Laz"
         },
         {
-          "description": "斯洛文尼亚城市",
+          "description": "斯洛文尼亚德拉瓦河畔的城市",
           "name": "马里博尔",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E9%A9%AC%E9%87%8C%E5%8D%9A%E5%B0%94"
         }
@@ -12822,12 +12797,12 @@
       "attractions": [
         {
           "description": "斯瓦尔巴的首府",
-          "name": "朗伊爾城",
+          "name": "朗伊尔城",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%9C%97%E4%BC%8A%E7%88%BE%E5%9F%8E"
         },
         {
-          "description": "挪威斯瓦爾巴特群島的斯匹次卑爾根島上的奧斯卡二世土地的研究小鎮",
-          "name": "新奧勒松",
+          "description": "挪威斯瓦尔巴特群岛的斯匹次卑尔根岛上的奥斯卡二世土地的研究小镇",
+          "name": "新奧爾松",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%96%B0%E5%A5%A7%E5%8B%92%E6%9D%BE"
         },
         {
@@ -12888,7 +12863,7 @@
         },
         {
           "description": "part of Štrba in Slovakia; ski, tourist, and health resort",
-          "name": "斯特爾布斯凱普萊索",
+          "name": "斯特尔布斯凯普莱索",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%96%AF%E7%89%B9%E7%88%BE%E5%B8%83%E6%96%AF%E5%87%B1%E6%99%AE%E8%90%8A%E7%B4%A2"
         },
         {
@@ -12954,17 +12929,17 @@
         },
         {
           "description": "national park",
-          "name": "戈拉雨林國家公園",
+          "name": "戈拉雨林国家公园",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%88%88%E6%8B%89%E9%9B%A8%E6%9E%97%E5%9C%8B%E5%AE%B6%E5%85%AC%E5%9C%92"
         },
         {
           "description": "highest mountain in Sierra Leone",
-          "name": "洛馬曼薩山",
+          "name": "洛马曼萨山",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%B4%9B%E9%A6%AC%E6%9B%BC%E8%96%A9%E5%B1%B1"
         },
         {
           "description": "protected area",
-          "name": "Tiwai Island",
+          "name": "Tiwai",
           "sourceUrl": "https://en.wikipedia.org/wiki/Tiwai_Island"
         }
       ],
@@ -13014,8 +12989,8 @@
     "sm": {
       "attractions": [
         {
-          "description": "聖馬利諾共和國首都",
-          "name": "聖馬力諾",
+          "description": "圣马力诺共和国首都",
+          "name": "圣马力诺",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E8%81%96%E9%A6%AC%E5%8A%9B%E8%AB%BE%E5%B8%82"
         }
       ],
@@ -13081,7 +13056,7 @@
         },
         {
           "description": "commune of Senegal",
-          "name": "Saly",
+          "name": "Saly Portudal",
           "sourceUrl": "https://en.wikipedia.org/wiki/Saly"
         }
       ],
@@ -13131,14 +13106,9 @@
     "so": {
       "attractions": [
         {
-          "description": "索馬里首都",
+          "description": "索马里第一大城市",
           "name": "摩加迪休",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%91%A9%E5%8A%A0%E8%BF%AA%E4%BC%91"
-        },
-        {
-          "description": "port city in the southern Lower Juba province of Somalia and capit…",
-          "name": "基斯马尤",
-          "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%9F%BA%E6%96%AF%E9%A9%AC%E5%B0%A4"
         },
         {
           "description": "port city in the southern Lower Juba province of Somalia and capit…",
@@ -13149,6 +13119,11 @@
           "description": "capital of Waqooyi-Bari state",
           "name": "拉斯戈赖",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%8B%89%E6%96%AF%E6%88%88%E8%B5%96"
+        },
+        {
+          "description": "city in Sool province of Waqooyi-Bari state",
+          "name": "塔莱赫",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Taleh"
         }
       ],
       "images": [
@@ -13202,19 +13177,9 @@
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%B0%A4%E5%8B%92%E6%96%AF%C2%B7%E9%9F%A6%E7%99%BB%E5%8D%9A%E6%96%AF%E5%A4%A7%E6%A1%A5"
         },
         {
-          "description": "代表性目的地",
-          "name": "[[West Coast (Suriname)#Bigi Pan Nature Reserve",
-          "sourceUrl": "https://www.wikidata.org/wiki/Q68488496"
-        },
-        {
-          "description": "nature reserve in Suriname",
-          "name": "[[Surinamese Rainforest#Brownsberg Nature Park",
-          "sourceUrl": "https://en.wikipedia.org/wiki/Brownsberg_Nature_Park"
-        },
-        {
-          "description": "世界遗产",
-          "name": "中苏里南自然保护区",
-          "sourceUrl": "https://zh.wikipedia.org/wiki/%E8%8B%8F%E9%87%8C%E5%8D%97%E4%B8%AD%E5%BF%83%E8%87%AA%E7%84%B6%E4%BF%9D%E6%8A%A4%E5%8C%BA"
+          "description": "苏里南的首都",
+          "name": "帕拉马里博",
+          "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%B8%95%E6%8B%89%E9%A9%AC%E9%87%8C%E5%8D%9A"
         }
       ],
       "images": [
@@ -13264,22 +13229,22 @@
       "attractions": [
         {
           "description": "national park in South Sudan",
-          "name": "巴丁吉羅國家公園",
+          "name": "巴丁吉罗国家公园",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%B7%B4%E4%B8%81%E5%90%89%E7%BE%85%E5%9C%8B%E5%AE%B6%E5%85%AC%E5%9C%92"
         },
         {
           "description": "national park in South Sudan",
-          "name": "波馬國家公園",
+          "name": "波马国家公园",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%8D%9A%E9%A6%AC%E5%9C%8B%E5%AE%B6%E5%85%AC%E5%9C%92"
         },
         {
           "description": "national park in South Sudan",
-          "name": "南方國家公園",
+          "name": "南方国家公园",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%8D%97%E6%96%B9%E5%9C%8B%E5%AE%B6%E5%85%AC%E5%9C%92"
         },
         {
           "description": "national park in South Sudan",
-          "name": "尼穆萊國家公園",
+          "name": "尼穆莱国家公园",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%B0%BC%E7%A9%86%E8%90%8A%E5%9C%8B%E5%AE%B6%E5%85%AC%E5%9C%92"
         }
       ],
@@ -13329,18 +13294,13 @@
     "st": {
       "attractions": [
         {
-          "description": "central bank of São Tomè and Príncipe",
-          "name": "圣多美和普林西比中央银行",
-          "sourceUrl": "https://en.wikipedia.org/wiki/Central_Bank_of_S%C3%A3o_Tom%C3%A9_and_Pr%C3%ADncipe"
-        },
-        {
           "description": "圣多美和普林西比民主共和国的首都",
           "name": "圣多美",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%9C%A3%E5%A4%9A%E7%BE%8E"
         },
         {
           "description": "圣多美和普林西比普林西比自治区的城镇",
-          "name": "聖安東尼奧",
+          "name": "圣安东尼奥",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E8%81%96%E5%AE%89%E6%9D%B1%E5%B0%BC%E5%A5%A7_(%E8%81%96%E5%A4%9A%E7%BE%8E%E5%92%8C%E6%99%AE%E6%9E%97%E8%A5%BF%E6%AF%94)"
         }
       ],
@@ -13390,8 +13350,8 @@
     "sv": {
       "attractions": [
         {
-          "description": "薩爾瓦多首都",
-          "name": "聖薩爾瓦多",
+          "description": "萨尔瓦多首都",
+          "name": "圣萨尔瓦多",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E8%81%96%E8%96%A9%E7%88%BE%E7%93%A6%E5%A4%9A"
         },
         {
@@ -13401,13 +13361,13 @@
         },
         {
           "description": "district in Northern Cuscatlán, El Salvador",
-          "name": "蘇奇托托",
+          "name": "苏奇托托",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E8%98%87%E5%A5%87%E6%89%98%E6%89%98"
         },
         {
-          "description": "维基媒体消歧义页",
-          "name": "Catedral de Santa Ana",
-          "sourceUrl": "https://en.wikipedia.org/wiki/Cathedral_of_Santa_Ana"
+          "description": "district in Northern Sonsonate, El Salvador",
+          "name": "华尤阿",
+          "sourceUrl": "https://zh.wikipedia.org/wiki/%E8%8F%AF%E5%B0%A4%E9%98%BF"
         }
       ],
       "images": [
@@ -13456,19 +13416,24 @@
     "sx": {
       "attractions": [
         {
-          "description": "human settlement in France",
-          "name": "格兰德凯斯",
-          "sourceUrl": "https://en.wikipedia.org/wiki/Grand_Case"
-        },
-        {
-          "description": "法属圣马丁的首府",
-          "name": "马里戈特",
-          "sourceUrl": "https://zh.wikipedia.org/wiki/%E9%A9%AC%E9%87%8C%E6%88%88"
-        },
-        {
-          "description": "荷属圣马丁的首都",
+          "description": "荷属圣马丁的首府与主要港口",
           "name": "菲利普斯堡",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E8%8F%B2%E5%88%A9%E6%99%AE%E6%96%AF%E5%A0%A1"
+        },
+        {
+          "description": "以近距离观看飞机进近而闻名的海滩",
+          "name": "马霍海滩",
+          "sourceUrl": "https://zh.wikipedia.org/wiki/%E9%A9%AC%E9%9C%8D%E6%B5%B7%E6%BB%A9"
+        },
+        {
+          "description": "荷属圣马丁西南部的海湾与聚居区",
+          "name": "辛普森湾",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Simpson_Bay"
+        },
+        {
+          "description": "位于大湾与小湾之间的历史堡垒遗址",
+          "name": "阿姆斯特丹堡",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Fort_Amsterdam,_Sint_Maarten"
         }
       ],
       "images": [
@@ -13517,7 +13482,7 @@
     "sy": {
       "attractions": [
         {
-          "description": "敘利亞首都",
+          "description": "叙利亚首都",
           "name": "大马士革",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%A4%A7%E9%A9%AC%E5%A3%AB%E9%9D%A9"
         },
@@ -13533,7 +13498,7 @@
         },
         {
           "description": "village in Syria",
-          "name": "Wadi Al-Nasarah",
+          "name": "Wadi al-Nasara",
           "sourceUrl": "https://en.wikipedia.org/wiki/Wadi_al-Nasara"
         }
       ],
@@ -13589,7 +13554,7 @@
         },
         {
           "description": "nature preserve in Eswatini",
-          "name": "哈雷恩皇家國家公園",
+          "name": "哈雷恩皇家国家公园",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%93%88%E9%9B%B7%E6%81%A9%E7%9A%87%E5%AE%B6%E5%9C%8B%E5%AE%B6%E5%85%AC%E5%9C%92"
         },
         {
@@ -13711,7 +13676,7 @@
         },
         {
           "description": "island in the Turks and Caicos Islands",
-          "name": "大特克島",
+          "name": "大特克岛",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%A4%A7%E7%89%B9%E5%85%8B%E5%B3%B6"
         },
         {
@@ -13772,7 +13737,7 @@
         },
         {
           "description": "national park",
-          "name": "曼達國家公園",
+          "name": "曼达国家公园",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%9B%BC%E9%81%94%E5%9C%8B%E5%AE%B6%E5%85%AC%E5%9C%92"
         },
         {
@@ -13883,24 +13848,24 @@
     "tg": {
       "attractions": [
         {
-          "description": "town in Volta Region of Ghana",
-          "name": "阿夫勞",
-          "sourceUrl": "https://zh.wikipedia.org/wiki/%E9%98%BF%E5%A4%AB%E5%8B%9E"
+          "description": "多哥首都与几内亚湾沿岸城市",
+          "name": "洛美",
+          "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%B4%9B%E7%BE%8E"
         },
         {
-          "description": "多哥世界遗产",
+          "description": "展示塔塔泥屋聚落文化的世界遗产",
           "name": "古帕玛库",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%8F%A4%E5%B8%95%E7%8E%9B%E5%BA%93"
         },
         {
-          "description": "National park",
-          "name": "法扎奥馬爾法卡薩國家公園",
-          "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%B3%95%E6%89%8E%E5%A5%A5%E9%A6%AC%E7%88%BE%E6%B3%95%E5%8D%A1%E8%96%A9%E5%9C%8B%E5%AE%B6%E5%85%AC%E5%9C%92"
+          "description": "多哥中部重要的自然保护区",
+          "name": "法扎奥-马尔法卡萨国家公园",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Fazao_Malfakassa_National_Park"
         },
         {
-          "description": "national park in Togo",
-          "name": "凱蘭國家公園",
-          "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%87%B1%E8%98%AD%E5%9C%8B%E5%AE%B6%E5%85%AC%E5%9C%92"
+          "description": "多哥北部的国家公园",
+          "name": "凯兰国家公园",
+          "sourceUrl": "https://en.wikipedia.org/wiki/K%C3%A9ran_National_Park"
         }
       ],
       "images": [
@@ -13949,13 +13914,13 @@
     "th": {
       "attractions": [
         {
-          "description": "泰國首都",
+          "description": "泰国首都",
           "name": "曼谷",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%9B%BC%E8%B0%B7"
         },
         {
-          "description": "泰國東部地區春武里府的城市",
-          "name": "芭達亞",
+          "description": "泰国春武里府城市",
+          "name": "芭堤雅",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E8%8A%AD%E9%81%94%E9%9B%85"
         },
         {
@@ -13964,7 +13929,7 @@
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E8%8A%AD%E4%B8%9C%E5%8C%BA"
         },
         {
-          "description": "位於泰國曼谷的世界遺產、觀光勝地",
+          "description": "位于泰国曼谷的世界遗产、观光胜地",
           "name": "阿瑜陀耶古城",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E9%98%BF%E7%91%9C%E9%99%80%E8%80%B6%E5%8F%A4%E5%9F%8E"
         }
@@ -14015,11 +13980,6 @@
     "tj": {
       "attractions": [
         {
-          "description": "中國、塔吉克和阿富汗的邊境山結",
-          "name": "帕米爾高原",
-          "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%B8%95%E7%B1%B3%E7%88%BE%E9%AB%98%E5%8E%9F"
-        },
-        {
           "description": "town in Tajikistan",
           "name": "扎拉夫尚 (塔吉克斯坦)",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%89%8E%E6%8B%89%E5%A4%AB%E5%B0%9A_(%E5%A1%94%E5%90%89%E5%85%8B%E6%96%AF%E5%9D%A6)"
@@ -14030,9 +13990,14 @@
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%9D%9C%E5%B0%9A%E5%88%AB"
         },
         {
+          "description": "city in Tajikistan",
+          "name": "伊斯法拉",
+          "sourceUrl": "https://zh.wikipedia.org/wiki/%E4%BC%8A%E6%96%AF%E6%B3%95%E6%8B%89"
+        },
+        {
           "description": "塔吉克斯坦城市",
-          "name": "博赫塔尔",
-          "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%8D%9A%E8%B5%AB%E5%A1%94%E7%88%BE"
+          "name": "伊斯塔拉夫尚",
+          "sourceUrl": "https://zh.wikipedia.org/wiki/%E4%BC%8A%E6%96%AF%E5%A1%94%E6%8B%89%E5%A4%AB%E5%B0%9A"
         }
       ],
       "images": [
@@ -14082,7 +14047,7 @@
       "attractions": [
         {
           "description": "archipelago in Tokelau",
-          "name": "法考福環礁",
+          "name": "法考福环礁",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%B3%95%E8%80%83%E7%A6%8F%E7%92%B0%E7%A4%81"
         }
       ],
@@ -14148,7 +14113,7 @@
         },
         {
           "description": "city of East Timor",
-          "name": "格蘭奴",
+          "name": "格兰奴",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%A0%BC%E8%98%AD%E5%A5%B4"
         }
       ],
@@ -14203,19 +14168,19 @@
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E9%98%BF%E4%BB%80%E5%93%88%E5%B7%B4%E5%BE%B7"
         },
         {
-          "description": "前土库曼斯坦总统",
-          "name": "薩帕爾穆拉特·阿塔耶維奇·尼亞佐夫",
-          "sourceUrl": "https://zh.wikipedia.org/wiki/%E8%90%A8%E5%B8%95%E5%B0%94%E7%A9%86%E6%8B%89%E7%89%B9%C2%B7%E5%B0%BC%E4%BA%9A%E4%BD%90%E5%A4%AB"
+          "description": "archaeological site in Turkmenistan",
+          "name": "Altyndepe",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Altyndepe"
         },
         {
-          "description": "中亚沙漠",
-          "name": "卡拉庫姆沙漠",
-          "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%8D%A1%E6%8B%89%E5%BA%AB%E5%A7%86%E6%B2%99%E6%BC%A0"
+          "description": "土库曼斯坦城市",
+          "name": "安纳乌",
+          "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%AE%89%E7%B4%8D%E7%83%8F"
         },
         {
           "description": "archaeological site in Turkmenistan",
-          "name": "Altin Depe",
-          "sourceUrl": "https://en.wikipedia.org/wiki/Altyndepe"
+          "name": "Gonur Depe",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Gonur_Depe"
         }
       ],
       "images": [
@@ -14265,7 +14230,7 @@
       "attractions": [
         {
           "description": "Tunisian town",
-          "name": "傑姆",
+          "name": "杰姆",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%82%91%E5%A7%86"
         },
         {
@@ -14279,7 +14244,7 @@
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E7%AA%81%E5%B0%BC%E6%96%AF%E5%B8%82"
         },
         {
-          "description": "突尼斯的考古遺址",
+          "description": "突尼斯的考古遗址",
           "name": "迦太基",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E8%BF%A6%E5%A4%AA%E5%9F%BA"
         }
@@ -14333,11 +14298,6 @@
           "description": "汤加王国的首都",
           "name": "努库阿洛法",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%8A%AA%E5%BA%93%E9%98%BF%E6%B4%9B%E6%B3%95"
-        },
-        {
-          "description": "汤加王国的首都",
-          "name": "努库阿洛法",
-          "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%8A%AA%E5%BA%93%E9%98%BF%E6%B4%9B%E6%B3%95"
         }
       ],
       "images": [
@@ -14386,8 +14346,8 @@
     "tr": {
       "attractions": [
         {
-          "description": "土耳其第一大城市",
-          "name": "伊斯坦堡",
+          "description": "土耳其城市",
+          "name": "伊斯坦布尔",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E4%BC%8A%E6%96%AF%E5%9D%A6%E5%A0%A1"
         },
         {
@@ -14457,8 +14417,8 @@
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E8%A5%BF%E7%8F%AD%E7%89%99%E6%B8%AF"
         },
         {
-          "description": "加勒比海群島",
-          "name": "特立尼達島",
+          "description": "加勒比海群岛",
+          "name": "特立尼达岛",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E7%89%B9%E7%AB%8B%E5%B0%BC%E8%BE%BE%E5%B2%9B"
         },
         {
@@ -14468,7 +14428,7 @@
         },
         {
           "description": "特立尼达和多巴哥城市",
-          "name": "聖費爾南多",
+          "name": "圣费尔南多",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%9C%A3%E8%B4%B9%E5%B0%94%E5%8D%97%E5%A4%9A_(%E7%89%B9%E7%AB%8B%E5%B0%BC%E8%BE%BE%E5%92%8C%E5%A4%9A%E5%B7%B4%E5%93%A5)"
         }
       ],
@@ -14706,24 +14666,24 @@
     "ua": {
       "attractions": [
         {
-          "description": "烏克蘭南部城市，座落於黑海西北岸",
-          "name": "敖德薩",
-          "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%95%96%E5%BE%B7%E8%96%A9"
+          "description": "乌克兰首都与文化中心",
+          "name": "基辅",
+          "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%9F%BA%E8%BE%85"
         },
         {
-          "description": "烏克蘭首都及最大城市",
-          "name": "基輔",
-          "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%9F%BA%E8%BC%94"
+          "description": "乌克兰西部以历史城区著称的城市",
+          "name": "利沃夫",
+          "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%88%A9%E6%B2%83%E5%A4%AB"
         },
         {
-          "description": "乌克兰克里米亚自治共和国的市级镇",
-          "name": "馬桑德拉",
-          "sourceUrl": "https://zh.wikipedia.org/wiki/%E9%A6%AC%E6%A1%91%E5%BE%B7%E6%8B%89"
+          "description": "乌克兰黑海沿岸的港口城市",
+          "name": "敖德萨",
+          "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%95%96%E5%BE%B7%E8%90%A8"
         },
         {
-          "description": "1911 Conte di Cavour-class battleship",
-          "name": "切薩雷號",
-          "sourceUrl": "https://en.wikipedia.org/wiki/Italian_battleship_Giulio_Cesare"
+          "description": "横跨乌克兰西部的山地自然区域",
+          "name": "乌克兰喀尔巴阡山脉",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Ukrainian_Carpathians"
         }
       ],
       "images": [
@@ -14778,7 +14738,7 @@
         },
         {
           "description": "City in Jinja District, Eastern Region, Uganda",
-          "name": "金賈",
+          "name": "金贾",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E9%87%91%E8%B3%88"
         },
         {
@@ -14889,23 +14849,23 @@
     "us": {
       "attractions": [
         {
-          "description": "美國最大都市、國際大都市之一",
+          "description": "美国纽约州的城市",
           "name": "纽约",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E7%BA%BD%E7%BA%A6"
         },
         {
-          "description": "美國伊利諾州城市",
+          "description": "美国伊利诺伊州城市",
           "name": "芝加哥",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E8%8A%9D%E5%8A%A0%E5%93%A5"
         },
         {
-          "description": "美国加利福尼亚州大型城市",
-          "name": "舊金山",
+          "description": "美国加利福尼亚州的城市",
+          "name": "旧金山",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%97%A7%E9%87%91%E5%B1%B1"
         },
         {
-          "description": "美利堅合眾國的首都",
-          "name": "華盛頓哥倫比亞特區",
+          "description": "美国首都",
+          "name": "华盛顿哥伦比亚特区",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%8D%8E%E7%9B%9B%E9%A1%BF%E5%93%A5%E4%BC%A6%E6%AF%94%E4%BA%9A%E7%89%B9%E5%8C%BA"
         }
       ],
@@ -14956,7 +14916,7 @@
       "attractions": [
         {
           "description": "neighborhood in Montevideo, Uruguay",
-          "name": "Ciudad Vieja, Montevideo",
+          "name": "Ciudad Vieja",
           "sourceUrl": "https://en.wikipedia.org/wiki/Ciudad_Vieja%2C_Montevideo"
         },
         {
@@ -14971,7 +14931,7 @@
         },
         {
           "description": "city of Uruguay",
-          "name": "皮里亞波利斯",
+          "name": "皮里亚波利斯",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E7%9A%AE%E9%87%8C%E4%BA%9E%E6%B3%A2%E5%88%A9%E6%96%AF"
         }
       ],
@@ -15021,8 +14981,8 @@
     "uz": {
       "attractions": [
         {
-          "description": "烏茲別克斯坦的城市",
-          "name": "撒馬爾罕",
+          "description": "乌兹别克斯坦的城市",
+          "name": "撒马尔罕",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%92%92%E9%A6%AC%E7%88%BE%E7%BD%95"
         },
         {
@@ -15032,12 +14992,12 @@
         },
         {
           "description": "World Heritage Site in Khiva, Uzbekistan",
-          "name": "伊欽卡拉",
+          "name": "伊钦卡拉",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E4%BC%8A%E6%AC%BD%E5%8D%A1%E6%8B%89"
         },
         {
-          "description": "位於哈薩克斯坦和烏茲別克斯坦之間的湖",
-          "name": "鹹海",
+          "description": "位于哈萨克斯坦和乌兹别克斯坦之间的湖",
+          "name": "咸海",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%92%B8%E6%B5%B7"
         }
       ],
@@ -15092,8 +15052,8 @@
           "sourceUrl": "https://en.wikipedia.org/wiki/Rome/Old_Rome"
         },
         {
-          "description": "位於罗马城内、由聖座管治的獨立城邦",
-          "name": "梵蒂岡城國",
+          "description": "位于罗马城内、由圣座管治的独立城邦",
+          "name": "梵蒂冈",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%A2%B5%E8%92%82%E5%86%88"
         }
       ],
@@ -15144,17 +15104,17 @@
       "attractions": [
         {
           "description": "island in Saint Vincent and the Grenadines",
-          "name": "多巴哥群島",
+          "name": "多巴哥群岛",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%A4%9A%E5%B7%B4%E5%93%A5%E7%BE%A4%E5%B2%9B"
         },
         {
           "description": "island",
-          "name": "貝基亞島",
+          "name": "贝基亚岛",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E8%B2%9D%E5%9F%BA%E4%BA%9E%E5%B3%B6"
         },
         {
-          "description": "small private island that is part of St Vincent and the Grenadines",
-          "name": "馬斯蒂克島",
+          "description": "位于圣文森特和格林纳丁斯的岛屿",
+          "name": "马斯蒂克岛",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E9%A6%AC%E6%96%AF%E8%92%82%E5%85%8B%E5%B3%B6"
         },
         {
@@ -15209,7 +15169,7 @@
     "ve": {
       "attractions": [
         {
-          "description": "委內瑞拉首都",
+          "description": "委内瑞拉首都",
           "name": "加拉加斯",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%8D%A1%E6%8B%89%E5%8D%A1%E6%96%AF"
         },
@@ -15224,9 +15184,9 @@
           "sourceUrl": "https://en.wikipedia.org/wiki/Playa_El_Agua"
         },
         {
-          "description": "維基媒體消歧義頁",
-          "name": "Mérida, Venezuela",
-          "sourceUrl": "https://en.wikipedia.org/wiki/Merida"
+          "description": "委内瑞拉城市",
+          "name": "马拉开波",
+          "sourceUrl": "https://zh.wikipedia.org/wiki/%E9%A9%AC%E6%8B%89%E5%BC%80%E6%B3%A2"
         }
       ],
       "images": [
@@ -15290,7 +15250,7 @@
           "sourceUrl": "https://en.wikipedia.org/wiki/Bitter_End_Yacht_Club"
         },
         {
-          "description": "island arc in the Caribbean Sea",
+          "description": "岛群",
           "name": "小安的列斯群岛",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%B0%8F%E5%AE%89%E7%9A%84%E5%88%97%E6%96%AF%E7%BE%A4%E5%B2%9B"
         }
@@ -15341,24 +15301,24 @@
     "vi": {
       "attractions": [
         {
-          "description": "one of the main islands of the United States Virgin Islands",
-          "name": "聖托馬斯島",
-          "sourceUrl": "https://zh.wikipedia.org/wiki/%E8%81%96%E6%89%98%E9%A6%AC%E6%96%AF%E5%B3%B6_(%E7%BE%8E%E5%B1%AC%E7%B6%AD%E7%88%BE%E4%BA%AC%E7%BE%A4%E5%B3%B6)"
+          "description": "美属维尔京群岛的首府",
+          "name": "夏洛特阿马利亚",
+          "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%A4%8F%E6%B4%9B%E7%89%B9%E9%98%BF%E9%A9%AC%E5%88%A9%E4%BA%9A"
         },
         {
-          "description": "代表性目的地",
-          "name": "Mary Point Estate",
-          "sourceUrl": "https://en.wikipedia.org/wiki/Mary_Point_Estate"
+          "description": "美属维尔京群岛的主要岛屿",
+          "name": "圣托马斯岛",
+          "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%9C%A3%E6%89%98%E9%A9%AC%E6%96%AF%E5%B2%9B_(%E7%BE%8E%E5%B1%9E%E7%BB%B4%E5%B0%94%E4%BA%AC%E7%BE%A4%E5%B2%9B)"
         },
         {
-          "description": "island in British Virgin Islands",
-          "name": "約斯特范代克島",
-          "sourceUrl": "https://zh.wikipedia.org/wiki/%E7%B4%84%E6%96%AF%E7%89%B9%C2%B7%E8%8C%83%E4%BB%A3%E5%85%8B%E5%B3%B6"
+          "description": "以海湾、步道与自然环境著称的岛屿",
+          "name": "圣约翰岛",
+          "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%9C%A3%E7%BA%A6%E7%BF%B0%E5%B2%9B_(%E7%BE%8E%E5%B1%9E%E7%BB%B4%E5%B0%94%E4%BA%AC%E7%BE%A4%E5%B2%9B)"
         },
         {
-          "description": "Radio station in Christiansted, U.S. Virgin Islands",
-          "name": "WJKC",
-          "sourceUrl": "https://en.wikipedia.org/wiki/WJKC"
+          "description": "覆盖圣约翰岛大部分区域的国家公园",
+          "name": "维尔京群岛国家公园",
+          "sourceUrl": "https://zh.wikipedia.org/wiki/%E7%BB%B4%E5%B0%94%E4%BA%AC%E7%BE%A4%E5%B2%9B%E5%9B%BD%E5%AE%B6%E5%85%AC%E5%9B%AD"
         }
       ],
       "images": [
@@ -15413,18 +15373,18 @@
         },
         {
           "description": "越南首都",
-          "name": "河內",
+          "name": "河内",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%B2%B3%E5%85%A7%E5%B8%82"
         },
         {
           "description": "越南直辖市",
-          "name": "順化市",
+          "name": "顺化市",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E9%A0%86%E5%8C%96%E5%B8%82"
         },
         {
-          "description": "维基媒体消歧义页",
-          "name": "會安",
-          "sourceUrl": "https://en.wikipedia.org/wiki/H%E1%BB%99i_An"
+          "description": "越南城市",
+          "name": "芽庄",
+          "sourceUrl": "https://zh.wikipedia.org/wiki/%E8%8A%BD%E8%8E%8A%E5%B8%82"
         }
       ],
       "images": [
@@ -15479,17 +15439,17 @@
         },
         {
           "description": "island",
-          "name": "埃皮島",
+          "name": "埃皮岛",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%9F%83%E7%9A%AE%E5%B3%B6"
         },
         {
           "description": "瓦努阿图岛屿",
-          "name": "圣灵岛",
+          "name": "圣埃斯皮里图岛",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%9C%A3%E5%9F%83%E6%96%AF%E7%9A%AE%E9%87%8C%E5%9B%BE%E5%B2%9B"
         },
         {
           "description": "island in Vanuatu",
-          "name": "馬拉庫拉島",
+          "name": "马拉库拉岛",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E9%A6%AC%E6%8B%89%E5%BA%AB%E6%8B%89%E5%B3%B6"
         }
       ],
@@ -15590,7 +15550,7 @@
     "ws": {
       "attractions": [
         {
-          "description": "萨摩亚独立国的首都",
+          "description": "萨摩亚首都",
           "name": "阿皮亚",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E9%98%BF%E7%9A%AE%E4%BA%9A"
         }
@@ -15630,24 +15590,24 @@
     "xk": {
       "attractions": [
         {
-          "description": "mountain region in northwest Kosovo",
-          "name": "魯戈瓦",
-          "sourceUrl": "https://zh.wikipedia.org/wiki/%E9%AD%AF%E6%88%88%E7%93%A6"
-        },
-        {
-          "description": "科索沃普里什蒂纳区的城镇",
-          "name": "格拉查尼察",
-          "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%A0%BC%E6%8B%89%E6%9F%A5%E5%B0%BC%E5%AF%9F_(%E7%A7%91%E7%B4%A2%E6%B2%83)"
-        },
-        {
           "description": "科索沃贾科维察区的城镇",
-          "name": "奧拉霍瓦茨",
+          "name": "奥拉霍瓦茨",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%A5%A7%E6%8B%89%E9%9C%8D%E7%93%A6%E8%8C%A8"
         },
         {
           "description": "village in Kosovo",
           "name": "Brezovica",
           "sourceUrl": "https://en.wikipedia.org/wiki/Brezovica%2C_Kosovo"
+        },
+        {
+          "description": "village in Kosovo",
+          "name": "Prevalla",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Prevalla"
+        },
+        {
+          "description": "village in Kosovo",
+          "name": "Brod (Dragash)",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Brod%2C_Dragash"
         }
       ],
       "images": [
@@ -15696,7 +15656,7 @@
     "ye": {
       "attractions": [
         {
-          "description": "葉門法定首都",
+          "description": "也门共和国首都",
           "name": "萨那",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E8%90%A8%E9%82%A3"
         },
@@ -15711,8 +15671,8 @@
           "sourceUrl": "https://en.wikipedia.org/wiki/Qaryat_al-Qabil"
         },
         {
-          "description": "也門的省",
-          "name": "塔伊茲省",
+          "description": "也门的省",
+          "name": "塔伊兹省",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%A1%94%E4%BC%8A%E8%8C%B2%E7%9C%81"
         }
       ],
@@ -15772,7 +15732,7 @@
           "sourceUrl": "https://en.wikipedia.org/wiki/Chissioua_Mtsamboro"
         },
         {
-          "description": "法国海外省马约特的市镇与省会",
+          "description": "法国市镇",
           "name": "马穆楚",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E9%A9%AC%E7%A9%86%E6%A5%9A"
         },
@@ -15828,7 +15788,7 @@
     "za": {
       "attractions": [
         {
-          "description": "headland of Cape Peninsula, South Africa",
+          "description": "航行",
           "name": "好望角",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%A5%BD%E6%9C%9B%E8%A7%92"
         },
@@ -15838,14 +15798,14 @@
           "sourceUrl": "https://en.wikipedia.org/wiki/Simon's_Town"
         },
         {
-          "description": "维基媒体消歧义页",
-          "name": "EThekwini",
-          "sourceUrl": "https://en.wikipedia.org/wiki/EThekwini"
-        },
-        {
           "description": "mountain",
           "name": "查普曼峰 (南非)",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%9F%A5%E6%99%AE%E6%9B%BC%E5%B3%B0_(%E5%8D%97%E9%9D%9E)"
+        },
+        {
+          "description": "南非的最大城市、豪登省首府",
+          "name": "约翰内斯堡",
+          "sourceUrl": "https://zh.wikipedia.org/wiki/%E7%BA%A6%E7%BF%B0%E5%86%85%E6%96%AF%E5%A0%A1"
         }
       ],
       "images": [
@@ -15895,7 +15855,7 @@
       "attractions": [
         {
           "description": "national park of Zambia",
-          "name": "藍湖國家公園",
+          "name": "蓝湖国家公园",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E8%97%8D%E6%B9%96%E5%9C%8B%E5%AE%B6%E5%85%AC%E5%9C%92"
         },
         {
@@ -15905,12 +15865,12 @@
         },
         {
           "description": "national park of Zambia",
-          "name": "洛欽瓦爾國家公園",
+          "name": "洛钦瓦尔国家公园",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%B4%9B%E6%AC%BD%E7%93%A6%E7%88%BE%E5%9C%8B%E5%AE%B6%E5%85%AC%E5%9C%92"
         },
         {
           "description": "national park of Zambia",
-          "name": "贊比西下游國家公園",
+          "name": "赞比西下游国家公园",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E8%B4%8A%E6%AF%94%E8%A5%BF%E4%B8%8B%E6%B8%B8%E5%9C%8B%E5%AE%B6%E5%85%AC%E5%9C%92"
         }
       ],
@@ -15965,19 +15925,19 @@
           "sourceUrl": "https://en.wikipedia.org/wiki/Victoria_Falls%2C_Zimbabwe"
         },
         {
-          "description": "津巴布韦城市",
-          "name": "维多利亚瀑布城",
-          "sourceUrl": "https://en.wikipedia.org/wiki/Victoria_Falls%2C_Zimbabwe"
-        },
-        {
-          "description": "非洲南部國家津巴布韋的國家公園",
-          "name": "戈納雷若國家公園",
+          "description": "非洲南部国家津巴布韦的国家公园",
+          "name": "戈纳雷若国家公园",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E6%88%88%E7%B4%8D%E9%9B%B7%E8%8B%A5%E5%9C%8B%E5%AE%B6%E5%85%AC%E5%9C%92"
         },
         {
           "description": "世界遗产",
           "name": "大津巴布韦",
           "sourceUrl": "https://zh.wikipedia.org/wiki/%E5%A4%A7%E6%B4%A5%E5%B7%B4%E5%B8%83%E9%9F%A6"
+        },
+        {
+          "description": "非洲国家",
+          "name": "莫桑比克",
+          "sourceUrl": "https://zh.wikipedia.org/wiki/%E8%8E%AB%E6%A1%91%E6%AF%94%E5%85%8B"
         }
       ],
       "images": [

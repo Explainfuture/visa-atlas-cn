@@ -93,7 +93,7 @@ npx tsc --noEmit
 npm run build
 ```
 
-`verify:visa-data` 会检查 251 个目的地是否完整覆盖、代码是否重复，以及是否仍存在占位攻略；`verify:application-portals` 会检查整理过的官方入口、属地别名、HTTPS 链接与页面接线，并确认未整理目的地仍有官方领事来源回退；`verify:consular-data` 会检查办理地点覆盖、必填来源、机构类型与中国香港、中国澳门、中国台湾的国内受理渠道；`verify:passport-data` 会检查 31 个省级行政区、城市代码、启用窗口和数据来源是否完整一致；`verify:travel-data` 会检查 251 个旅行页是否都有介绍、代表性地点、至少两张高清图片，以及图片作者、许可和 Commons 文件页链接。
+`verify:visa-data` 会检查 251 个目的地是否完整覆盖、代码是否重复，以及是否仍存在占位攻略；`verify:application-portals` 会检查整理过的官方入口、属地别名、HTTPS 链接与页面接线，并确认未整理目的地仍有官方领事来源回退；`verify:consular-data` 会检查办理地点覆盖、必填来源、机构类型与中国香港、中国澳门、中国台湾的国内受理渠道；`verify:passport-data` 会检查 31 个省级行政区、城市代码、启用窗口和数据来源是否完整一致；`verify:travel-data` 会检查 251 个旅行页是否都有介绍、代表性地点、至少两张高清图片，以及图片作者、许可和 Commons 文件页链接，同时拒绝负面事件、机构、消歧义页面、商业设施和重复地点混入旅行建议。
 
 ## 数据结构与维护
 
@@ -139,6 +139,12 @@ npm run verify:passport-data
 ```bash
 npm run data:travel
 npm run verify:travel-data
+```
+
+只刷新代表性城市与景点、保留现有介绍和图片：
+
+```bash
+npm run data:travel:attractions
 ```
 
 `visa-baseline.generated.ts` 来自 [Wikipedia：中国公民签证要求](https://en.wikipedia.org/wiki/Visa_requirements_for_Chinese_citizens) 的固定修订版本，由脚本生成，不应手工编辑。高频目的地的细节在 `visa-guides.ts` 中使用目的地移民局、外交部、使领馆等一手来源补充。
