@@ -2,16 +2,18 @@ import Link from "next/link";
 import {
   ArrowDownRight,
   ArrowRight,
-  BookOpen,
   Compass,
   IdCard,
-  ShieldCheck,
 } from "lucide-react";
 import { MapShell } from "@/components/map-shell";
+import { PopularDestinationRail } from "@/components/popular-destination-rail";
 import { SiteFooter, SiteHeader } from "@/components/site-chrome";
-import { continents, featuredCountries } from "@/data/featured-countries";
+import {
+  continents,
+  popularDestinations,
+  popularDestinationSources,
+} from "@/data/featured-countries";
 import { getContinentCount, worldCountries } from "@/data/world-countries";
-import { visaGuides } from "@/data/visa-guides";
 
 export default function Home() {
   const currentYear = new Date().getUTCFullYear();
@@ -129,41 +131,19 @@ export default function Home() {
         <section className="featured-section" id="featured-guides" aria-labelledby="featured-title">
           <div className="section-heading featured-heading">
             <div>
-              <p className="section-kicker">第一批攻略</p>
-              <h2 id="featured-title">大家常去的地方，先整理好</h2>
+              <p className="section-kicker">出境热榜 · 12</p>
+              <h2 id="featured-title">热门景点</h2>
             </div>
-            <div className="source-promise">
-              <ShieldCheck aria-hidden="true" size={19} />
-              每条结论附来源与核验日期
+            <div className="popular-ranking-sources" aria-label="热门目的地参考来源">
+              {popularDestinationSources.map((source) => (
+                <a href={source.url} key={source.url} rel="noreferrer" target="_blank">
+                  {source.label} ↗
+                </a>
+              ))}
             </div>
           </div>
 
-          <div className="country-grid">
-            {featuredCountries.map((country) => (
-              <Link
-                className="country-card"
-                href={`/country/${country.code}`}
-                id={`country-${country.slug}`}
-                key={country.code}
-              >
-                <div className="country-card-topline">
-                  <span className="country-flag" aria-hidden="true">
-                    {country.code.toUpperCase()}
-                  </span>
-                  <span>{country.continent}</span>
-                </div>
-                <h3>{country.name}</h3>
-                <p>{country.city}</p>
-                <div className="country-card-footer">
-                  <span>
-                    <BookOpen aria-hidden="true" size={16} />
-                    {visaGuides[country.code]?.status ?? "攻略已收录"}
-                  </span>
-                  <ArrowRight aria-hidden="true" size={19} />
-                </div>
-              </Link>
-            ))}
-          </div>
+          <PopularDestinationRail destinations={popularDestinations} />
         </section>
       </main>
 

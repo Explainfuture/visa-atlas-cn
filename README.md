@@ -165,6 +165,8 @@ npm run data:travel:image-text
 
 `travel-destinations.generated.json` 由脚本读取 [Wikivoyage](https://www.wikivoyage.org/) 的目的地介绍、[SightsMap-HeatmapExplorer](https://github.com/enceladus3/SightsMap-HeatmapExplorer) 的开放景点数据和 [Wikimedia Commons](https://commons.wikimedia.org/) 的图片元数据生成。页面逐张保留作者、许可和 Commons 文件页链接；图片许可可能不同，使用时应以对应文件页为准。
 
+首页 12 个热门目的地参考[全联旅游业商会整理的 2026 年上半年及暑期出境游趋势](https://www.tcc.org.cn/newsinfo/11259706.html)与[中国网报道的 2026 年“五一”出境游热度](https://news.china.com.cn/2026-05/06/content_118479156.shtml)，不把中国香港、中国澳门列作国家。该列表用于首页导览，不替代目的地签证页的官方规则核验。
+
 驻华机构地址用于联系与核验，**不代表该地址一定直接接收个人签证申请**。实际递交仍以目的地官方签证页、签证中心、指定代办机构或线上系统为准。
 
 ## 内容原则

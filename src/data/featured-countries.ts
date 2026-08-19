@@ -1,16 +1,27 @@
-export const featuredCountries = [
-  { code: "jp", slug: "japan", name: "日本", continent: "亚洲", city: "东京 · 京都 · 北海道", flag: "🇯🇵" },
-  { code: "th", slug: "thailand", name: "泰国", continent: "亚洲", city: "曼谷 · 清迈 · 普吉", flag: "🇹🇭" },
-  { code: "sg", slug: "singapore", name: "新加坡", continent: "亚洲", city: "新加坡", flag: "🇸🇬" },
-  { code: "fr", slug: "france", name: "法国", continent: "欧洲", city: "巴黎 · 尼斯 · 里昂", flag: "🇫🇷" },
-  { code: "gb", slug: "united-kingdom", name: "英国", continent: "欧洲", city: "伦敦 · 爱丁堡", flag: "🇬🇧" },
-  { code: "us", slug: "united-states", name: "美国", continent: "北美洲", city: "纽约 · 洛杉矶", flag: "🇺🇸" },
-  { code: "ca", slug: "canada", name: "加拿大", continent: "北美洲", city: "温哥华 · 多伦多", flag: "🇨🇦" },
-  { code: "br", slug: "brazil", name: "巴西", continent: "南美洲", city: "里约 · 圣保罗", flag: "🇧🇷" },
-  { code: "ma", slug: "morocco", name: "摩洛哥", continent: "非洲", city: "马拉喀什 · 卡萨布兰卡", flag: "🇲🇦" },
-  { code: "za", slug: "south-africa", name: "南非", continent: "非洲", city: "开普敦 · 约翰内斯堡", flag: "🇿🇦" },
-  { code: "au", slug: "australia", name: "澳大利亚", continent: "大洋洲", city: "悉尼 · 墨尔本", flag: "🇦🇺" },
-  { code: "nz", slug: "new-zealand", name: "新西兰", continent: "大洋洲", city: "奥克兰 · 皇后镇", flag: "🇳🇿" },
+export const popularDestinations = [
+  { code: "kr", name: "韩国", continent: "亚洲", city: "首尔 · 济州 · 釜山", signal: "暑期热搜" },
+  { code: "th", name: "泰国", continent: "亚洲", city: "曼谷 · 清迈 · 普吉", signal: "暑期热搜" },
+  { code: "jp", name: "日本", continent: "亚洲", city: "东京 · 京都 · 北海道", signal: "暑期热搜" },
+  { code: "us", name: "美国", continent: "北美洲", city: "纽约 · 洛杉矶 · 旧金山", signal: "暑期热搜" },
+  { code: "fr", name: "法国", continent: "欧洲", city: "巴黎 · 尼斯 · 里昂", signal: "暑期热搜" },
+  { code: "it", name: "意大利", continent: "欧洲", city: "罗马 · 米兰 · 佛罗伦萨", signal: "暑期热搜" },
+  { code: "nz", name: "新西兰", continent: "大洋洲", city: "奥克兰 · 皇后镇", signal: "暑期热搜" },
+  { code: "gb", name: "英国", continent: "欧洲", city: "伦敦 · 爱丁堡", signal: "暑期热搜" },
+  { code: "my", name: "马来西亚", continent: "亚洲", city: "吉隆坡 · 槟城 · 沙巴", signal: "暑期热搜" },
+  { code: "id", name: "印度尼西亚", continent: "亚洲", city: "巴厘岛 · 雅加达", signal: "暑期热搜" },
+  { code: "sg", name: "新加坡", continent: "亚洲", city: "滨海湾 · 圣淘沙", signal: "五一热门" },
+  { code: "au", name: "澳大利亚", continent: "大洋洲", city: "悉尼 · 墨尔本 · 黄金海岸", signal: "长线热门" },
+] as const;
+
+export const popularDestinationSources = [
+  {
+    label: "2026 暑期出境热搜",
+    url: "https://www.tcc.org.cn/newsinfo/11259706.html",
+  },
+  {
+    label: "2026 五一出境热度",
+    url: "https://news.china.com.cn/2026-05/06/content_118479156.shtml",
+  },
 ] as const;
 
 export const continents = [
