@@ -9,6 +9,7 @@
     "data:passport": "node scripts/generate-passport-offices.mjs",
     "data:travel": "node scripts/generate-travel-destinations.mjs",
     "data:travel:attractions": "node scripts/generate-travel-destinations.mjs --refresh-attractions",
+    "data:travel:image-text": "node scripts/generate-travel-destinations.mjs --refresh-image-text",
     "data:travel:introductions": "node scripts/generate-travel-destinations.mjs --refresh-introductions",
     "verify:visa-data": "node scripts/verify-visa-coverage.mjs",
     "verify:application-portals": "node scripts/verify-application-portals.mjs",
@@ -38,6 +39,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.3.1",
+    "opencc-js": "^1.4.1",
     "tailwindcss": "^4",
     "typescript": "^5",
     "undici": "^7.29.0"

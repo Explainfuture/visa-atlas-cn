@@ -2,6 +2,7 @@ import { readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { getCountryDataList } from "countries-list";
 import { ProxyAgent, setGlobalDispatcher } from "undici";
+import { toSimplifiedChinese } from "./chinese-text.mjs";
 import { getTravelSuggestionIssue } from "./travel-content-rules.mjs";
 
 const proxyUrl =
@@ -479,9 +480,11 @@ function buildImageRecord(filename, metadata, caption, alt) {
   const license = metadataFields.LicenseShortName?.value ?? "查看文件页许可";
 
   return {
-    alt,
+    alt: toSimplifiedChinese(alt),
     artist,
-    caption: compactText(caption || metadataFields.ImageDescription?.value || alt, 88),
+    caption: toSimplifiedChinese(
+      compactText(caption || metadataFields.ImageDescription?.value || alt, 88),
+    ),
     height,
     license,
     licenseUrl: metadataFields.LicenseUrl?.value ?? imageInfo.descriptionurl,
@@ -489,6 +492,18 @@ function buildImageRecord(filename, metadata, caption, alt) {
     url: imageInfo.thumburl ?? imageInfo.url,
     width,
   };
+}
+
+function normalizeImageText(country, image) {
+  const caption = toSimplifiedChinese(image.caption);
+  const alt = toSimplifiedChinese(image.alt);
+  const neutralText = `${country.name}旅行风光`;
+
+  if (getTravelSuggestionIssue({ name: caption })) {
+    return { ...image, alt: neutralText, caption: neutralText };
+  }
+
+  return { ...image, alt, caption };
 }
 
 async function getCommonsMetadata(filenames) {
@@ -662,6 +677,35 @@ if (process.argv.includes("--refresh-introductions")) {
   process.exit(0);
 }
 
+if (process.argv.includes("--refresh-image-text")) {
+  const output = JSON.parse(await readFile(OUTPUT_PATH, "utf8"));
+  let changedFields = 0;
+  let neutralizedCaptions = 0;
+
+  for (const country of countries) {
+    const destination = output.destinations[country.code.toLowerCase()];
+    destination.images = destination.images.map((image) => {
+      const normalizedImage = normalizeImageText(country, image);
+      if (normalizedImage.caption !== image.caption) changedFields += 1;
+      if (normalizedImage.alt !== image.alt) changedFields += 1;
+      if (
+        normalizedImage.caption === `${country.name}旅行风光` &&
+        normalizedImage.caption !== toSimplifiedChinese(image.caption)
+      ) {
+        neutralizedCaptions += 1;
+      }
+      return normalizedImage;
+    });
+  }
+
+  await writeFile(OUTPUT_PATH, `${JSON.stringify(output, null, 2)}\n`, "utf8");
+  console.log(
+    `Normalized ${changedFields} image text fields across ${countries.length} destinations; ` +
+      `${neutralizedCaptions} unsuitable captions were replaced with neutral travel labels.`,
+  );
+  process.exit(0);
+}
+
 if (process.argv.includes("--refresh-image-overrides")) {
   const output = JSON.parse(await readFile(OUTPUT_PATH, "utf8"));
   const filenames = Object.values(imageFileOverrides).flatMap((images) =>
@@ -683,6 +727,7 @@ if (process.argv.includes("--refresh-image-overrides")) {
         )
       )
       .filter(Boolean)
+      .map((image) => normalizeImageText(country, image))
       .slice(0, 3);
 
     output.destinations[country.code.toLowerCase()].images = images;
@@ -902,7 +947,10 @@ for (const [countryIndex, country] of countries.entries()) {
 
   const images = imageCandidates.slice(0, 3).map((image, index) => {
     const caption = imageCaptionOverrides[country.code]?.[index];
-    return caption ? { ...image, alt: `${country.name}的${caption}`, caption } : image;
+    return normalizeImageText(
+      country,
+      caption ? { ...image, alt: `${country.name}的${caption}`, caption } : image,
+    );
   });
   if (images.length === 3) destinationsWithThreeImages += 1;
 

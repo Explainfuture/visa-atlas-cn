@@ -1,5 +1,6 @@
 import { getCountryDataList } from "countries-list";
 import travelData from "../src/data/travel-destinations.generated.json" with { type: "json" };
+import { containsConvertibleTraditionalChinese } from "./chinese-text.mjs";
 import { getTravelSuggestionIssue } from "./travel-content-rules.mjs";
 
 const expectedCodes = getCountryDataList()
@@ -62,6 +63,12 @@ for (const code of expectedCodes) {
     }
     if (!image.artist || !image.license) {
       errors.push(`${code}: image attribution is incomplete.`);
+    }
+    if (containsConvertibleTraditionalChinese(image.caption)) {
+      errors.push(`${code}: image caption is not Simplified Chinese (${image.caption}).`);
+    }
+    if (containsConvertibleTraditionalChinese(image.alt)) {
+      errors.push(`${code}: image alt text is not Simplified Chinese (${image.alt}).`);
     }
   }
 }
