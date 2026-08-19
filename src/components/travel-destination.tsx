@@ -51,7 +51,7 @@ export function TravelDestinationIntro({ country, destination }: TravelDestinati
               <Image
                 alt={image.alt}
                 fill
-                loading={index === 0 ? "eager" : "lazy"}
+                loading="lazy"
                 sizes={
                   index === 0
                     ? "(max-width: 760px) calc(100vw - 32px), (max-width: 1080px) 56vw, 650px"
