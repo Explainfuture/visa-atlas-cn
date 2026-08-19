@@ -1,5 +1,14 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import {
+  GlobalCountrySearch,
+  type GlobalCountrySearchItem,
+} from "@/components/global-country-search";
+import { worldCountries } from "@/data/world-countries";
+
+const globalSearchCountries: GlobalCountrySearchItem[] = worldCountries.map(
+  ({ code, englishName, name }) => ({ code, englishName, name }),
+);
 
 export function SiteHeader() {
   return (
@@ -17,6 +26,8 @@ export function SiteHeader() {
         <Link href="/#featured-guides">签证攻略</Link>
         <Link href="/passport">第一次办护照</Link>
       </nav>
+
+      <GlobalCountrySearch countries={globalSearchCountries} />
 
       <Link className="header-action" href="/passport">
         办护照
