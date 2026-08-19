@@ -142,9 +142,15 @@ export function PopularDestinationShowcase({ destinations }: {
   }
 
   function handleKeyDown(event: React.KeyboardEvent<HTMLDivElement>) {
-    if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return;
+    if (
+      event.key !== "ArrowLeft" &&
+      event.key !== "ArrowRight" &&
+      event.key !== "ArrowUp" &&
+      event.key !== "ArrowDown"
+    ) return;
+
     event.preventDefault();
-    move(event.key === "ArrowRight" ? 1 : -1);
+    move(event.key === "ArrowRight" || event.key === "ArrowDown" ? 1 : -1);
   }
 
   function handlePointerDown(event: React.PointerEvent<HTMLDivElement>) {
@@ -193,7 +199,7 @@ export function PopularDestinationShowcase({ destinations }: {
   if (!activeDestination) return null;
 
   const backgroundImage = activeDestination.image
-    ? `linear-gradient(90deg, rgba(220, 242, 250, 0.93) 0%, rgba(220, 242, 250, 0.72) 32%, rgba(220, 242, 250, 0.38) 72%, rgba(220, 242, 250, 0.62) 100%), linear-gradient(0deg, rgba(220, 242, 250, 0.34), rgba(220, 242, 250, 0.18)), url("${activeDestination.image.url}")`
+    ? `linear-gradient(90deg, rgba(220, 242, 250, 0.9) 0%, rgba(220, 242, 250, 0.54) 32%, rgba(220, 242, 250, 0.12) 66%, rgba(220, 242, 250, 0.18) 100%), linear-gradient(0deg, rgba(220, 242, 250, 0.2), rgba(220, 242, 250, 0.08)), url("${activeDestination.image.url}")`
     : undefined;
 
   return (
@@ -205,53 +211,55 @@ export function PopularDestinationShowcase({ destinations }: {
         style={{ backgroundImage }}
       />
 
-      <div className="section-heading featured-heading">
-        <div>
-          <p className="section-kicker">出境热榜</p>
-          <h2 id="featured-title">热门景点</h2>
+      <div className="popular-showcase-layout">
+        <div className="section-heading featured-heading">
+          <div>
+            <p className="section-kicker">出境热榜</p>
+            <h2 id="featured-title">热门景点</h2>
+          </div>
         </div>
-      </div>
 
-      <div
-        aria-label="热门国家层叠胶囊，可上下滑动、使用滚轮或方向键旋转"
-        className="popular-destination-rail"
-        role="region"
-      >
         <div
-          aria-label="滚动切换热门国家"
-          className="popular-stack-stage"
-          onClickCapture={handleClickCapture}
-          onKeyDown={handleKeyDown}
-          onPointerCancel={handlePointerEnd}
-          onPointerDown={handlePointerDown}
-          onPointerMove={handlePointerMove}
-          onPointerUp={handlePointerEnd}
-          ref={railRef}
-          role="group"
-          tabIndex={0}
+          aria-label="热门国家层叠胶囊，可上下滑动、使用滚轮或方向键旋转"
+          className="popular-destination-rail"
+          role="region"
         >
-          {stackedDestinations.map(({ destination, offset }) => (
-            <Link
-              aria-hidden={offset !== 0}
-              aria-label={offset === 0 ? `打开${destination.name}签证攻略` : undefined}
-              className="popular-stack-card"
-              data-stack-position={offset}
-              href={`/country/${destination.code}`}
-              key={destination.code}
-              tabIndex={offset === 0 ? 0 : -1}
-            >
-              <span
-                aria-hidden="true"
-                className={`popular-stack-flag fi fi-${destination.code}`}
-              />
-              <span className="popular-stack-copy">
-                <small>{destination.signal} · {destination.continent}</small>
-                <strong>{destination.name}</strong>
-                <span>{destination.city}</span>
-              </span>
-              <span className="popular-stack-action">查看攻略 ↗</span>
-            </Link>
-          ))}
+          <div
+            aria-label="滚动切换热门国家"
+            className="popular-stack-stage"
+            onClickCapture={handleClickCapture}
+            onKeyDown={handleKeyDown}
+            onPointerCancel={handlePointerEnd}
+            onPointerDown={handlePointerDown}
+            onPointerMove={handlePointerMove}
+            onPointerUp={handlePointerEnd}
+            ref={railRef}
+            role="group"
+            tabIndex={0}
+          >
+            {stackedDestinations.map(({ destination, offset }) => (
+              <Link
+                aria-hidden={offset !== 0}
+                aria-label={offset === 0 ? `打开${destination.name}签证攻略` : undefined}
+                className="popular-stack-card"
+                data-stack-position={offset}
+                href={`/country/${destination.code}`}
+                key={destination.code}
+                tabIndex={offset === 0 ? 0 : -1}
+              >
+                <span
+                  aria-hidden="true"
+                  className={`popular-stack-flag fi fi-${destination.code}`}
+                />
+                <span className="popular-stack-copy">
+                  <small>{destination.signal} · {destination.continent}</small>
+                  <strong>{destination.name}</strong>
+                  <span>{destination.city}</span>
+                </span>
+                <span className="popular-stack-action">攻略 ↗</span>
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
 
