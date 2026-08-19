@@ -13,10 +13,16 @@ export type PopularDestination = {
 
 const WHEEL_THRESHOLD = 20;
 const WHEEL_COOLDOWN = 260;
-const SECONDARY_COUNT = 5;
+const STACK_DEPTH = 3;
 
 function wrapIndex(index: number, length: number) {
   return (index + length) % length;
+}
+
+function getStackOffset(index: number, activeIndex: number, length: number) {
+  let offset = wrapIndex(index - activeIndex, length);
+  if (offset > length / 2) offset -= length;
+  return offset;
 }
 
 export function PopularDestinationRail({
@@ -30,10 +36,12 @@ export function PopularDestinationRail({
   const wheelLockRef = useRef(0);
   const destinationCount = destinations.length;
   const activeDestination = destinations[activeIndex];
-  const secondaryDestinations = Array.from(
-    { length: Math.min(SECONDARY_COUNT, Math.max(0, destinationCount - 1)) },
-    (_, offset) => destinations[wrapIndex(activeIndex + offset + 1, destinationCount)],
-  );
+  const stackedDestinations = destinations
+    .map((destination, index) => ({
+      destination,
+      offset: getStackOffset(index, activeIndex, destinationCount),
+    }))
+    .filter(({ offset }) => Math.abs(offset) <= STACK_DEPTH);
 
   useEffect(() => {
     const rail = railRef.current;
@@ -74,58 +82,50 @@ export function PopularDestinationRail({
 
   return (
     <div
-      aria-label="热门国家胶囊轨道，悬停后使用滚轮或方向键切换"
+      aria-label="热门国家层叠胶囊，悬停后使用滚轮或方向键旋转"
       className="popular-destination-rail"
-      onKeyDown={handleKeyDown}
-      ref={railRef}
       role="region"
-      tabIndex={0}
     >
-      <Link
-        aria-label={`打开${activeDestination.name}签证攻略`}
-        className="popular-main-pill"
-        href={`/country/${activeDestination.code}`}
-        key={activeDestination.code}
+      <div
+        aria-label="滚动切换热门国家"
+        className="popular-stack-stage"
+        onKeyDown={handleKeyDown}
+        ref={railRef}
+        role="group"
+        tabIndex={0}
       >
-        <span
-          aria-hidden="true"
-          className={`popular-main-flag fi fi-${activeDestination.code}`}
-        />
-        <span className="popular-main-copy">
-          <small>{activeDestination.signal} · {activeDestination.continent}</small>
-          <strong>{activeDestination.name}</strong>
-          <span>{activeDestination.city}</span>
-        </span>
-        <span className="popular-main-action">查看攻略 ↗</span>
-      </Link>
-
-      <div className="popular-secondary-list" aria-label="接下来的热门国家">
-        {secondaryDestinations.map((destination, index) => (
+        {stackedDestinations.map(({ destination, offset }) => (
           <Link
-            aria-label={`打开${destination.name}签证攻略`}
-            className="popular-secondary-pill"
-            data-depth={index + 1}
+            aria-hidden={offset !== 0}
+            aria-label={offset === 0 ? `打开${destination.name}签证攻略` : undefined}
+            className="popular-stack-card"
+            data-stack-position={offset}
             href={`/country/${destination.code}`}
             key={destination.code}
+            tabIndex={offset === 0 ? 0 : -1}
           >
             <span
               aria-hidden="true"
-              className={`popular-secondary-flag fi fi-${destination.code}`}
+              className={`popular-stack-flag fi fi-${destination.code}`}
             />
-            <strong>{destination.name}</strong>
+            <span className="popular-stack-copy">
+              <small>{destination.signal} · {destination.continent}</small>
+              <strong>{destination.name}</strong>
+              <span>{destination.city}</span>
+            </span>
+            <span className="popular-stack-action">查看攻略 ↗</span>
           </Link>
         ))}
       </div>
 
       <div className="popular-rail-controls">
-        <span aria-live="polite">
-          {String(activeIndex + 1).padStart(2, "0")} / {destinationCount}
-        </span>
+        <span aria-live="polite">{String(activeIndex + 1).padStart(2, "0")} / {destinationCount}</span>
+        <strong>{activeDestination.name}</strong>
         <div>
           <button aria-label="上一个热门国家" onClick={() => move(-1)} type="button">←</button>
           <button aria-label="下一个热门国家" onClick={() => move(1)} type="button">→</button>
         </div>
-        <small>悬停滚轮切换</small>
+        <small>悬停滚轮旋转</small>
       </div>
     </div>
   );
