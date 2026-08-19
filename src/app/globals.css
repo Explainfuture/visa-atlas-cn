@@ -1,14 +1,17 @@
 @import "tailwindcss";
 
 :root {
-  --paper: #fff8fa;
-  --paper-deep: #faedf1;
-  --blush: #f4d8e1;
-  --rose: #d76789;
-  --rose-deep: #a9385c;
+  --paper: #fff9fb;
+  --paper-deep: #faeff3;
+  --blush: #f7dfe7;
+  --brand-sky: #79c2df;
+  --brand-sky-deep: #3e83a2;
+  --brand-pink: #f2afc2;
+  --rose: var(--brand-pink);
+  --rose-deep: var(--brand-sky-deep);
   --ink: #261d21;
   --muted: #725e66;
-  --line: #e7cdd6;
+  --line: #d7e7ee;
   --white: #fffdfd;
   --sky: #eef8fc;
   --sky-deep: #dceff7;
@@ -111,17 +114,11 @@ h3 {
 }
 
 .brand-mark {
-  display: grid;
+  display: block;
   flex: 0 0 auto;
-  width: 38px;
-  height: 38px;
-  place-items: center;
-  padding-top: 1px;
-  border: 1px solid var(--rose-deep);
-  border-radius: 50%;
-  color: var(--rose-deep);
-  font-size: 17px;
-  line-height: 1;
+  width: 40px;
+  height: 40px;
+  background: url("/brand/visa-atlas-mark.png") center / contain no-repeat;
 }
 
 .main-nav {
@@ -164,7 +161,7 @@ h3 {
 
 .global-search-field:focus-within {
   border-color: var(--rose-deep);
-  box-shadow: 0 0 0 3px rgba(185, 68, 104, 0.1);
+  box-shadow: 0 0 0 3px rgba(62, 131, 162, 0.12);
 }
 
 .global-search-field input {
@@ -1201,7 +1198,7 @@ h3 {
 }
 
 .schengen-tooltip-trigger:focus-visible {
-  outline: 3px solid rgba(215, 103, 137, 0.3);
+  outline: 3px solid rgba(62, 131, 162, 0.3);
   outline-offset: 3px;
 }
 

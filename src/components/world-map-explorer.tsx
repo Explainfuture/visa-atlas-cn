@@ -46,8 +46,8 @@ export function WorldMapExplorer({ availableCodes }: { availableCodes: string[] 
 
   const styleCountry = (context: CountryContext<string>) => {
     return {
-      fill: context.countryValue ? "#e99bb3" : "#eadde2",
-      stroke: "#fff8fa",
+      fill: context.countryValue ? "#79c2df" : "#dcecf2",
+      stroke: "#fff9fb",
       strokeWidth: 0.55,
       cursor: context.countryValue ? "pointer" : "default",
       transition: "fill 180ms ease, filter 180ms ease, opacity 180ms ease",
@@ -103,8 +103,8 @@ export function WorldMapExplorer({ availableCodes }: { availableCodes: string[] 
               >
                 <WorldMap
                   backgroundColor="transparent"
-                  borderColor="#fff8fa"
-                  color="#e99bb3"
+                  borderColor="#fff9fb"
+                  color="#79c2df"
                   data={mapData}
                   frame={false}
                   hrefFunction={({ countryCode }) => {
@@ -119,8 +119,8 @@ export function WorldMapExplorer({ availableCodes }: { availableCodes: string[] 
                   size="responsive"
                   styleFunction={styleCountry}
                   title="可交互的世界签证地图"
-                  tooltipBgColor="#2a2024"
-                  tooltipTextColor="#fff8fa"
+                  tooltipBgColor="#23495e"
+                  tooltipTextColor="#fff9fb"
                   tooltipTextFunction={({ countryCode, countryValue }) =>
                     countryValue ?? getDestinationName(countryCode, displayNames)
                   }
