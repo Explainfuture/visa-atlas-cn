@@ -203,7 +203,7 @@ export function PopularDestinationShowcase({ destinations }: {
     : undefined;
 
   return (
-    <section className="featured-section" id="featured-guides" aria-labelledby="featured-title">
+    <section className="featured-section" id="popular-destinations" aria-labelledby="featured-title">
       <div
         aria-hidden="true"
         className="popular-destination-backdrop"
