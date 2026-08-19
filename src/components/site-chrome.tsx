@@ -21,7 +21,7 @@ export function SiteHeader() {
       <nav className="main-nav" aria-label="主导航">
         <Link href="/#world-map">世界地图</Link>
         <Link href="/#continents">七大洲</Link>
-        <Link href="/#featured-guides">签证攻略</Link>
+        <Link href="/#popular-destinations">热门景点</Link>
         <Link href="/passport">第一次办护照</Link>
       </nav>
 
