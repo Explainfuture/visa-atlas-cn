@@ -1,17 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --paper: #fff9fb;
-  --paper-deep: #faeff3;
-  --blush: #f7dfe7;
-  --brand-sky: #79c2df;
-  --brand-sky-deep: #3e83a2;
-  --brand-pink: #f2afc2;
-  --rose: var(--brand-pink);
-  --rose-deep: var(--brand-sky-deep);
+  --paper: #fff8fa;
+  --paper-deep: #faedf1;
+  --blush: #f4d8e1;
+  --rose: #d76789;
+  --rose-deep: #a9385c;
   --ink: #261d21;
   --muted: #725e66;
-  --line: #d7e7ee;
+  --line: #e7cdd6;
   --white: #fffdfd;
   --sky: #eef8fc;
   --sky-deep: #dceff7;
@@ -161,7 +158,7 @@ h3 {
 
 .global-search-field:focus-within {
   border-color: var(--rose-deep);
-  box-shadow: 0 0 0 3px rgba(62, 131, 162, 0.12);
+  box-shadow: 0 0 0 3px rgba(185, 68, 104, 0.1);
 }
 
 .global-search-field input {
@@ -1198,7 +1195,7 @@ h3 {
 }
 
 .schengen-tooltip-trigger:focus-visible {
-  outline: 3px solid rgba(62, 131, 162, 0.3);
+  outline: 3px solid rgba(215, 103, 137, 0.3);
   outline-offset: 3px;
 }
 
