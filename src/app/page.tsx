@@ -6,17 +6,42 @@ import {
   IdCard,
 } from "lucide-react";
 import { MapShell } from "@/components/map-shell";
-import { PopularDestinationRail } from "@/components/popular-destination-rail";
+import { PopularDestinationShowcase } from "@/components/popular-destination-rail";
 import { SiteFooter, SiteHeader } from "@/components/site-chrome";
 import {
   continents,
   popularDestinations,
   popularDestinationSources,
 } from "@/data/featured-countries";
+import { getTravelDestination } from "@/data/travel-destinations";
 import { getContinentCount, worldCountries } from "@/data/world-countries";
 
 export default function Home() {
   const currentYear = new Date().getUTCFullYear();
+  const popularDestinationSlides = popularDestinations.map((destination) => {
+    const travelDestination = getTravelDestination(destination.code);
+    const image = travelDestination?.images.find(
+      (candidate) => candidate.caption === destination.imageCaption,
+    ) ?? travelDestination?.images[0];
+
+    return {
+      city: destination.city,
+      code: destination.code,
+      continent: destination.continent,
+      image: image
+        ? {
+            alt: image.alt,
+            artist: image.artist,
+            caption: image.caption,
+            license: image.license,
+            sourceUrl: image.sourceUrl,
+            url: image.url,
+          }
+        : undefined,
+      name: destination.name,
+      signal: destination.signal,
+    };
+  });
 
   return (
     <>
@@ -128,23 +153,10 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="featured-section" id="featured-guides" aria-labelledby="featured-title">
-          <div className="section-heading featured-heading">
-            <div>
-              <p className="section-kicker">出境热榜 · 12</p>
-              <h2 id="featured-title">热门景点</h2>
-            </div>
-            <div className="popular-ranking-sources" aria-label="热门目的地参考来源">
-              {popularDestinationSources.map((source) => (
-                <a href={source.url} key={source.url} rel="noreferrer" target="_blank">
-                  {source.label} ↗
-                </a>
-              ))}
-            </div>
-          </div>
-
-          <PopularDestinationRail destinations={popularDestinations} />
-        </section>
+        <PopularDestinationShowcase
+          destinations={popularDestinationSlides}
+          sources={popularDestinationSources}
+        />
       </main>
 
       <SiteFooter />

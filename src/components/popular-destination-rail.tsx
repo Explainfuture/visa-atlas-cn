@@ -7,8 +7,21 @@ export type PopularDestination = {
   city: string;
   code: string;
   continent: string;
+  image?: {
+    alt: string;
+    artist: string;
+    caption: string;
+    license: string;
+    sourceUrl: string;
+    url: string;
+  };
   name: string;
   signal: string;
+};
+
+type PopularDestinationSource = {
+  label: string;
+  url: string;
 };
 
 const WHEEL_THRESHOLD = 20;
@@ -25,10 +38,12 @@ function getStackOffset(index: number, activeIndex: number, length: number) {
   return offset;
 }
 
-export function PopularDestinationRail({
+export function PopularDestinationShowcase({
   destinations,
+  sources,
 }: {
   destinations: readonly PopularDestination[];
+  sources: readonly PopularDestinationSource[];
 }) {
   const [activeIndex, setActiveIndex] = useState(0);
   const railRef = useRef<HTMLDivElement>(null);
@@ -68,6 +83,23 @@ export function PopularDestinationRail({
     return () => rail.removeEventListener("wheel", handleWheel);
   }, [destinationCount]);
 
+  useEffect(() => {
+    if (destinationCount < 2) return;
+
+    const neighboringImages = [-1, 1]
+      .map((offset) => destinations[wrapIndex(activeIndex + offset, destinationCount)]?.image?.url)
+      .filter((url): url is string => Boolean(url));
+    const preloadTimer = window.setTimeout(() => {
+      neighboringImages.forEach((url) => {
+        const image = new Image();
+        image.decoding = "async";
+        image.src = url;
+      });
+    }, 180);
+
+    return () => window.clearTimeout(preloadTimer);
+  }, [activeIndex, destinationCount, destinations]);
+
   function move(direction: number) {
     setActiveIndex((current) => wrapIndex(current + direction, destinationCount));
   }
@@ -80,53 +112,92 @@ export function PopularDestinationRail({
 
   if (!activeDestination) return null;
 
+  const backgroundImage = activeDestination.image
+    ? `linear-gradient(90deg, rgba(220, 242, 250, 0.93) 0%, rgba(220, 242, 250, 0.72) 32%, rgba(220, 242, 250, 0.38) 72%, rgba(220, 242, 250, 0.62) 100%), linear-gradient(0deg, rgba(220, 242, 250, 0.34), rgba(220, 242, 250, 0.18)), url("${activeDestination.image.url}")`
+    : undefined;
+
   return (
-    <div
-      aria-label="热门国家层叠胶囊，悬停后使用滚轮或方向键旋转"
-      className="popular-destination-rail"
-      role="region"
-    >
+    <section className="featured-section" id="featured-guides" aria-labelledby="featured-title">
       <div
-        aria-label="滚动切换热门国家"
-        className="popular-stack-stage"
-        onKeyDown={handleKeyDown}
-        ref={railRef}
-        role="group"
-        tabIndex={0}
-      >
-        {stackedDestinations.map(({ destination, offset }) => (
-          <Link
-            aria-hidden={offset !== 0}
-            aria-label={offset === 0 ? `打开${destination.name}签证攻略` : undefined}
-            className="popular-stack-card"
-            data-stack-position={offset}
-            href={`/country/${destination.code}`}
-            key={destination.code}
-            tabIndex={offset === 0 ? 0 : -1}
-          >
-            <span
-              aria-hidden="true"
-              className={`popular-stack-flag fi fi-${destination.code}`}
-            />
-            <span className="popular-stack-copy">
-              <small>{destination.signal} · {destination.continent}</small>
-              <strong>{destination.name}</strong>
-              <span>{destination.city}</span>
-            </span>
-            <span className="popular-stack-action">查看攻略 ↗</span>
-          </Link>
-        ))}
+        aria-hidden="true"
+        className="popular-destination-backdrop"
+        key={activeDestination.code}
+        style={{ backgroundImage }}
+      />
+
+      <div className="section-heading featured-heading">
+        <div>
+          <p className="section-kicker">出境热榜 · {destinationCount}</p>
+          <h2 id="featured-title">热门景点</h2>
+        </div>
+        <div className="popular-ranking-sources" aria-label="热门目的地参考来源">
+          {sources.map((source) => (
+            <a href={source.url} key={source.url} rel="noreferrer" target="_blank">
+              {source.label} ↗
+            </a>
+          ))}
+        </div>
       </div>
 
-      <div className="popular-rail-controls">
-        <span aria-live="polite">{String(activeIndex + 1).padStart(2, "0")} / {destinationCount}</span>
-        <strong>{activeDestination.name}</strong>
-        <div>
-          <button aria-label="上一个热门国家" onClick={() => move(-1)} type="button">←</button>
-          <button aria-label="下一个热门国家" onClick={() => move(1)} type="button">→</button>
+      <div
+        aria-label="热门国家层叠胶囊，悬停后使用滚轮或方向键旋转"
+        className="popular-destination-rail"
+        role="region"
+      >
+        <div
+          aria-label="滚动切换热门国家"
+          className="popular-stack-stage"
+          onKeyDown={handleKeyDown}
+          ref={railRef}
+          role="group"
+          tabIndex={0}
+        >
+          {stackedDestinations.map(({ destination, offset }) => (
+            <Link
+              aria-hidden={offset !== 0}
+              aria-label={offset === 0 ? `打开${destination.name}签证攻略` : undefined}
+              className="popular-stack-card"
+              data-stack-position={offset}
+              href={`/country/${destination.code}`}
+              key={destination.code}
+              tabIndex={offset === 0 ? 0 : -1}
+            >
+              <span
+                aria-hidden="true"
+                className={`popular-stack-flag fi fi-${destination.code}`}
+              />
+              <span className="popular-stack-copy">
+                <small>{destination.signal} · {destination.continent}</small>
+                <strong>{destination.name}</strong>
+                <span>{destination.city}</span>
+              </span>
+              <span className="popular-stack-action">查看攻略 ↗</span>
+            </Link>
+          ))}
         </div>
-        <small>悬停滚轮旋转</small>
+
+        <div className="popular-rail-controls">
+          <span aria-live="polite">{String(activeIndex + 1).padStart(2, "0")} / {destinationCount}</span>
+          <strong>{activeDestination.name}</strong>
+          <div>
+            <button aria-label="上一个热门国家" onClick={() => move(-1)} type="button">←</button>
+            <button aria-label="下一个热门国家" onClick={() => move(1)} type="button">→</button>
+          </div>
+          <small>悬停滚轮旋转</small>
+        </div>
       </div>
-    </div>
+
+      {activeDestination.image ? (
+        <a
+          className="popular-image-credit"
+          href={activeDestination.image.sourceUrl}
+          rel="noreferrer"
+          target="_blank"
+          title={`${activeDestination.image.caption} · ${activeDestination.image.artist} · ${activeDestination.image.license}`}
+        >
+          图片：{activeDestination.image.caption} · {activeDestination.image.artist} · {activeDestination.image.license} ↗
+        </a>
+      ) : null}
+    </section>
   );
 }

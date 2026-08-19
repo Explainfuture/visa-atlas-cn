@@ -649,12 +649,41 @@ h3 {
 }
 
 .featured-section {
+  position: relative;
+  isolation: isolate;
   width: 100%;
   max-width: none;
+  overflow: hidden;
+  padding-block: 100px;
   padding-inline: max(32px, calc((100vw - 1440px) / 2));
   border-block: 1px solid var(--sky-line);
   background: var(--sky);
   color: var(--sky-ink);
+}
+
+.popular-destination-backdrop {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  background-position: center;
+  background-size: cover;
+  opacity: 0;
+  transform: scale(1.025);
+  animation: popular-backdrop-in 520ms ease-out forwards;
+}
+
+@keyframes popular-backdrop-in {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.featured-heading,
+.popular-destination-rail,
+.popular-image-credit {
+  position: relative;
+  z-index: 1;
 }
 
 .featured-heading .section-kicker,
@@ -686,13 +715,13 @@ h3 {
   grid-template-columns: minmax(0, 1fr) 112px;
   gap: 20px;
   align-items: center;
-  min-height: 270px;
+  min-height: 380px;
 }
 
 .popular-stack-stage {
   position: relative;
   min-width: 0;
-  height: 260px;
+  height: 370px;
   perspective: 1200px;
 }
 
@@ -737,38 +766,38 @@ h3 {
 
 .popular-stack-card[data-stack-position="-1"] {
   z-index: 5;
-  opacity: 0.58;
-  filter: saturate(0.72) blur(0.15px);
-  transform: translate3d(-48%, calc(-50% - 43px), -80px) scale(0.94) rotateX(-6deg);
+  opacity: 0.56;
+  filter: saturate(0.72) blur(0.3px);
+  transform: translate3d(-49%, calc(-50% - 82px), -80px) scale(0.95) rotateX(-5deg);
 }
 
 .popular-stack-card[data-stack-position="1"] {
   z-index: 5;
-  opacity: 0.58;
-  filter: saturate(0.72) blur(0.15px);
-  transform: translate3d(-48%, calc(-50% + 43px), -80px) scale(0.94) rotateX(6deg);
+  opacity: 0.56;
+  filter: saturate(0.72) blur(0.3px);
+  transform: translate3d(-49%, calc(-50% + 82px), -80px) scale(0.95) rotateX(5deg);
 }
 
 .popular-stack-card[data-stack-position="-2"] {
   z-index: 3;
-  opacity: 0.28;
-  filter: saturate(0.52) blur(0.45px);
-  transform: translate3d(-46%, calc(-50% - 76px), -150px) scale(0.88) rotateX(-10deg);
+  opacity: 0.26;
+  filter: saturate(0.5) blur(0.75px);
+  transform: translate3d(-47%, calc(-50% - 150px), -150px) scale(0.89) rotateX(-9deg);
 }
 
 .popular-stack-card[data-stack-position="2"] {
   z-index: 3;
-  opacity: 0.28;
-  filter: saturate(0.52) blur(0.45px);
-  transform: translate3d(-46%, calc(-50% + 76px), -150px) scale(0.88) rotateX(10deg);
+  opacity: 0.26;
+  filter: saturate(0.5) blur(0.75px);
+  transform: translate3d(-47%, calc(-50% + 150px), -150px) scale(0.89) rotateX(9deg);
 }
 
 .popular-stack-card[data-stack-position="-3"] {
-  transform: translate3d(-44%, calc(-50% - 104px), -220px) scale(0.82) rotateX(-14deg);
+  transform: translate3d(-45%, calc(-50% - 205px), -220px) scale(0.82) rotateX(-13deg);
 }
 
 .popular-stack-card[data-stack-position="3"] {
-  transform: translate3d(-44%, calc(-50% + 104px), -220px) scale(0.82) rotateX(14deg);
+  transform: translate3d(-45%, calc(-50% + 205px), -220px) scale(0.82) rotateX(13deg);
 }
 
 .popular-stack-card[data-stack-position="0"]:hover {
@@ -779,10 +808,11 @@ h3 {
 .popular-stack-flag {
   width: 76px;
   height: 76px;
-  border: 5px solid rgba(255, 255, 255, 0.24);
+  border: 0;
   border-radius: 50%;
+  background-position: center;
   background-size: cover;
-  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.22);
+  box-shadow: none;
 }
 
 .popular-stack-copy {
@@ -885,6 +915,25 @@ h3 {
   color: var(--sky-muted);
   font-size: 9px;
   white-space: nowrap;
+}
+
+.popular-image-credit {
+  display: block;
+  width: max-content;
+  max-width: min(100%, 680px);
+  margin: 10px 0 0 auto;
+  overflow: hidden;
+  color: color-mix(in srgb, var(--sky-ink) 76%, transparent);
+  font-size: 10px;
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--sky-ink) 28%, transparent);
+  text-overflow: ellipsis;
+  text-underline-offset: 4px;
+  white-space: nowrap;
+}
+
+.popular-image-credit:hover {
+  color: var(--rose-deep);
 }
 
 .site-footer {
@@ -4150,6 +4199,7 @@ a.consular-detail:hover strong {
   }
 
   .featured-section {
+    padding-block: 78px;
     padding-inline: 16px;
   }
 
@@ -4161,7 +4211,35 @@ a.consular-detail:hover strong {
   .popular-destination-rail {
     grid-template-columns: minmax(0, 1fr);
     gap: 0;
-    min-height: 310px;
+    min-height: 360px;
+  }
+
+  .popular-stack-stage {
+    height: 320px;
+  }
+
+  .popular-stack-card[data-stack-position="-1"] {
+    transform: translate3d(-49%, calc(-50% - 70px), -80px) scale(0.95) rotateX(-5deg);
+  }
+
+  .popular-stack-card[data-stack-position="1"] {
+    transform: translate3d(-49%, calc(-50% + 70px), -80px) scale(0.95) rotateX(5deg);
+  }
+
+  .popular-stack-card[data-stack-position="-2"] {
+    transform: translate3d(-47%, calc(-50% - 122px), -150px) scale(0.89) rotateX(-9deg);
+  }
+
+  .popular-stack-card[data-stack-position="2"] {
+    transform: translate3d(-47%, calc(-50% + 122px), -150px) scale(0.89) rotateX(9deg);
+  }
+
+  .popular-stack-card[data-stack-position="-3"] {
+    transform: translate3d(-45%, calc(-50% - 162px), -220px) scale(0.82) rotateX(-13deg);
+  }
+
+  .popular-stack-card[data-stack-position="3"] {
+    transform: translate3d(-45%, calc(-50% + 162px), -220px) scale(0.82) rotateX(13deg);
   }
 
   .popular-stack-card {
@@ -4489,7 +4567,7 @@ a.consular-detail:hover strong {
   }
 
   .popular-stack-stage {
-    height: 230px;
+    height: 300px;
   }
 
   .popular-stack-card {
@@ -4507,6 +4585,27 @@ a.consular-detail:hover strong {
 
   .popular-stack-action {
     display: none;
+  }
+
+  .popular-stack-card[data-stack-position="-1"] {
+    transform: translate3d(-49%, calc(-50% - 66px), -80px) scale(0.95) rotateX(-5deg);
+  }
+
+  .popular-stack-card[data-stack-position="1"] {
+    transform: translate3d(-49%, calc(-50% + 66px), -80px) scale(0.95) rotateX(5deg);
+  }
+
+  .popular-stack-card[data-stack-position="-2"] {
+    transform: translate3d(-47%, calc(-50% - 116px), -150px) scale(0.89) rotateX(-9deg);
+  }
+
+  .popular-stack-card[data-stack-position="2"] {
+    transform: translate3d(-47%, calc(-50% + 116px), -150px) scale(0.89) rotateX(9deg);
+  }
+
+  .popular-image-credit {
+    max-width: 100%;
+    margin-top: 14px;
   }
 
   .directory-country-card {
