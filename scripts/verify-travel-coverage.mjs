@@ -1,5 +1,6 @@
 import { getCountryDataList } from "countries-list";
 import travelData from "../src/data/travel-destinations.generated.json" with { type: "json" };
+import { getTravelSuggestionIssue } from "./travel-content-rules.mjs";
 
 const expectedCodes = getCountryDataList()
   .filter((country) => country.iso2 !== "CN")
@@ -30,6 +31,16 @@ for (const code of expectedCodes) {
   }
   if (destination.attractions.length < 1) {
     errors.push(`${code}: no representative attraction or destination.`);
+  }
+  const attractionNames = new Set();
+  for (const attraction of destination.attractions) {
+    const normalizedName = attraction.name.trim().toLocaleLowerCase("en");
+    const issue = getTravelSuggestionIssue(attraction);
+    if (issue) errors.push(`${code}: ${attraction.name} is unsafe (${issue}).`);
+    if (attractionNames.has(normalizedName)) {
+      errors.push(`${code}: duplicate travel suggestion ${attraction.name}.`);
+    }
+    attractionNames.add(normalizedName);
   }
   if (destination.images.length < 2) {
     errors.push(`${code}: expected at least two travel images, found ${destination.images.length}.`);
