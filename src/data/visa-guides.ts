@@ -1,4 +1,5 @@
 import type { CountrySummary } from "@/data/world-countries";
+import { createBaselineVisaGuide } from "@/data/baseline-visa-guide";
 
 export type VisaStatusTone =
   | "visa-free"
@@ -10,7 +11,12 @@ export type VisaStatusTone =
 export type MaterialItem = {
   title: string;
   detail: string;
-  kind: "必备" | "按情况" | "建议";
+  kind: "必备" | "按身份必备" | "按情况" | "建议";
+  purpose?: string;
+  reference?: {
+    label: string;
+    url: string;
+  };
 };
 
 export type ApplicationStep = {
@@ -50,10 +56,19 @@ export type VisaGuide = {
     title: string;
     authority: string;
     url: string;
+    tag?: string;
   }>;
 };
 
 const verifiedAt = "2026-08-18";
+const schengenChinaChecklistReference = {
+  label: "欧盟 2024 在华材料清单",
+  url: "https://home-affairs.ec.europa.eu/document/download/99f6ef02-bd70-4c1e-bc35-b780bea8c9da_en",
+};
+const schengenVisaCodeReference = {
+  label: "欧盟签证法典",
+  url: "https://eur-lex.europa.eu/eli/reg/2009/810/2024-06-11/eng",
+};
 
 export const visaGuides: Record<string, VisaGuide> = {
   jp: {
@@ -61,11 +76,11 @@ export const visaGuides: Record<string, VisaGuide> = {
     status: "需提前办签",
     statusTone: "visa-required",
     stay: "个人旅游通常获 15 天或 30 天",
-    method: "指定旅行社或代办机构递交",
+    method: "按常住地选择领区，再向使领馆指定旅行社递交",
     leadTime: "至少提前 3—4 周开始",
     overview:
       "持中国大陆普通护照赴日个人旅游，需要先办短期旅游签证。中国境内申请不能直接把材料交给使领馆，应先按居住地找到有送签资格的旅行社或代办机构。",
-    decision: "先选领区和代办机构，再按它给出的版本准备材料；不要先买不可退机票。",
+    decision: "先按常住地选领区，再到该使领馆官网核对指定旅行社公司全称；不要只凭淘宝、飞猪或地图搜索排名付款。",
     cost: {
       summary: "¥715 起 + 代办费",
       items: [
@@ -82,8 +97,9 @@ export const visaGuides: Record<string, VisaGuide> = {
         action: { label: "查看日本驻华申请说明", url: "https://www.cn.emb-japan.go.jp/consular/visa_dantai.htm" },
       },
       {
-        title: "向指定机构要最新版清单",
-        detail: "同一签证在不同领区、不同职业状态下会追加材料。先拿书面清单和完整报价，再开始开证明。",
+        title: "从官方名单选择指定旅行社",
+        detail: "淘宝、飞猪和线下门店都可以用来比价，但先索要营业执照公司全称，与所属领区官方名单逐字核对，再要书面材料清单和含税总价。",
+        action: { label: "查看使馆指定旅行社名单", url: "https://www.cn.emb-japan.go.jp/itpr_zh/visa_dantai_daili.html" },
       },
       {
         title: "交材料并核对电子签",
@@ -104,6 +120,7 @@ export const visaGuides: Record<string, VisaGuide> = {
       "旅行社说的“简化材料”不代表使领馆放弃审查，仍可能要求补件或面谈。",
       "一次签证有效期通常为 3 个月，停留 15 天或 30 天；以最终签发内容为准。",
       "个人旅游、探亲访友和商务不是同一种材料路径，不要混用邀请函或行程目的。",
+      "所谓‘旗舰店’、销量和搜索排名不代表有送签资格；付款前必须用公司全称核对所属领区官方名单。",
     ],
     verifiedAt,
     sources: [
@@ -230,19 +247,22 @@ export const visaGuides: Record<string, VisaGuide> = {
     materials: [
       { title: "护照与旧护照", detail: "护照签发不超过 10 年、计划离开申根后仍有效至少 3 个月，并留有空白页。", kind: "必备" },
       { title: "France-Visas 表格、回执与照片", detail: "签名和护照信息保持一致，照片使用符合 ICAO 标准的近期证件照。", kind: "必备" },
-      { title: "旅行医疗保险", detail: "覆盖全部申根国家和全部日期，医疗、急诊住院及遣返保额至少 €30,000。", kind: "必备" },
-      { title: "往返交通与逐日行程", detail: "交通、城市顺序和日期相互对应；未获签前优先选择可退改订单。", kind: "必备" },
-      { title: "全程住宿证明", detail: "酒店订单或邀请接待文件覆盖每一晚。", kind: "必备" },
-      { title: "银行流水与旅行预算", detail: "用稳定收入和账户余额说明能承担本次机酒与日常费用。", kind: "必备" },
-      { title: "在职 / 在读 / 退休材料", detail: "证明当前身份、准假安排和返回中国的约束力。", kind: "必备" },
+      { title: "旅行医疗保险", detail: "覆盖全部申根国家和全部日期，医疗、急诊住院及遣返保额至少 €30,000。", kind: "必备", reference: schengenVisaCodeReference },
+      { title: "往返交通与逐日行程", detail: "交通、城市顺序和日期相互对应；未获签前优先选择可退改订单。", kind: "必备", reference: schengenChinaChecklistReference },
+      { title: "全程住宿证明", detail: "酒店订单或邀请接待文件覆盖每一晚。", kind: "必备", reference: schengenChinaChecklistReference },
+      { title: "近 3 个月银行流水", detail: "提交连续的个人活期流水，用稳定收入和账户余额说明能承担本次机酒与日常费用。", kind: "必备", reference: schengenChinaChecklistReference },
+      { title: "与本人身份对应的证明", detail: "在职、在读、退休、自由职业或无固定收入者，只提交与自己身份对应的那一组材料。", kind: "按身份必备", reference: schengenChinaChecklistReference },
+      { title: "户口簿已使用页", detail: "在中国申请申根短期签证时，欧盟统一材料清单将户口簿已使用页列为通用要求。", kind: "必备", reference: schengenChinaChecklistReference },
       { title: "翻译件", detail: "France-Visas 清单要求翻译的中文材料应按规定提供法文或英文版本。", kind: "按情况" },
     ],
     notes: ["申请错国家是常见硬伤：按主要停留国判断，不是简单看哪国更容易出签。", "法国海外领地不一定适用申根签证，目的地是海外省或领地时重新走 Visa Wizard。"],
-    verifiedAt,
+    verifiedAt: "2026-08-19",
     sources: [
       { title: "在中国申请法国签证", authority: "France-Visas", url: "https://france-visas.gouv.fr/en/web/france-visas/chine" },
       { title: "法国签证费用表", authority: "France-Visas", url: "https://france-visas.gouv.fr/documents/d/france-visas/frais-de-visa-anglais" },
       { title: "旅行医疗保险要求", authority: "France-Visas", url: "https://www.france-visas.gouv.fr/en/faq" },
+      { title: "在中国申请短期签证支持文件清单（2024）", authority: "欧盟委员会", url: schengenChinaChecklistReference.url, tag: "材料清单" },
+      { title: "欧盟签证法典", authority: "EUR-Lex", url: schengenVisaCodeReference.url, tag: "法律依据" },
     ],
   },
   gb: {
@@ -595,43 +615,5 @@ export const visaGuides: Record<string, VisaGuide> = {
 };
 
 export function getVisaGuide(country: CountrySummary): VisaGuide {
-  return (
-    visaGuides[country.code] ?? {
-      code: country.code,
-      status: "正在核验",
-      statusTone: "pending",
-      stay: "以目的地官方答复为准",
-      method: "先查官方入境要求",
-      leadTime: "订票前完成确认",
-      overview: `${country.name}页面已经进入知识库，但面向中国普通护照的材料、申请入口与费用还没有完成逐项核验。这里不会用通用模板假装成完整攻略。`,
-      decision: "本页尚未达到可直接照办的标准，请先使用下方官方渠道确认，再购买不可退行程。",
-      cost: {
-        summary: "费用待核验",
-        items: [
-          { label: "政府签证或授权费", amount: "待核验", detail: "以目的地使领馆或移民机关最新收费页为准。" },
-          { label: "签证中心服务费", amount: "可能另收", detail: "只有官方指定外包中心才能作为费用依据。" },
-          { label: "第三方代办费", amount: "非政府收费", detail: "付款前区分政府费、指定中心费和商业代办费。" },
-        ],
-        note: "核验完成前不展示猜测金额。",
-      },
-      steps: [
-        { title: "确认旅行目的与护照类型", detail: "先区分旅游、探亲、商务、过境，以及普通、公务或其他旅行证件。" },
-        { title: "查目的地官方移民或使领馆", detail: "用完整行程和入境口岸确认签证类别、材料、费用和递交地点。" },
-        { title: "得到明确答复后再付费订票", detail: "保存官方页面、邮件或书面清单，避免向非指定网站付款。" },
-      ],
-      materials: [
-        { title: "有效中国普通护照", detail: "准备护照有效期、空白页和旧护照信息。", kind: "必备" },
-        { title: "完整旅行日期与入境口岸", detail: "包含转机地、交通方式和所有目的地。", kind: "必备" },
-        { title: "返程或后续行程", detail: "说明将在许可期限内离境。", kind: "必备" },
-        { title: "住宿与访问目的", detail: "酒店、接待人或活动安排。", kind: "必备" },
-        { title: "旅行预算与资金来源", detail: "用于核对资金要求和费用承担能力。", kind: "建议" },
-      ],
-      notes: ["此页暂未发布确定的签证结论、材料门槛或费用。", "转机、邮轮和陆路入境可能有独立规则。"],
-      verifiedAt,
-      sources: [
-        { title: "中国领事服务网目的地指南", authority: "中华人民共和国外交部", url: "https://cs.mfa.gov.cn/zggmcg/ljmdd/" },
-        { title: "旅行证件与入境要求查询", authority: "IATA Travel Centre", url: "https://www.iatatravelcentre.com/" },
-      ],
-    }
-  );
+  return visaGuides[country.code] ?? createBaselineVisaGuide(country);
 }

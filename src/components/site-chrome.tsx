@@ -1,5 +1,14 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import {
+  GlobalCountrySearch,
+  type GlobalCountrySearchItem,
+} from "@/components/global-country-search";
+import { worldCountries } from "@/data/world-countries";
+
+const globalSearchCountries: GlobalCountrySearchItem[] = worldCountries.map(
+  ({ code, englishName, name }) => ({ code, englishName, name }),
+);
 
 export function SiteHeader() {
   return (
@@ -15,10 +24,13 @@ export function SiteHeader() {
         <Link href="/#world-map">世界地图</Link>
         <Link href="/#continents">七大洲</Link>
         <Link href="/#featured-guides">签证攻略</Link>
+        <Link href="/passport">第一次办护照</Link>
       </nav>
 
-      <Link className="header-action" href="/#featured-guides">
-        开始探索
+      <GlobalCountrySearch countries={globalSearchCountries} />
+
+      <Link className="header-action" href="/passport">
+        办护照
         <ArrowRight aria-hidden="true" size={17} strokeWidth={2.2} />
       </Link>
     </header>
@@ -26,14 +38,28 @@ export function SiteHeader() {
 }
 
 export function SiteFooter() {
+  const currentYear = new Date().getUTCFullYear();
+
   return (
     <footer className="site-footer">
-      <Link className="brand footer-brand" href="/">
+      <Link className="brand footer-brand" href="/" aria-label="签证地图首页">
         <span className="brand-mark" aria-hidden="true">
           签
         </span>
         <span>签证地图</span>
       </Link>
+
+      <div className="footer-meta">
+        <span>© {currentYear} Explainfuture</span>
+        <a
+          href="https://github.com/Explainfuture/visa-atlas-cn"
+          rel="noreferrer"
+          target="_blank"
+        >
+          GitHub 源码 ↗
+        </a>
+      </div>
+
       <p>出发前，再到目的地官方渠道确认一次。</p>
     </footer>
   );

@@ -4,18 +4,33 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "data:visa": "node scripts/generate-visa-baseline.mjs",
+    "data:consular": "node scripts/generate-consular-locations.mjs",
+    "data:passport": "node scripts/generate-passport-offices.mjs",
+    "data:travel": "node scripts/generate-travel-destinations.mjs",
+    "data:travel:attractions": "node scripts/generate-travel-destinations.mjs --refresh-attractions",
+    "data:travel:image-text": "node scripts/generate-travel-destinations.mjs --refresh-image-text",
+    "data:travel:introductions": "node scripts/generate-travel-destinations.mjs --refresh-introductions",
+    "verify:visa-data": "node scripts/verify-visa-coverage.mjs",
+    "verify:application-portals": "node scripts/verify-application-portals.mjs",
+    "verify:consular-data": "node scripts/verify-consular-coverage.mjs",
+    "verify:passport-data": "node scripts/verify-passport-coverage.mjs",
+    "verify:travel-data": "node scripts/verify-travel-coverage.mjs",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"
   },
   "dependencies": {
+    "@radix-ui/react-select": "^2.3.7",
+    "@radix-ui/react-tooltip": "^1.2.16",
     "countries-list": "^3.4.1",
     "flag-icons": "^7.5.0",
     "lucide-react": "^1.31.0",
     "next": "16.3.1",
     "react": "19.2.8",
     "react-dom": "19.2.8",
-    "react-svg-worldmap": "^2.0.2"
+    "react-svg-worldmap": "^2.0.2",
+    "react-zoom-pan-pinch": "^4.0.4"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
@@ -24,7 +39,9 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.3.1",
+    "opencc-js": "^1.4.1",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "typescript": "^5",
+    "undici": "^7.29.0"
   }
 }

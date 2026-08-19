@@ -2,18 +2,45 @@ import Link from "next/link";
 import {
   ArrowDownRight,
   ArrowRight,
-  BookOpen,
   Compass,
-  ShieldCheck,
+  IdCard,
 } from "lucide-react";
 import { MapShell } from "@/components/map-shell";
+import { PopularDestinationShowcase } from "@/components/popular-destination-rail";
 import { SiteFooter, SiteHeader } from "@/components/site-chrome";
-import { continents, featuredCountries } from "@/data/featured-countries";
+import {
+  continents,
+  popularDestinations,
+} from "@/data/featured-countries";
+import { getTravelDestination } from "@/data/travel-destinations";
 import { getContinentCount, worldCountries } from "@/data/world-countries";
-import { visaGuides } from "@/data/visa-guides";
 
 export default function Home() {
   const currentYear = new Date().getUTCFullYear();
+  const popularDestinationSlides = popularDestinations.map((destination) => {
+    const travelDestination = getTravelDestination(destination.code);
+    const image = travelDestination?.images.find(
+      (candidate) => candidate.caption === destination.imageCaption,
+    ) ?? travelDestination?.images[0];
+
+    return {
+      city: destination.city,
+      code: destination.code,
+      continent: destination.continent,
+      image: image
+        ? {
+            alt: image.alt,
+            artist: image.artist,
+            caption: image.caption,
+            license: image.license,
+            sourceUrl: image.sourceUrl,
+            url: image.url,
+          }
+        : undefined,
+      name: destination.name,
+      signal: destination.signal,
+    };
+  });
 
   return (
     <>
@@ -35,7 +62,7 @@ export default function Home() {
               <span>从一张地图出发。</span>
             </h1>
             <p className="hero-intro">
-              选择大洲或点亮一个国家，快速找到签证方式、材料清单与官方入口。
+              选择大洲或点亮一个目的地，快速找到签证方式、材料清单与官方入口。
             </p>
 
             <div className="hero-actions">
@@ -55,8 +82,8 @@ export default function Home() {
                 <dd>大洲目录</dd>
               </div>
               <div>
-                <dt>{featuredCountries.length}</dt>
-                <dd>首批目的地</dd>
+                <dt>{worldCountries.length}</dt>
+                <dd>目的地攻略</dd>
               </div>
               <div>
                 <dt>官方</dt>
@@ -74,10 +101,24 @@ export default function Home() {
               <MapShell availableCodes={worldCountries.map((country) => country.code)} />
               <div className="map-folio-note">
                 <span className="map-pulse" aria-hidden="true" />
-                点按地图，认识你的下一站
+                滚轮或双指缩放 · 拖动平移 · 悬浮查看目的地
               </div>
             </div>
           </div>
+        </section>
+
+        <section className="passport-home-entry" aria-labelledby="passport-entry-title">
+          <div className="passport-home-number" aria-hidden="true">01</div>
+          <div>
+            <p className="section-kicker">还没有护照？从这里开始</p>
+            <h2 id="passport-entry-title">第一次办护照，不用自己到处查</h2>
+            <p>看懂护照有什么用、要带什么、交多少钱，再按省份和城市找到出入境办理窗口。</p>
+          </div>
+          <Link href="/passport">
+            <IdCard aria-hidden="true" size={22} />
+            打开新手攻略
+            <ArrowRight aria-hidden="true" size={19} />
+          </Link>
         </section>
 
         <section className="continent-section" id="continents" aria-labelledby="continents-title">
@@ -111,45 +152,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="featured-section" id="featured-guides" aria-labelledby="featured-title">
-          <div className="section-heading featured-heading">
-            <div>
-              <p className="section-kicker">第一批攻略</p>
-              <h2 id="featured-title">大家常去的地方，先整理好</h2>
-            </div>
-            <div className="source-promise">
-              <ShieldCheck aria-hidden="true" size={19} />
-              每条结论附来源与核验日期
-            </div>
-          </div>
-
-          <div className="country-grid">
-            {featuredCountries.map((country) => (
-              <Link
-                className="country-card"
-                href={`/country/${country.code}`}
-                id={`country-${country.slug}`}
-                key={country.code}
-              >
-                <div className="country-card-topline">
-                  <span className="country-flag" aria-hidden="true">
-                    {country.code.toUpperCase()}
-                  </span>
-                  <span>{country.continent}</span>
-                </div>
-                <h3>{country.name}</h3>
-                <p>{country.city}</p>
-                <div className="country-card-footer">
-                  <span>
-                    <BookOpen aria-hidden="true" size={16} />
-                    {visaGuides[country.code]?.status ?? "攻略已收录"}
-                  </span>
-                  <ArrowRight aria-hidden="true" size={19} />
-                </div>
-              </Link>
-            ))}
-          </div>
-        </section>
+        <PopularDestinationShowcase destinations={popularDestinationSlides} />
       </main>
 
       <SiteFooter />

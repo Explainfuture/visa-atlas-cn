@@ -47,8 +47,15 @@ const continentByCode = new Map(continentDirectory.map((continent) => [continent
 const chineseRegionNames = new Intl.DisplayNames(["zh-CN"], { type: "region" });
 const chineseCollator = new Intl.Collator("zh-CN");
 
+const destinationNameOverrides: Partial<
+  Record<TCountryCode, { name: string; englishName: string; isTerritory?: boolean }>
+> = {
+  TW: { name: "中国台湾", englishName: "Taiwan, China", isTerritory: false },
+};
+
 function toCountrySummary(country: ICountryData): CountrySummary {
   const continent = continentByCode.get(country.continent);
+  const nameOverride = destinationNameOverrides[country.iso2 as TCountryCode];
 
   if (!continent) {
     throw new Error(`Unsupported continent code: ${country.continent}`);
@@ -56,14 +63,14 @@ function toCountrySummary(country: ICountryData): CountrySummary {
 
   return {
     code: country.iso2.toLowerCase(),
-    name: chineseRegionNames.of(country.iso2) ?? country.name,
-    englishName: country.name,
+    name: nameOverride?.name ?? chineseRegionNames.of(country.iso2) ?? country.name,
+    englishName: nameOverride?.englishName ?? country.name,
     capital: country.capital,
     continentCode: country.continent,
     continentName: continent.name,
     continentSlug: continent.slug,
     flag: getEmojiFlag(country.iso2 as TCountryCode),
-    isTerritory: Boolean(country.partOf),
+    isTerritory: nameOverride?.isTerritory ?? Boolean(country.partOf),
   };
 }
 

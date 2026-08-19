@@ -28,7 +28,7 @@ export async function generateMetadata({
 
   if (!continent) return {};
 
-  const description = `${continent.name}国家与地区签证目录，面向中国普通护照持有人。`;
+  const description = `${continent.name}目的地签证目录，面向中国普通护照持有人。`;
 
   return {
     title: `${continent.name}签证目录`,
@@ -76,7 +76,7 @@ export default async function ContinentPage({
           <p className="section-kicker">{continent.englishName}</p>
           <h1>{continent.name}</h1>
           <p>{continent.introduction}</p>
-          <span>{countries.length} 条国家与地区记录</span>
+          <span>{countries.length} 条目的地记录</span>
         </section>
 
         <ContinentCountryList countries={countries} />

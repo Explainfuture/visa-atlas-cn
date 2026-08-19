@@ -31,12 +31,12 @@ export function ContinentCountryList({ countries }: { countries: DirectoryCountr
     <div className="directory-browser">
       <label className="country-search">
         <Search aria-hidden="true" size={20} />
-        <span className="sr-only">搜索国家或地区</span>
+        <span className="sr-only">搜索目的地</span>
         <input
           autoComplete="off"
           name="country-search"
           onChange={(event) => setQuery(event.target.value)}
-          placeholder="搜索国家或地区…"
+          placeholder="搜索目的地…"
           spellCheck={false}
           type="search"
           value={query}
@@ -61,7 +61,7 @@ export function ContinentCountryList({ countries }: { countries: DirectoryCountr
       ) : (
         <div className="empty-search">
           <strong>没有找到匹配目的地</strong>
-          <span>试试国家中文名、英文名或两位代码。</span>
+          <span>试试目的地中文名、英文名或两位代码。</span>
         </div>
       )}
     </div>
