@@ -14,9 +14,7 @@ export function SiteHeader() {
   return (
     <header className="site-header">
       <Link className="brand" href="/" aria-label="签证地图首页">
-        <span className="brand-mark" aria-hidden="true">
-          签
-        </span>
+        <span className="brand-mark" aria-hidden="true" />
         <span>签证地图</span>
       </Link>
 
@@ -43,9 +41,7 @@ export function SiteFooter() {
   return (
     <footer className="site-footer">
       <Link className="brand footer-brand" href="/" aria-label="签证地图首页">
-        <span className="brand-mark" aria-hidden="true">
-          签
-        </span>
+        <span className="brand-mark" aria-hidden="true" />
         <span>签证地图</span>
       </Link>
 
