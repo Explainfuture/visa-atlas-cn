@@ -38,14 +38,28 @@ export function SiteHeader() {
 }
 
 export function SiteFooter() {
+  const currentYear = new Date().getUTCFullYear();
+
   return (
     <footer className="site-footer">
-      <Link className="brand footer-brand" href="/">
+      <Link className="brand footer-brand" href="/" aria-label="签证地图首页">
         <span className="brand-mark" aria-hidden="true">
           签
         </span>
         <span>签证地图</span>
       </Link>
+
+      <div className="footer-meta">
+        <span>© {currentYear} Explainfuture</span>
+        <a
+          href="https://github.com/Explainfuture/visa-atlas-cn"
+          rel="noreferrer"
+          target="_blank"
+        >
+          GitHub 源码 ↗
+        </a>
+      </div>
+
       <p>出发前，再到目的地官方渠道确认一次。</p>
     </footer>
   );
