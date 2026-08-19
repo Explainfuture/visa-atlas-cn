@@ -2055,31 +2055,6 @@ a.consular-detail:hover strong {
   transition: background 180ms ease;
 }
 
-.action-materials-list li::before {
-  position: absolute;
-  top: -1px;
-  right: 24px;
-  width: 72px;
-  height: 7px;
-  border: 1px solid var(--line);
-  border-bottom: 0;
-  border-radius: 8px 8px 0 0;
-  background: #f7dce4;
-  content: "";
-}
-
-.action-materials-list li[data-kind="建议"]::before {
-  background: var(--sky-deep);
-}
-
-.action-materials-list li[data-kind="按情况"]::before {
-  background: #f5e8c7;
-}
-
-.action-materials-list li[data-kind="按身份必备"]::before {
-  background: #efcfa7;
-}
-
 .action-materials-list li:nth-child(odd) {
   border-right: 1px solid var(--line);
 }
