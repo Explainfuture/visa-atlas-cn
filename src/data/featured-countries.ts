@@ -13,17 +13,6 @@ export const popularDestinations = [
   { code: "au", name: "澳大利亚", continent: "大洋洲", city: "悉尼 · 墨尔本 · 黄金海岸", signal: "长线热门", imageCaption: "悉尼" },
 ] as const;
 
-export const popularDestinationSources = [
-  {
-    label: "2026 暑期出境热搜",
-    url: "https://www.tcc.org.cn/newsinfo/11259706.html",
-  },
-  {
-    label: "2026 五一出境热度",
-    url: "https://news.china.com.cn/2026-05/06/content_118479156.shtml",
-  },
-] as const;
-
 export const continents = [
   { index: "01", slug: "asia", name: "亚洲", englishName: "Asia", count: 49 },
   { index: "02", slug: "europe", name: "欧洲", englishName: "Europe", count: 44 },

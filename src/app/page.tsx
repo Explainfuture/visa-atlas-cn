@@ -11,7 +11,6 @@ import { SiteFooter, SiteHeader } from "@/components/site-chrome";
 import {
   continents,
   popularDestinations,
-  popularDestinationSources,
 } from "@/data/featured-countries";
 import { getTravelDestination } from "@/data/travel-destinations";
 import { getContinentCount, worldCountries } from "@/data/world-countries";
@@ -153,10 +152,7 @@ export default function Home() {
           </div>
         </section>
 
-        <PopularDestinationShowcase
-          destinations={popularDestinationSlides}
-          sources={popularDestinationSources}
-        />
+        <PopularDestinationShowcase destinations={popularDestinationSlides} />
       </main>
 
       <SiteFooter />

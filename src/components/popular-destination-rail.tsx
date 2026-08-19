@@ -19,11 +19,6 @@ export type PopularDestination = {
   signal: string;
 };
 
-type PopularDestinationSource = {
-  label: string;
-  url: string;
-};
-
 const WHEEL_THRESHOLD = 20;
 const WHEEL_COOLDOWN = 260;
 const STACK_DEPTH = 3;
@@ -38,12 +33,8 @@ function getStackOffset(index: number, activeIndex: number, length: number) {
   return offset;
 }
 
-export function PopularDestinationShowcase({
-  destinations,
-  sources,
-}: {
+export function PopularDestinationShowcase({ destinations }: {
   destinations: readonly PopularDestination[];
-  sources: readonly PopularDestinationSource[];
 }) {
   const [activeIndex, setActiveIndex] = useState(0);
   const railRef = useRef<HTMLDivElement>(null);
@@ -127,15 +118,8 @@ export function PopularDestinationShowcase({
 
       <div className="section-heading featured-heading">
         <div>
-          <p className="section-kicker">出境热榜 · {destinationCount}</p>
+          <p className="section-kicker">出境热榜</p>
           <h2 id="featured-title">热门景点</h2>
-        </div>
-        <div className="popular-ranking-sources" aria-label="热门目的地参考来源">
-          {sources.map((source) => (
-            <a href={source.url} key={source.url} rel="noreferrer" target="_blank">
-              {source.label} ↗
-            </a>
-          ))}
         </div>
       </div>
 
@@ -174,16 +158,6 @@ export function PopularDestinationShowcase({
               <span className="popular-stack-action">查看攻略 ↗</span>
             </Link>
           ))}
-        </div>
-
-        <div className="popular-rail-controls">
-          <span aria-live="polite">{String(activeIndex + 1).padStart(2, "0")} / {destinationCount}</span>
-          <strong>{activeDestination.name}</strong>
-          <div>
-            <button aria-label="上一个热门国家" onClick={() => move(-1)} type="button">←</button>
-            <button aria-label="下一个热门国家" onClick={() => move(1)} type="button">→</button>
-          </div>
-          <small>悬停滚轮旋转</small>
         </div>
       </div>
 

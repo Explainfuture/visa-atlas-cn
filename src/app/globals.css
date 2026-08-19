@@ -654,7 +654,7 @@ h3 {
   width: 100%;
   max-width: none;
   overflow: hidden;
-  padding-block: 100px;
+  padding-block: 64px;
   padding-inline: max(32px, calc((100vw - 1440px) / 2));
   border-block: 1px solid var(--sky-line);
   background: var(--sky);
@@ -686,42 +686,18 @@ h3 {
   z-index: 1;
 }
 
-.featured-heading .section-kicker,
-.popular-ranking-sources {
+.featured-heading .section-kicker {
   color: var(--rose-deep);
 }
 
-.popular-ranking-sources {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 18px;
-  margin-bottom: 6px;
-  font-size: 13px;
-}
-
-.popular-ranking-sources a {
-  text-decoration: underline;
-  text-decoration-color: color-mix(in srgb, var(--rose-deep) 35%, transparent);
-  text-underline-offset: 5px;
-}
-
-.popular-ranking-sources a:hover {
-  color: var(--ink);
-}
-
 .popular-destination-rail {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 112px;
-  gap: 20px;
-  align-items: center;
-  min-height: 380px;
+  min-height: 340px;
 }
 
 .popular-stack-stage {
   position: relative;
   min-width: 0;
-  height: 370px;
+  height: 340px;
   perspective: 1200px;
 }
 
@@ -861,59 +837,6 @@ h3 {
   color: #ffd5e2;
   font-size: 11px;
   font-weight: 750;
-  white-space: nowrap;
-}
-
-.popular-rail-controls {
-  display: grid;
-  min-width: 112px;
-  place-content: center;
-  gap: 6px;
-  padding-inline: 10px 16px;
-  text-align: center;
-}
-
-.popular-rail-controls > span {
-  color: var(--rose-deep);
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-}
-
-.popular-rail-controls > strong {
-  overflow: hidden;
-  color: var(--sky-ink);
-  font-size: 12px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.popular-rail-controls > div {
-  display: flex;
-  gap: 5px;
-}
-
-.popular-rail-controls button {
-  display: grid;
-  width: 32px;
-  height: 32px;
-  place-items: center;
-  border: 1px solid var(--sky-line);
-  border-radius: 50%;
-  background: var(--white);
-  color: var(--sky-ink);
-  cursor: pointer;
-  transition: background 150ms ease, color 150ms ease;
-}
-
-.popular-rail-controls button:hover {
-  background: var(--rose-deep);
-  color: white;
-}
-
-.popular-rail-controls small {
-  color: var(--sky-muted);
-  font-size: 9px;
   white-space: nowrap;
 }
 
@@ -4199,19 +4122,12 @@ a.consular-detail:hover strong {
   }
 
   .featured-section {
-    padding-block: 78px;
+    padding-block: 52px;
     padding-inline: 16px;
   }
 
-  .popular-ranking-sources {
-    flex-wrap: wrap;
-    justify-content: flex-start;
-  }
-
   .popular-destination-rail {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 0;
-    min-height: 360px;
+    min-height: 320px;
   }
 
   .popular-stack-stage {
@@ -4250,18 +4166,6 @@ a.consular-detail:hover strong {
   .popular-stack-flag {
     width: 68px;
     height: 68px;
-  }
-
-  .popular-rail-controls {
-    display: flex;
-    min-width: 0;
-    align-items: center;
-    justify-content: center;
-    padding-inline: 0;
-  }
-
-  .popular-rail-controls small {
-    display: none;
   }
 
   .site-footer {
