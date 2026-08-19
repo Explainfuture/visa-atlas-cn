@@ -7,6 +7,7 @@ const expectedCodes = getCountryDataList()
   .sort();
 const actualCodes = Object.keys(travelData.destinations).sort();
 const errors = [];
+const commonTraditionalCharacters = /[語國亞陸鄰邊緬蘭馬積擁億僅風氣與為異這個後裡臺灣區門東學體會開發數長時無處]/u;
 
 if (actualCodes.length !== expectedCodes.length) {
   errors.push(`Expected ${expectedCodes.length} destinations, found ${actualCodes.length}.`);
@@ -22,6 +23,10 @@ for (const code of expectedCodes) {
 
   if (destination.introduction.trim().length < 24) {
     errors.push(`${code}: introduction is missing or too short.`);
+  }
+  const traditionalCharacter = destination.introduction.match(commonTraditionalCharacters)?.[0];
+  if (traditionalCharacter) {
+    errors.push(`${code}: introduction contains the traditional character ${traditionalCharacter}.`);
   }
   if (destination.attractions.length < 1) {
     errors.push(`${code}: no representative attraction or destination.`);

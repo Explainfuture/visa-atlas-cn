@@ -19,6 +19,13 @@ const SIGHTSMAP_SPOTS =
 const SIGHTSMAP_METADATA =
   "https://raw.githubusercontent.com/enceladus3/SightsMap-HeatmapExplorer/main/data/topspots_15K_extended.js";
 const WIKIVOYAGE_LICENSE = "https://creativecommons.org/licenses/by-sa/4.0/";
+const ZH_WIKIVOYAGE_PARAMETERS = {
+  exintro: "1",
+  explaintext: "1",
+  piprop: "name|original",
+  prop: "extracts|pageimages",
+  variant: "zh-cn",
+};
 
 const continentNames = {
   AF: "非洲",
@@ -485,6 +492,40 @@ const countries = getCountryDataList()
     };
   });
 
+function buildIntroduction(country, page) {
+  const fallbackIntroduction = `${country.name}位于${country.continentName}。${
+    country.capital ? `可以从${country.capital}开始认识当地，` : "规划行程时可以从主要聚居地出发，"
+  }再把当地的城市、人文与自然景观放进行程，了解当地的风景、文化与旅行节奏。`;
+  const extractedIntroduction = compactText(page?.extract, 260);
+
+  return introductionOverrides[country.code] ??
+    (extractedIntroduction.length >= 80
+      ? extractedIntroduction
+      : `${extractedIntroduction}${extractedIntroduction ? " " : ""}${fallbackIntroduction}`);
+}
+
+async function queryZhWikivoyagePages() {
+  return queryWikiPages(
+    "https://zh.wikivoyage.org/w/api.php",
+    countries.map((country) => ({ key: country.code, title: country.zhTitle })),
+    ZH_WIKIVOYAGE_PARAMETERS,
+  );
+}
+
+if (process.argv.includes("--refresh-introductions")) {
+  const output = JSON.parse(await readFile(OUTPUT_PATH, "utf8"));
+  const pages = await queryZhWikivoyagePages();
+
+  for (const country of countries) {
+    const destination = output.destinations[country.code.toLowerCase()];
+    destination.introduction = buildIntroduction(country, pages.get(country.code));
+  }
+
+  await writeFile(OUTPUT_PATH, `${JSON.stringify(output, null, 2)}\n`, "utf8");
+  console.log(`Refreshed simplified-Chinese introductions for ${countries.length} destinations.`);
+  process.exit(0);
+}
+
 if (process.argv.includes("--refresh-image-overrides")) {
   const output = JSON.parse(await readFile(OUTPUT_PATH, "utf8"));
   const filenames = Object.values(imageFileOverrides).flatMap((images) =>
@@ -541,16 +582,7 @@ for (let index = 0; index < Math.min(spots.length, spotsMetadata.length); index 
 
 console.log(`SightsMap candidates loaded for ${topSpotsByCountry.size} destinations.`);
 
-const zhWikivoyagePages = await queryWikiPages(
-  "https://zh.wikivoyage.org/w/api.php",
-  countries.map((country) => ({ key: country.code, title: country.zhTitle })),
-  {
-    exintro: "1",
-    explaintext: "1",
-    piprop: "name|original",
-    prop: "extracts|pageimages",
-  },
-);
+const zhWikivoyagePages = await queryZhWikivoyagePages();
 
 const enWikivoyagePages = await queryWikiPages(
   "https://en.wikivoyage.org/w/api.php",
@@ -733,15 +765,7 @@ for (const [countryIndex, country] of countries.entries()) {
   });
   if (images.length === 3) destinationsWithThreeImages += 1;
 
-  const attractionNames = attractions.map((attraction) => attraction.name).filter(Boolean);
-  const fallbackIntroduction = `${country.name}位于${country.continentName}。${
-    country.capital ? `可以从${country.capital}开始认识当地，` : "规划行程时可以从主要聚居地出发，"
-  }再把${attractionNames.slice(0, 3).join("、") || "城市、人文与自然景观"}放进行程，了解当地的风景、文化与旅行节奏。`;
-  const extractedIntroduction = compactText(zhPage?.extract, 260);
-  const introduction = introductionOverrides[country.code] ??
-    (extractedIntroduction.length >= 80
-      ? extractedIntroduction
-      : `${extractedIntroduction}${extractedIntroduction ? " " : ""}${fallbackIntroduction}`);
+  const introduction = buildIntroduction(country, zhPage);
   const travelSourceUrl = zhPage && !zhPage.missing
     ? `https://zh.wikivoyage.org/wiki/${encodeURIComponent(zhPage.title.replaceAll(" ", "_"))}`
     : enPage && !enPage.missing
